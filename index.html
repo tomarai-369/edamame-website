@@ -85,6 +85,11 @@
             --color-accent: #C4A35A;
             --color-accent-light: #E8D5A3;
             --color-kintone: #ED1C24;
+            --color-kintone-light: #FF5A5F;
+            --color-kintone-dark: #C41118;
+            --gradient-primary: linear-gradient(135deg, #4A7C59 0%, #6B9B7A 100%);
+            --gradient-accent: linear-gradient(135deg, #ED1C24 0%, #C4A35A 100%);
+            --gradient-mixed: linear-gradient(135deg, #4A7C59 0%, #ED1C24 100%);
             --font-main: 'Carlito', Calibri, 'Segoe UI', sans-serif;
             --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
             --ease-out-quint: cubic-bezier(0.22, 1, 0.36, 1);
@@ -202,7 +207,7 @@
             left: 0;
             width: 0;
             height: 2px;
-            background: var(--color-primary);
+            background: var(--gradient-accent);
             transition: width 0.3s var(--ease-out-expo);
         }
 
@@ -215,7 +220,7 @@
         }
 
         .nav-cta {
-            background: var(--color-dark);
+            background: var(--gradient-accent);
             color: white;
             padding: 0.75rem 1.75rem;
             border-radius: 100px;
@@ -225,8 +230,8 @@
         }
 
         .nav-cta:hover {
-            background: var(--color-primary);
             transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(237, 28, 36, 0.3);
         }
 
         .mobile-toggle {
@@ -261,7 +266,7 @@
             right: -10%;
             width: 70%;
             height: 100%;
-            background: linear-gradient(135deg, rgba(74, 124, 89, 0.08) 0%, rgba(196, 163, 90, 0.05) 100%);
+            background: linear-gradient(135deg, rgba(74, 124, 89, 0.08) 0%, rgba(237, 28, 36, 0.04) 100%);
             border-radius: 0 0 0 40%;
             z-index: -1;
         }
@@ -300,8 +305,8 @@
             display: inline-flex;
             align-items: center;
             gap: 0.5rem;
-            background: rgba(74, 124, 89, 0.1);
-            color: var(--color-primary);
+            background: linear-gradient(135deg, rgba(74, 124, 89, 0.1), rgba(237, 28, 36, 0.1));
+            color: var(--color-kintone);
             padding: 0.5rem 1rem;
             border-radius: 100px;
             font-size: 0.9rem;
@@ -313,7 +318,7 @@
             content: '';
             width: 8px;
             height: 8px;
-            background: var(--color-primary);
+            background: var(--color-kintone);
             border-radius: 50%;
             animation: pulse 2s ease infinite;
         }
@@ -333,7 +338,10 @@
 
         .hero-title em {
             font-style: normal;
-            color: var(--color-primary);
+            background: var(--gradient-accent);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
         .hero-desc {
@@ -365,14 +373,13 @@
         }
 
         .btn-primary {
-            background: var(--color-primary);
+            background: var(--gradient-accent);
             color: white;
         }
 
         .btn-primary:hover {
-            background: var(--color-primary-dark);
             transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(74, 124, 89, 0.3);
+            box-shadow: 0 10px 30px rgba(237, 28, 36, 0.3);
         }
 
         .btn-secondary {
@@ -382,8 +389,8 @@
         }
 
         .btn-secondary:hover {
-            border-color: var(--color-primary);
-            color: var(--color-primary);
+            border-color: var(--color-kintone);
+            color: var(--color-kintone);
         }
 
         .btn-arrow {
@@ -417,7 +424,7 @@
             left: 0;
             right: 0;
             height: 4px;
-            background: linear-gradient(90deg, var(--color-primary), var(--color-accent));
+            background: var(--gradient-accent);
         }
 
         .hero-stats {
@@ -434,7 +441,10 @@
         .stat-number {
             font-size: 2.25rem;
             font-weight: 700;
-            color: var(--color-primary);
+            background: var(--gradient-accent);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
             line-height: 1;
             margin-bottom: 0.25rem;
         }
@@ -474,7 +484,7 @@
         .screenshot-placeholder svg {
             width: 60px;
             height: 60px;
-            color: var(--color-primary);
+            color: var(--color-kintone);
             opacity: 0.5;
         }
 
@@ -589,7 +599,10 @@
             font-size: 0.85rem;
             text-transform: uppercase;
             letter-spacing: 0.15em;
-            color: var(--color-primary);
+            background: var(--gradient-accent);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
             margin-bottom: 1rem;
             font-weight: 700;
         }
@@ -635,7 +648,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: linear-gradient(135deg, var(--color-primary), var(--color-primary-light));
+            background: var(--gradient-mixed);
             opacity: 0;
             transition: opacity 0.4s ease;
         }
@@ -804,7 +817,7 @@
         }
 
         .sidebar-item.active {
-            background: var(--color-primary);
+            background: var(--color-kintone);
             color: white;
         }
 
@@ -854,7 +867,7 @@
 
         .status-badge.active { background: #D4EDDA; color: #155724; }
         .status-badge.pending { background: #FFF3CD; color: #856404; }
-        .status-badge.new { background: #CCE5FF; color: #004085; }
+        .status-badge.new { background: #FFE5E7; color: #C41118; }
 
         .about-img-badge {
             position: absolute;
@@ -872,11 +885,15 @@
         .badge-icon {
             width: 50px;
             height: 50px;
-            background: var(--color-accent-light);
+            background: linear-gradient(135deg, rgba(237, 28, 36, 0.1), rgba(196, 163, 90, 0.1));
             border-radius: 12px;
             display: flex;
             align-items: center;
             justify-content: center;
+        }
+
+        .badge-icon svg {
+            color: var(--color-kintone);
         }
 
         .badge-text {
@@ -898,7 +915,10 @@
             font-size: 0.85rem;
             text-transform: uppercase;
             letter-spacing: 0.15em;
-            color: var(--color-primary);
+            background: var(--gradient-accent);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
             font-weight: 700;
             margin-bottom: 1rem;
         }
@@ -933,7 +953,7 @@
         .feature-check {
             width: 24px;
             height: 24px;
-            background: rgba(74, 124, 89, 0.1);
+            background: rgba(237, 28, 36, 0.1);
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -945,7 +965,7 @@
         .feature-check svg {
             width: 12px;
             height: 12px;
-            color: var(--color-primary);
+            color: var(--color-kintone);
         }
 
         .about-feature span {
@@ -963,7 +983,7 @@
         }
 
         .process .section-label {
-            color: var(--color-accent);
+            color: var(--color-kintone-light);
         }
 
         .process .section-title {
@@ -988,7 +1008,7 @@
             left: 12.5%;
             right: 12.5%;
             height: 2px;
-            background: linear-gradient(90deg, var(--color-primary), var(--color-accent));
+            background: var(--gradient-accent);
             opacity: 0.3;
         }
 
@@ -1000,7 +1020,7 @@
         .step-number {
             width: 56px;
             height: 56px;
-            background: linear-gradient(135deg, var(--color-primary), var(--color-primary-light));
+            background: var(--gradient-accent);
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -1024,83 +1044,72 @@
             line-height: 1.6;
         }
 
-        /* Testimonials */
-        .testimonials {
+        /* Customers Section */
+        .customers {
             background: var(--color-bg);
         }
 
-        .testimonials-grid {
+        .customers-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 2rem;
         }
 
-        .testimonial-card {
+        .customer-card {
             background: white;
-            border-radius: 24px;
-            padding: 2.5rem;
+            border-radius: 20px;
+            padding: 2rem;
             box-shadow: 0 4px 20px rgba(0,0,0,0.03);
             transition: all 0.4s var(--ease-out-expo);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 140px;
+            position: relative;
+            overflow: hidden;
         }
 
-        .testimonial-card:hover {
+        .customer-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: var(--gradient-accent);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s var(--ease-out-expo);
+        }
+
+        .customer-card:hover {
             transform: translateY(-8px);
             box-shadow: 0 20px 40px rgba(0,0,0,0.08);
         }
 
-        .testimonial-rating {
-            display: flex;
-            gap: 4px;
-            margin-bottom: 1.25rem;
+        .customer-card:hover::before {
+            transform: scaleX(1);
         }
 
-        .star {
-            width: 18px;
-            height: 18px;
-            color: var(--color-accent);
-        }
-
-        .testimonial-text {
-            font-size: 1.05rem;
-            line-height: 1.7;
-            margin-bottom: 1.5rem;
+        .customer-name {
+            font-size: 1.15rem;
+            font-weight: 700;
+            text-align: center;
+            line-height: 1.4;
             color: var(--color-text);
+            transition: color 0.3s ease;
         }
 
-        .testimonial-author {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            padding-top: 1.5rem;
-            border-top: 1px solid rgba(0,0,0,0.05);
-        }
-
-        .author-avatar {
-            width: 48px;
-            height: 48px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, var(--color-primary-light), var(--color-accent-light));
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 700;
-            color: white;
-        }
-
-        .author-info strong {
-            display: block;
-            font-size: 0.95rem;
-            font-weight: 700;
-        }
-
-        .author-info span {
-            font-size: 0.85rem;
-            color: var(--color-text-muted);
+        .customer-card:hover .customer-name {
+            background: var(--gradient-accent);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
         /* CTA Section */
         .cta {
-            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+            background: var(--gradient-mixed);
             color: white;
             position: relative;
             overflow: hidden;
@@ -1146,7 +1155,7 @@
 
         .cta .btn-primary {
             background: white;
-            color: var(--color-primary);
+            color: var(--color-kintone);
         }
 
         .cta .btn-primary:hover {
@@ -1207,7 +1216,7 @@
         }
 
         .social-link:hover {
-            background: var(--color-primary);
+            background: var(--color-kintone);
             transform: translateY(-3px);
         }
 
@@ -1316,8 +1325,8 @@
                 display: none;
             }
 
-            .testimonials-grid {
-                grid-template-columns: repeat(2, 1fr);
+            .customers-grid {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             }
 
             .footer-grid {
@@ -1368,7 +1377,7 @@
                 grid-template-columns: 1fr;
             }
 
-            .testimonials-grid {
+            .customers-grid {
                 grid-template-columns: 1fr;
             }
 
@@ -1445,7 +1454,10 @@
         }
 
         .mobile-menu-links a:hover {
-            color: var(--color-primary);
+            background: var(--gradient-accent);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
     </style>
 </head>
@@ -1468,7 +1480,7 @@
                     <li><a href="#services" class="nav-link">Services</a></li>
                     <li><a href="#about" class="nav-link">About</a></li>
                     <li><a href="#process" class="nav-link">Process</a></li>
-                    <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
+                    <li><a href="#customers" class="nav-link">Customers</a></li>
                     <li><a href="#contact" class="nav-cta">Get Started</a></li>
                 </ul>
                 <div class="mobile-toggle" onclick="toggleMobileMenu()">
@@ -1492,7 +1504,7 @@
             <li><a href="#services" onclick="toggleMobileMenu()">Services</a></li>
             <li><a href="#about" onclick="toggleMobileMenu()">About</a></li>
             <li><a href="#process" onclick="toggleMobileMenu()">Process</a></li>
-            <li><a href="#testimonials" onclick="toggleMobileMenu()">Testimonials</a></li>
+            <li><a href="#customers" onclick="toggleMobileMenu()">Customers</a></li>
             <li><a href="#contact" onclick="toggleMobileMenu()">Contact</a></li>
         </ul>
     </div>
@@ -1502,7 +1514,7 @@
         <div class="hero-bg"></div>
         <svg class="hero-pattern" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
             <circle cx="200" cy="200" r="150" stroke="#4A7C59" stroke-width="1" stroke-dasharray="4 4"/>
-            <circle cx="200" cy="200" r="100" stroke="#4A7C59" stroke-width="1" stroke-dasharray="4 4"/>
+            <circle cx="200" cy="200" r="100" stroke="#ED1C24" stroke-width="1" stroke-dasharray="4 4"/>
             <circle cx="200" cy="200" r="50" stroke="#4A7C59" stroke-width="1" stroke-dasharray="4 4"/>
         </svg>
         <div class="container">
@@ -1729,7 +1741,7 @@
                     </div>
                     <div class="about-img-badge">
                         <div class="badge-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C4A35A" stroke-width="2">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
                             </svg>
                         </div>
@@ -1822,65 +1834,35 @@
         </div>
     </section>
 
-    <!-- Testimonials -->
-    <section class="section testimonials" id="testimonials">
+    <!-- Customers Section -->
+    <section class="section customers" id="customers">
         <div class="container">
             <div class="section-header">
-                <span class="section-label">Testimonials</span>
-                <h2 class="section-title">What Our Clients Say</h2>
-                <p class="section-desc">Businesses across the Philippines trust Edamame Inc. to power their digital transformation.</p>
+                <span class="section-label">Our Clients</span>
+                <h2 class="section-title">Some of Our Customers</h2>
+                <p class="section-desc">Trusted by leading organizations across the Philippines to power their digital transformation.</p>
             </div>
-            <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <div class="testimonial-rating">
-                        <svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                        <svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                        <svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                        <svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                        <svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                    </div>
-                    <p class="testimonial-text">"Edamame transformed how we manage projects. What used to take days now takes hours. Their Kintone expertise is unmatched."</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">MR</div>
-                        <div class="author-info">
-                            <strong>Maria Reyes</strong>
-                            <span>Operations Director, TechStart PH</span>
-                        </div>
-                    </div>
+            <div class="customers-grid">
+                <div class="customer-card">
+                    <h3 class="customer-name">Aeon Fantasy Group Philippines Inc.</h3>
                 </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-rating">
-                        <svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                        <svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                        <svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                        <svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                        <svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                    </div>
-                    <p class="testimonial-text">"The custom dashboards they built give us real-time visibility into our sales pipeline. Game-changing for our decision making."</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">JC</div>
-                        <div class="author-info">
-                            <strong>Juan Carlos</strong>
-                            <span>CEO, Global Trade Solutions</span>
-                        </div>
-                    </div>
+                <div class="customer-card">
+                    <h3 class="customer-name">Daikin Airconditioning Philippines</h3>
                 </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-rating">
-                        <svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                        <svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                        <svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                        <svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                        <svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                    </div>
-                    <p class="testimonial-text">"From consultation to deployment, Edamame's team was professional and thorough. They truly understand business processes."</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">AS</div>
-                        <div class="author-info">
-                            <strong>Angela Santos</strong>
-                            <span>HR Manager, MediCare Plus</span>
-                        </div>
-                    </div>
+                <div class="customer-card">
+                    <h3 class="customer-name">ORIX METRO Leasing and Finance Corporation</h3>
+                </div>
+                <div class="customer-card">
+                    <h3 class="customer-name">Guhring Philippines Inc.</h3>
+                </div>
+                <div class="customer-card">
+                    <h3 class="customer-name">Maximum Solutions Corporation</h3>
+                </div>
+                <div class="customer-card">
+                    <h3 class="customer-name">Coliconstruct Engineering Services</h3>
+                </div>
+                <div class="customer-card">
+                    <h3 class="customer-name">O.M. Manufacturing Philippines Inc.</h3>
                 </div>
             </div>
         </div>
@@ -1956,7 +1938,7 @@
                     <ul class="footer-links">
                         <li><a href="#about">About Us</a></li>
                         <li><a href="#process">Our Process</a></li>
-                        <li><a href="#testimonials">Testimonials</a></li>
+                        <li><a href="#customers">Customers</a></li>
                         <li><a href="#contact">Contact</a></li>
                     </ul>
                 </div>
