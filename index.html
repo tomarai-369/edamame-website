@@ -4,16 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
+    <!-- AUTO-REDIRECT SCRIPT (for root domain) -->
+    <script>
+        // Redirect root to /en if no language path specified
+        (function() {
+            const path = window.location.pathname;
+            const validPaths = ['/en', '/ja', '/en/', '/ja/'];
+            if (path === '/' || path === '') {
+                window.location.replace('/en');
+            }
+        })();
+    </script>
+    
     <!-- PRIMARY SEO - MAXIMIZED -->
-    <title>Kintone Philippines | Official Partner - No-Code AI Business Apps, Workflow Automation, Digital Transformation | Edamame Inc.</title>
-    <meta name="description" content="Official Kintone Partner Philippines. Build AI-powered custom business apps without coding. Low-code workflow automation, BPM software, digital transformation solutions. Alternative to Airtable, Smartsheet, Monday.com. Free consultation available.">
+    <title>Kintone Philippines | Official Partner - Build Any Business App Without Code | CRM, Inventory, HR, Accounting & More | Edamame Inc.</title>
+    <meta name="description" content="Official Kintone Partner Philippines. One platform, infinite possibilities. Build CRM, inventory management, HR systems, accounting apps, project trackers & any custom business app without coding. AI-powered workflow automation. Free consultation available.">
     
     <!-- COMPREHENSIVE KEYWORDS - PHILIPPINES + GLOBAL -->
-    <meta name="keywords" content="Kintone Philippines, Kintone フィリピン, Cybozu Philippines, no-code platform Philippines, low-code development Philippines, AI business apps, business process management Philippines, BPM software Philippines, workflow automation Philippines, digital transformation Philippines, business app builder, custom business apps, database app builder, Airtable alternative Philippines, Smartsheet alternative, Monday.com alternative, ClickUp alternative, no-code database, process automation software, enterprise app platform, cloud business apps, AI automation, キントーン フィリピン, サイボウズ, ノーコード プラットフォーム, ワークフロー自動化, ビジネスプロセス管理, デジタル変革, AI搭載アプリ, カスタムアプリ開発, Manila software solutions, Pasig business software, Metro Manila automation, Philippines SaaS, Filipino business solutions, project management software Philippines, CRM Philippines, inventory management system, HR management software, sales automation Philippines, business intelligence Philippines, data management platform, team collaboration tool, productivity software, enterprise software Philippines, SME business solutions, Japanese companies Philippines, PEZA companies software">
+    <meta name="keywords" content="Kintone Philippines, Kintone フィリピン, Cybozu Philippines, no-code platform Philippines, low-code development Philippines, all-in-one business platform, unified business software, CRM Philippines, inventory management system Philippines, HR management software Philippines, accounting software Philippines, project management Philippines, sales management, purchase order system, customer database, employee management, expense tracking, asset management, task management, approval workflow, document management, contract management, vendor management, quotation system, invoice management, business process management Philippines, BPM software Philippines, workflow automation Philippines, digital transformation Philippines, business app builder, custom business apps, database app builder, Airtable alternative Philippines, Smartsheet alternative, Monday.com alternative, ClickUp alternative, Notion alternative, no-code database, process automation software, enterprise app platform, cloud business apps, AI automation, キントーン フィリピン, サイボウズ, ノーコード プラットフォーム, ワークフロー自動化, ビジネスプロセス管理, デジタル変革, AI搭載アプリ, カスタムアプリ開発, 顧客管理, 在庫管理, 人事管理, 会計システム, Manila software solutions, Pasig business software, Metro Manila automation, Philippines SaaS, Filipino business solutions, Japanese companies Philippines, PEZA companies software, SME business solutions, enterprise software Philippines">
     
     <meta name="author" content="Edamame Inc. - Official Kintone Partner Philippines">
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
-    <link rel="canonical" href="https://edamame-jp.com/">
+    <link rel="canonical" href="https://edamame-jp.com/en">
     
     <!-- GEO TARGETING - PHILIPPINES -->
     <meta name="geo.region" content="PH">
@@ -21,36 +33,38 @@
     <meta name="geo.position" content="14.5876;121.0614">
     <meta name="ICBM" content="14.5876, 121.0614">
     
-    <!-- LANGUAGE ALTERNATES -->
-    <link rel="alternate" hreflang="en" href="https://edamame-jp.com/">
-    <link rel="alternate" hreflang="ja" href="https://edamame-jp.com/jp">
-    <link rel="alternate" hreflang="en-ph" href="https://edamame-jp.com/">
-    <link rel="alternate" hreflang="x-default" href="https://edamame-jp.com/">
+    <!-- LANGUAGE ALTERNATES - Updated URL structure -->
+    <link rel="alternate" hreflang="en" href="https://edamame-jp.com/en">
+    <link rel="alternate" hreflang="ja" href="https://edamame-jp.com/ja">
+    <link rel="alternate" hreflang="en-ph" href="https://edamame-jp.com/en">
+    <link rel="alternate" hreflang="x-default" href="https://edamame-jp.com/en">
     
     <!-- OPEN GRAPH -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://edamame-jp.com/">
-    <meta property="og:title" content="Kintone Philippines | No-Code AI Platform, Workflow Automation">
-    <meta property="og:description" content="Build AI-powered business apps without coding. Official Kintone partner in Philippines. Alternative to Airtable, Smartsheet, Monday.com. Trusted by 37,000+ companies.">
+    <meta property="og:url" content="https://edamame-jp.com/en">
+    <meta property="og:title" content="Kintone Philippines | One Platform, Infinite Possibilities">
+    <meta property="og:description" content="Build any business app without code. CRM, inventory, HR, accounting, projects & more. Official Kintone partner. Trusted by 37,000+ companies worldwide.">
     <meta property="og:image" content="https://edamame-jp.com/og-image-kintone-philippines.png">
     <meta property="og:locale" content="en_PH">
     <meta property="og:locale:alternate" content="ja_JP">
+    <meta property="og:site_name" content="Edamame Inc. - Kintone Philippines">
     
     <!-- TWITTER -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Kintone Philippines | No-Code AI Platform">
-    <meta name="twitter:description" content="Official Kintone partner. Build AI business apps without coding. Trusted by Filipino & Japanese companies.">
+    <meta name="twitter:title" content="Kintone Philippines | One Platform, Infinite Possibilities">
+    <meta name="twitter:description" content="Build any business app without code. Official Kintone partner Philippines. CRM, inventory, HR, accounting & more.">
+    <meta name="twitter:image" content="https://edamame-jp.com/og-image-kintone-philippines.png">
     
-    <!-- STRUCTURED DATA -->
+    <!-- STRUCTURED DATA - Enhanced -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "Organization",
         "name": "Edamame Inc.",
-        "alternateName": ["Kintone Philippines", "Cybozu Partner Philippines"],
-        "description": "Official Kintone Partner in Philippines. No-code AI business app platform, workflow automation, BPM software.",
+        "alternateName": ["Kintone Philippines", "Cybozu Partner Philippines", "Kintone PH"],
+        "description": "Official Kintone Partner in Philippines. Build any business app without code - CRM, inventory, HR, accounting, projects & more. AI-powered workflow automation and digital transformation solutions.",
         "url": "https://edamame-jp.com",
-        "logo": "https://www.kintone.com/wp-content/themes/kintone-global/assets/images//help-support/img_specialist-support.png",
+        "logo": "https://edamame-jp.com/logo.png",
         "email": "kintone@edamame-jp.com",
         "telephone": "+639288727958",
         "address": {
@@ -66,7 +80,10 @@
             {"@type": "City", "name": "Metro Manila"},
             {"@type": "City", "name": "Makati"},
             {"@type": "City", "name": "BGC Taguig"},
-            {"@type": "City", "name": "Ortigas Pasig"}
+            {"@type": "City", "name": "Ortigas Pasig"},
+            {"@type": "City", "name": "Quezon City"},
+            {"@type": "City", "name": "Cebu"},
+            {"@type": "City", "name": "Davao"}
         ],
         "sameAs": [
             "https://ph.linkedin.com/company/kintonephilippines",
@@ -74,25 +91,80 @@
         ],
         "serviceType": [
             "Kintone Implementation",
-            "No-Code AI App Development",
+            "No-Code App Development",
+            "CRM System Development",
+            "Inventory Management System",
+            "HR Management System",
+            "Accounting & Finance Apps",
+            "Project Management Solutions",
             "Workflow Automation",
             "Business Process Management",
-            "Digital Transformation"
+            "Digital Transformation Consulting"
+        ],
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Kintone Solutions",
+            "itemListElement": [
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Free Kintone Consultation",
+                        "description": "Complimentary assessment of your business processes and Kintone solution recommendations"
+                    }
+                }
+            ]
+        }
+    }
+    </script>
+    
+    <!-- FAQ Schema for SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What is Kintone?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Kintone is a no-code/low-code platform that lets you build custom business applications without programming. You can create CRM, inventory management, HR systems, project trackers, and virtually any business app using drag-and-drop tools."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What types of apps can I build with Kintone?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Kintone can be used to build virtually any business application including CRM, sales management, inventory tracking, HR management, accounting apps, project management, purchase orders, vendor management, contract tracking, expense reports, and custom workflows."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Is Kintone better than Airtable or Monday.com?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Unlike Airtable (which has record limits) or Monday.com (limited customization), Kintone offers unlimited records, deeper workflow automation, enterprise-grade security, and more flexible app building capabilities. It's particularly strong for complex business processes."
+                }
+            }
         ]
     }
     </script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Carlito:wght@400;700&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Noto+Sans+JP:wght@400;500;600;700&display=swap" rel="stylesheet">
     
     <style>
         :root {
             --color-bg: #FAFAF8;
             --color-bg-alt: #F0EDE8;
+            --color-bg-cream: #FBF9F4;
             --color-dark: #1A1A18;
             --color-text: #2D2D2A;
             --color-text-muted: #6B6B66;
+            --color-text-light: #8A8A85;
             --color-primary: #4A7C59;
             --color-primary-light: #6B9B7A;
             --color-primary-dark: #3A6349;
@@ -101,13 +173,25 @@
             --color-kintone: #ED1C24;
             --color-kintone-light: #FF5A5F;
             --color-kintone-dark: #C41118;
+            --color-kintone-soft: rgba(237, 28, 36, 0.08);
             --gradient-primary: linear-gradient(135deg, #4A7C59 0%, #6B9B7A 100%);
-            --gradient-accent: linear-gradient(135deg, #ED1C24 0%, #C4A35A 100%);
+            --gradient-accent: linear-gradient(135deg, #ED1C24 0%, #FF5A5F 100%);
             --gradient-mixed: linear-gradient(135deg, #4A7C59 0%, #ED1C24 100%);
-            --font-main: 'Carlito', Calibri, 'Segoe UI', sans-serif;
+            --gradient-warm: linear-gradient(135deg, #ED1C24 0%, #C4A35A 100%);
+            --gradient-subtle: linear-gradient(180deg, rgba(74, 124, 89, 0.03) 0%, rgba(237, 28, 36, 0.03) 100%);
+            --font-main: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
             --font-jp: 'Noto Sans JP', sans-serif;
             --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
             --ease-out-quint: cubic-bezier(0.22, 1, 0.36, 1);
+            --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+            --shadow-sm: 0 2px 8px rgba(0,0,0,0.04);
+            --shadow-md: 0 8px 24px rgba(0,0,0,0.06);
+            --shadow-lg: 0 24px 48px rgba(0,0,0,0.08);
+            --shadow-xl: 0 32px 64px rgba(0,0,0,0.12);
+            --radius-sm: 8px;
+            --radius-md: 16px;
+            --radius-lg: 24px;
+            --radius-xl: 32px;
         }
 
         *, *::before, *::after {
@@ -127,6 +211,8 @@
             color: var(--color-text);
             line-height: 1.6;
             overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
         }
 
         body[lang="ja"],
@@ -134,6 +220,7 @@
             font-family: var(--font-jp);
         }
 
+        /* Subtle grain texture */
         body::before {
             content: '';
             position: fixed;
@@ -141,8 +228,8 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
-            opacity: 0.03;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+            opacity: 0.025;
             pointer-events: none;
             z-index: 9999;
         }
@@ -158,12 +245,33 @@
         }
 
         .container {
-            max-width: 1400px;
+            max-width: 1320px;
             margin: 0 auto;
             padding: 0 clamp(1.5rem, 5vw, 4rem);
         }
 
-        /* Language Switcher */
+        /* Animated underline utility */
+        .link-hover {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .link-hover::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--gradient-accent);
+            transition: width 0.4s var(--ease-out-expo);
+        }
+        
+        .link-hover:hover::after {
+            width: 100%;
+        }
+
+        /* ==================== LANGUAGE SWITCHER ==================== */
         .lang-switcher {
             position: fixed;
             top: 100px;
@@ -171,49 +279,53 @@
             z-index: 1001;
             background: white;
             border-radius: 100px;
-            padding: 0.5rem;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            padding: 4px;
+            box-shadow: var(--shadow-md), 0 0 0 1px rgba(0,0,0,0.03);
             display: flex;
-            gap: 0.5rem;
+            gap: 4px;
         }
 
         .lang-btn {
-            padding: 0.5rem 1rem;
+            padding: 0.5rem 1.25rem;
             border: none;
             background: transparent;
             cursor: pointer;
             border-radius: 100px;
-            font-size: 0.9rem;
+            font-size: 0.875rem;
             font-weight: 600;
-            transition: all 0.3s ease;
+            transition: all 0.3s var(--ease-out-expo);
             color: var(--color-text-muted);
+            font-family: inherit;
         }
 
         .lang-btn.active {
             background: var(--gradient-accent);
             color: white;
+            box-shadow: 0 4px 12px rgba(237, 28, 36, 0.25);
         }
 
         .lang-btn:hover:not(.active) {
             background: var(--color-bg-alt);
+            color: var(--color-text);
         }
 
-        /* Navigation */
+        /* ==================== NAVIGATION ==================== */
         .nav {
             position: fixed;
             top: 0;
             left: 0;
             right: 0;
             z-index: 1000;
-            padding: 1.5rem 0;
+            padding: 1.25rem 0;
             transition: all 0.4s var(--ease-out-expo);
         }
 
         .nav.scrolled {
-            background: rgba(250, 250, 248, 0.95);
+            background: rgba(250, 250, 248, 0.92);
             backdrop-filter: blur(20px);
             -webkit-backdrop-filter: blur(20px);
             box-shadow: 0 1px 0 rgba(0,0,0,0.05);
+            padding: 1rem 0;
         }
 
         .nav-inner {
@@ -226,28 +338,34 @@
             display: flex;
             align-items: center;
             gap: 0.75rem;
+            transition: transform 0.3s var(--ease-out-expo);
+        }
+        
+        .logo:hover {
+            transform: scale(1.02);
         }
 
         .logo-icon {
-            width: 42px;
-            height: 42px;
+            width: 44px;
+            height: 44px;
         }
 
         .logo-text {
             font-size: 1.5rem;
             font-weight: 700;
             letter-spacing: -0.02em;
+            color: var(--color-dark);
         }
 
         .nav-links {
             display: flex;
             align-items: center;
-            gap: 2.5rem;
+            gap: 2.25rem;
             list-style: none;
         }
 
         .nav-link {
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             font-weight: 600;
             color: var(--color-text-muted);
             transition: color 0.3s ease;
@@ -276,35 +394,37 @@
         .nav-cta {
             background: var(--gradient-accent);
             color: white;
-            padding: 0.75rem 1.75rem;
+            padding: 0.75rem 1.5rem;
             border-radius: 100px;
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             font-weight: 600;
             transition: all 0.3s var(--ease-out-expo);
+            box-shadow: 0 4px 16px rgba(237, 28, 36, 0.2);
         }
 
         .nav-cta:hover {
             transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(237, 28, 36, 0.3);
+            box-shadow: 0 8px 24px rgba(237, 28, 36, 0.3);
         }
 
         .mobile-toggle {
             display: none;
             flex-direction: column;
-            gap: 6px;
+            gap: 5px;
             cursor: pointer;
             padding: 10px;
             margin-right: -10px;
         }
 
         .mobile-toggle span {
-            width: 24px;
+            width: 22px;
             height: 2px;
             background: var(--color-dark);
             transition: all 0.3s ease;
+            border-radius: 2px;
         }
 
-        /* Hero Section */
+        /* ==================== HERO SECTION ==================== */
         .hero {
             min-height: 100vh;
             display: flex;
@@ -317,27 +437,33 @@
         .hero-bg {
             position: absolute;
             top: 0;
-            right: -10%;
-            width: 70%;
+            right: -15%;
+            width: 75%;
             height: 100%;
-            background: linear-gradient(135deg, rgba(74, 124, 89, 0.08) 0%, rgba(237, 28, 36, 0.04) 100%);
-            border-radius: 0 0 0 40%;
+            background: radial-gradient(ellipse at 70% 30%, rgba(74, 124, 89, 0.06) 0%, transparent 50%),
+                        radial-gradient(ellipse at 80% 70%, rgba(237, 28, 36, 0.04) 0%, transparent 40%);
             z-index: -1;
         }
 
         .hero-pattern {
             position: absolute;
-            top: 20%;
-            right: 5%;
-            width: 400px;
-            height: 400px;
-            opacity: 0.15;
+            top: 15%;
+            right: 3%;
+            width: 500px;
+            height: 500px;
+            opacity: 0.12;
             z-index: -1;
+            animation: rotate-slow 60s linear infinite;
+        }
+        
+        @keyframes rotate-slow {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
         }
 
         .hero-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 1.1fr 0.9fr;
             gap: 4rem;
             align-items: center;
         }
@@ -358,14 +484,15 @@
         .hero-badge {
             display: inline-flex;
             align-items: center;
-            gap: 0.5rem;
-            background: linear-gradient(135deg, rgba(74, 124, 89, 0.1), rgba(237, 28, 36, 0.1));
+            gap: 0.625rem;
+            background: linear-gradient(135deg, rgba(74, 124, 89, 0.08), rgba(237, 28, 36, 0.08));
             color: var(--color-kintone);
-            padding: 0.5rem 1rem;
+            padding: 0.625rem 1.25rem;
             border-radius: 100px;
-            font-size: 0.9rem;
+            font-size: 0.875rem;
             font-weight: 600;
-            margin-bottom: 1.5rem;
+            margin-bottom: 1.75rem;
+            border: 1px solid rgba(237, 28, 36, 0.1);
         }
 
         .hero-badge::before {
@@ -379,65 +506,73 @@
 
         @keyframes pulse {
             0%, 100% { opacity: 1; transform: scale(1); }
-            50% { opacity: 0.5; transform: scale(1.2); }
+            50% { opacity: 0.5; transform: scale(1.3); }
         }
 
         .hero-title {
-            font-size: clamp(2.75rem, 5.5vw, 4rem);
+            font-size: clamp(2.5rem, 5vw, 3.75rem);
             font-weight: 700;
             line-height: 1.1;
             letter-spacing: -0.03em;
-            margin-bottom: 1.5rem;
+            margin-bottom: 1.25rem;
         }
 
         .hero-title em {
             font-style: normal;
-            background: var(--gradient-accent);
+            background: var(--gradient-warm);
             -webkit-background-clip: text;
             background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
+        .hero-subtitle {
+            font-size: 1.35rem;
+            font-weight: 600;
+            color: var(--color-primary);
+            margin-bottom: 1rem;
+            letter-spacing: -0.01em;
+        }
+
         .hero-desc {
-            font-size: 1.15rem;
+            font-size: 1.1rem;
             color: var(--color-text-muted);
-            max-width: 520px;
-            margin-bottom: 2.5rem;
-            line-height: 1.7;
+            max-width: 540px;
+            margin-bottom: 2rem;
+            line-height: 1.75;
         }
 
-        .hero-highlights {
+        /* Use Cases Pills */
+        .hero-use-cases {
             display: flex;
-            gap: 2rem;
-            margin-bottom: 2.5rem;
             flex-wrap: wrap;
+            gap: 0.625rem;
+            margin-bottom: 2rem;
         }
 
-        .highlight-item {
-            display: flex;
+        .use-case-pill {
+            display: inline-flex;
             align-items: center;
-            gap: 0.5rem;
+            gap: 0.375rem;
+            padding: 0.5rem 0.875rem;
+            background: white;
+            border: 1px solid rgba(0,0,0,0.08);
+            border-radius: 100px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            color: var(--color-text);
+            transition: all 0.3s ease;
         }
 
-        .highlight-icon {
-            width: 24px;
-            height: 24px;
-            background: rgba(237, 28, 36, 0.1);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .highlight-icon svg {
-            width: 14px;
-            height: 14px;
+        .use-case-pill:hover {
+            border-color: var(--color-kintone);
+            background: var(--color-kintone-soft);
             color: var(--color-kintone);
         }
 
-        .highlight-text {
-            font-size: 0.95rem;
-            font-weight: 600;
+        .use-case-pill svg {
+            width: 14px;
+            height: 14px;
+            color: var(--color-primary);
         }
 
         .hero-actions {
@@ -450,9 +585,9 @@
             display: inline-flex;
             align-items: center;
             gap: 0.5rem;
-            padding: 1rem 2rem;
+            padding: 1rem 1.75rem;
             border-radius: 100px;
-            font-size: 1rem;
+            font-size: 0.95rem;
             font-weight: 600;
             transition: all 0.3s var(--ease-out-expo);
             cursor: pointer;
@@ -463,22 +598,25 @@
         .btn-primary {
             background: var(--gradient-accent);
             color: white;
+            box-shadow: 0 4px 16px rgba(237, 28, 36, 0.25);
         }
 
         .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(237, 28, 36, 0.3);
+            transform: translateY(-3px);
+            box-shadow: 0 12px 32px rgba(237, 28, 36, 0.35);
         }
 
         .btn-secondary {
-            background: transparent;
+            background: white;
             color: var(--color-text);
-            border: 2px solid rgba(0,0,0,0.15);
+            border: 2px solid rgba(0,0,0,0.1);
+            box-shadow: var(--shadow-sm);
         }
 
         .btn-secondary:hover {
             border-color: var(--color-kintone);
             color: var(--color-kintone);
+            box-shadow: var(--shadow-md);
         }
 
         .btn-arrow {
@@ -498,19 +636,19 @@
 
         .kintone-logo-hero {
             text-align: center;
-            margin-bottom: 2rem;
+            margin-bottom: 1.5rem;
         }
 
         .kintone-logo-hero img {
-            height: 60px;
-            filter: drop-shadow(0 4px 12px rgba(0,0,0,0.1));
+            height: 55px;
+            filter: drop-shadow(0 4px 12px rgba(0,0,0,0.08));
         }
 
         .hero-card {
             background: white;
-            border-radius: 24px;
+            border-radius: var(--radius-xl);
             padding: 2rem;
-            box-shadow: 0 40px 80px rgba(0,0,0,0.08), 0 0 0 1px rgba(0,0,0,0.03);
+            box-shadow: var(--shadow-xl), 0 0 0 1px rgba(0,0,0,0.02);
             position: relative;
             overflow: hidden;
         }
@@ -522,14 +660,16 @@
             left: 0;
             right: 0;
             height: 4px;
-            background: var(--gradient-accent);
+            background: var(--gradient-warm);
         }
 
         .hero-stats {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 1.5rem;
+            gap: 1.25rem;
             margin-bottom: 1.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid rgba(0,0,0,0.06);
         }
 
         .stat-item {
@@ -537,9 +677,9 @@
         }
 
         .stat-number {
-            font-size: 2.25rem;
+            font-size: 2rem;
             font-weight: 700;
-            background: var(--gradient-accent);
+            background: var(--gradient-warm);
             -webkit-background-clip: text;
             background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -548,22 +688,22 @@
         }
 
         .stat-label {
-            font-size: 0.8rem;
+            font-size: 0.75rem;
             color: var(--color-text-muted);
             text-transform: uppercase;
-            letter-spacing: 0.1em;
+            letter-spacing: 0.08em;
             font-weight: 600;
         }
 
-        .ai-features {
-            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-            border-radius: 16px;
-            padding: 1.5rem;
-            margin-top: 1.5rem;
+        /* Infinite Possibilities Showcase */
+        .infinite-showcase {
+            background: linear-gradient(135deg, #f8f9fa 0%, #f0f1f3 100%);
+            border-radius: var(--radius-md);
+            padding: 1.25rem;
         }
 
-        .ai-features-title {
-            font-size: 0.85rem;
+        .infinite-title {
+            font-size: 0.8rem;
             font-weight: 700;
             color: var(--color-kintone);
             text-transform: uppercase;
@@ -574,41 +714,55 @@
             gap: 0.5rem;
         }
 
-        .ai-features-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 0.75rem;
-        }
-
-        .ai-feature-item {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            font-size: 0.85rem;
-        }
-
-        .ai-feature-item svg {
+        .infinite-title svg {
             width: 16px;
             height: 16px;
+        }
+
+        .app-types-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0.5rem;
+        }
+
+        .app-type-item {
+            display: flex;
+            align-items: center;
+            gap: 0.375rem;
+            font-size: 0.8rem;
+            padding: 0.375rem 0.5rem;
+            background: white;
+            border-radius: 6px;
+            transition: all 0.2s ease;
+        }
+
+        .app-type-item:hover {
+            background: var(--color-kintone-soft);
             color: var(--color-kintone);
+        }
+
+        .app-type-item svg {
+            width: 14px;
+            height: 14px;
+            color: var(--color-primary);
             flex-shrink: 0;
         }
 
-        /* Partners Bar */
+        /* ==================== PARTNERS BAR ==================== */
         .partners-bar {
-            padding: 4rem 0;
-            border-top: 1px solid rgba(0,0,0,0.05);
-            border-bottom: 1px solid rgba(0,0,0,0.05);
+            padding: 3.5rem 0;
+            border-top: 1px solid rgba(0,0,0,0.04);
+            border-bottom: 1px solid rgba(0,0,0,0.04);
             background: white;
         }
 
         .partners-label {
             text-align: center;
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             text-transform: uppercase;
             letter-spacing: 0.15em;
             color: var(--color-text-muted);
-            margin-bottom: 2rem;
+            margin-bottom: 1.75rem;
             font-weight: 600;
         }
 
@@ -621,32 +775,35 @@
         }
 
         .partner-logo {
-            height: 45px;
-            opacity: 0.7;
+            height: 40px;
+            opacity: 0.65;
             transition: all 0.3s ease;
+            filter: grayscale(0.2);
         }
 
         .partner-logo:hover {
             opacity: 1;
+            filter: grayscale(0);
+            transform: scale(1.05);
         }
 
-        /* Section Styles */
+        /* ==================== SECTION STYLES ==================== */
         .section {
             padding: 6rem 0;
         }
 
         .section-header {
             text-align: center;
-            max-width: 700px;
+            max-width: 720px;
             margin: 0 auto 4rem;
         }
 
         .section-label {
             display: inline-block;
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             text-transform: uppercase;
             letter-spacing: 0.15em;
-            background: var(--gradient-accent);
+            background: var(--gradient-warm);
             -webkit-background-clip: text;
             background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -655,7 +812,7 @@
         }
 
         .section-title {
-            font-size: clamp(2rem, 4vw, 2.75rem);
+            font-size: clamp(1.875rem, 3.5vw, 2.5rem);
             font-weight: 700;
             line-height: 1.2;
             letter-spacing: -0.02em;
@@ -663,12 +820,134 @@
         }
 
         .section-desc {
-            font-size: 1.1rem;
+            font-size: 1.05rem;
             color: var(--color-text-muted);
-            line-height: 1.7;
+            line-height: 1.75;
         }
 
-        /* Services Section */
+        /* ==================== POSSIBILITIES SECTION (NEW) ==================== */
+        .possibilities {
+            background: var(--gradient-subtle);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .possibilities::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 60%;
+            height: 200%;
+            background: radial-gradient(ellipse, rgba(237, 28, 36, 0.03) 0%, transparent 60%);
+            pointer-events: none;
+        }
+
+        .possibilities-intro {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 4rem;
+        }
+
+        .possibilities-headline {
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            font-weight: 700;
+            margin-bottom: 1rem;
+            line-height: 1.3;
+        }
+
+        .possibilities-headline em {
+            font-style: normal;
+            background: var(--gradient-warm);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .possibilities-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+        }
+
+        .possibility-card {
+            background: white;
+            border-radius: var(--radius-lg);
+            padding: 1.75rem;
+            transition: all 0.4s var(--ease-out-expo);
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(0,0,0,0.04);
+        }
+
+        .possibility-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: var(--gradient-mixed);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s var(--ease-out-expo);
+        }
+
+        .possibility-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .possibility-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .possibility-icon {
+            width: 48px;
+            height: 48px;
+            background: var(--color-kintone-soft);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.25rem;
+        }
+
+        .possibility-icon svg {
+            width: 24px;
+            height: 24px;
+            color: var(--color-kintone);
+        }
+
+        .possibility-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .possibility-desc {
+            font-size: 0.875rem;
+            color: var(--color-text-muted);
+            line-height: 1.6;
+        }
+
+        .possibility-examples {
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid rgba(0,0,0,0.06);
+        }
+
+        .possibility-examples span {
+            display: inline-block;
+            font-size: 0.75rem;
+            padding: 0.25rem 0.5rem;
+            background: var(--color-bg-alt);
+            border-radius: 4px;
+            margin: 0.125rem;
+            color: var(--color-text-muted);
+        }
+
+        /* ==================== SERVICES SECTION ==================== */
         .services {
             background: white;
         }
@@ -676,13 +955,13 @@
         .services-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 2rem;
+            gap: 1.75rem;
         }
 
         .service-card {
             background: var(--color-bg);
-            border-radius: 24px;
-            padding: 2.5rem;
+            border-radius: var(--radius-lg);
+            padding: 2.25rem;
             transition: all 0.4s var(--ease-out-expo);
             position: relative;
             overflow: hidden;
@@ -719,10 +998,10 @@
         }
 
         .service-icon {
-            width: 60px;
-            height: 60px;
+            width: 56px;
+            height: 56px;
             background: rgba(74, 124, 89, 0.1);
-            border-radius: 16px;
+            border-radius: 14px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -735,8 +1014,8 @@
         }
 
         .service-icon svg {
-            width: 28px;
-            height: 28px;
+            width: 26px;
+            height: 26px;
             color: var(--color-primary);
             transition: color 0.4s ease;
         }
@@ -746,22 +1025,22 @@
         }
 
         .service-title {
-            font-size: 1.35rem;
+            font-size: 1.25rem;
             font-weight: 700;
-            margin-bottom: 0.75rem;
+            margin-bottom: 0.625rem;
         }
 
         .service-desc {
             color: var(--color-text-muted);
-            font-size: 0.95rem;
-            line-height: 1.6;
+            font-size: 0.9rem;
+            line-height: 1.65;
         }
 
         .service-card:hover .service-desc {
             color: rgba(255,255,255,0.85);
         }
 
-        /* About Section */
+        /* ==================== ABOUT SECTION ==================== */
         .about {
             background: var(--color-bg);
         }
@@ -779,10 +1058,10 @@
         }
 
         .about-label {
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             text-transform: uppercase;
             letter-spacing: 0.15em;
-            background: var(--gradient-accent);
+            background: var(--gradient-warm);
             -webkit-background-clip: text;
             background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -791,36 +1070,36 @@
         }
 
         .about-title {
-            font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+            font-size: clamp(1.625rem, 3vw, 2.25rem);
             font-weight: 700;
             line-height: 1.2;
-            margin-bottom: 1.5rem;
+            margin-bottom: 1.25rem;
         }
 
         .about-text {
             color: var(--color-text-muted);
-            font-size: 1.05rem;
+            font-size: 1rem;
             line-height: 1.8;
-            margin-bottom: 1.5rem;
+            margin-bottom: 1.25rem;
         }
 
         .about-features {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 1.25rem;
+            gap: 1rem;
             margin-bottom: 2rem;
         }
 
         .about-feature {
             display: flex;
             align-items: flex-start;
-            gap: 0.75rem;
+            gap: 0.625rem;
         }
 
         .feature-check {
-            width: 24px;
-            height: 24px;
-            background: rgba(237, 28, 36, 0.1);
+            width: 22px;
+            height: 22px;
+            background: var(--color-kintone-soft);
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -836,7 +1115,7 @@
         }
 
         .about-feature span {
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             color: var(--color-text);
             font-weight: 500;
         }
@@ -847,60 +1126,80 @@
 
         .platform-preview {
             background: white;
-            border-radius: 24px;
-            padding: 2rem;
-            box-shadow: 0 40px 80px rgba(0,0,0,0.1);
+            border-radius: var(--radius-xl);
+            padding: 1.75rem;
+            box-shadow: var(--shadow-xl);
         }
 
         .preview-screens {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 1rem;
+            gap: 0.875rem;
         }
 
         .preview-screen {
             background: var(--color-bg-alt);
             border-radius: 12px;
-            padding: 1.5rem;
+            padding: 1.25rem;
             text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .preview-screen:hover {
+            background: var(--color-kintone-soft);
         }
 
         .preview-icon {
-            width: 48px;
-            height: 48px;
-            background: linear-gradient(135deg, rgba(237, 28, 36, 0.1), rgba(74, 124, 89, 0.1));
-            border-radius: 12px;
+            width: 44px;
+            height: 44px;
+            background: linear-gradient(135deg, rgba(237, 28, 36, 0.08), rgba(74, 124, 89, 0.08));
+            border-radius: 11px;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 0 auto 1rem;
+            margin: 0 auto 0.875rem;
         }
 
         .preview-icon svg {
-            width: 24px;
-            height: 24px;
+            width: 22px;
+            height: 22px;
             color: var(--color-kintone);
         }
 
         .preview-title {
-            font-size: 0.9rem;
+            font-size: 0.875rem;
             font-weight: 700;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.375rem;
         }
 
         .preview-desc {
-            font-size: 0.8rem;
+            font-size: 0.75rem;
             color: var(--color-text-muted);
         }
 
-        /* Process Section */
+        /* ==================== PROCESS SECTION ==================== */
         .process {
             background: var(--color-dark);
             color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .process::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(ellipse at 30% 20%, rgba(74, 124, 89, 0.1) 0%, transparent 50%),
+                        radial-gradient(ellipse at 70% 80%, rgba(237, 28, 36, 0.08) 0%, transparent 50%);
+            pointer-events: none;
         }
 
         .process .section-label {
             color: var(--color-kintone-light);
+            -webkit-text-fill-color: var(--color-kintone-light);
         }
 
         .process .section-title {
@@ -921,11 +1220,11 @@
         .process-steps::before {
             content: '';
             position: absolute;
-            top: 40px;
-            left: 12.5%;
-            right: 12.5%;
+            top: 32px;
+            left: 12%;
+            right: 12%;
             height: 2px;
-            background: var(--gradient-accent);
+            background: linear-gradient(90deg, var(--color-kintone), var(--color-primary));
             opacity: 0.3;
         }
 
@@ -935,55 +1234,57 @@
         }
 
         .step-number {
-            width: 56px;
-            height: 56px;
-            background: var(--gradient-accent);
+            width: 52px;
+            height: 52px;
+            background: var(--gradient-warm);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             margin: 0 auto 1.25rem;
-            font-size: 1.35rem;
+            font-size: 1.25rem;
             font-weight: 700;
             position: relative;
             z-index: 1;
+            box-shadow: 0 4px 16px rgba(237, 28, 36, 0.3);
         }
 
         .step-title {
-            font-size: 1.15rem;
+            font-size: 1.1rem;
             font-weight: 700;
             margin-bottom: 0.5rem;
         }
 
         .step-desc {
-            font-size: 0.9rem;
+            font-size: 0.875rem;
             color: rgba(255,255,255,0.6);
-            line-height: 1.6;
+            line-height: 1.65;
         }
 
-        /* Customers Section */
+        /* ==================== CUSTOMERS SECTION ==================== */
         .customers {
             background: var(--color-bg);
         }
 
         .customers-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1.5rem;
         }
 
         .customer-card {
             background: white;
-            border-radius: 20px;
-            padding: 2rem;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+            border-radius: var(--radius-md);
+            padding: 1.75rem;
+            box-shadow: var(--shadow-sm);
             transition: all 0.4s var(--ease-out-expo);
             display: flex;
             align-items: center;
             justify-content: center;
-            min-height: 140px;
+            min-height: 120px;
             position: relative;
             overflow: hidden;
+            border: 1px solid rgba(0,0,0,0.03);
         }
 
         .customer-card::before {
@@ -993,15 +1294,15 @@
             left: 0;
             right: 0;
             height: 3px;
-            background: var(--gradient-accent);
+            background: var(--gradient-warm);
             transform: scaleX(0);
             transform-origin: left;
             transition: transform 0.4s var(--ease-out-expo);
         }
 
         .customer-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-lg);
         }
 
         .customer-card:hover::before {
@@ -1009,22 +1310,22 @@
         }
 
         .customer-name {
-            font-size: 1.15rem;
+            font-size: 1.05rem;
             font-weight: 700;
             text-align: center;
             line-height: 1.4;
             color: var(--color-text);
-            transition: color 0.3s ease;
+            transition: all 0.3s ease;
         }
 
         .customer-card:hover .customer-name {
-            background: var(--gradient-accent);
+            background: var(--gradient-warm);
             -webkit-background-clip: text;
             background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
-        /* CTA Section */
+        /* ==================== CTA SECTION ==================== */
         .cta {
             background: var(--gradient-mixed);
             color: white;
@@ -1038,7 +1339,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            opacity: 0.1;
+            opacity: 0.08;
             background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
         }
 
@@ -1046,21 +1347,21 @@
             position: relative;
             z-index: 1;
             text-align: center;
-            max-width: 700px;
+            max-width: 720px;
             margin: 0 auto;
         }
 
         .cta-title {
-            font-size: clamp(2rem, 4vw, 2.75rem);
+            font-size: clamp(1.875rem, 4vw, 2.5rem);
             font-weight: 700;
             margin-bottom: 1rem;
         }
 
         .cta-desc {
-            font-size: 1.15rem;
+            font-size: 1.1rem;
             opacity: 0.9;
             margin-bottom: 2.5rem;
-            line-height: 1.7;
+            line-height: 1.75;
         }
 
         .cta-actions {
@@ -1073,16 +1374,18 @@
         .cta .btn-primary {
             background: white;
             color: var(--color-kintone);
+            box-shadow: 0 4px 16px rgba(0,0,0,0.15);
         }
 
         .cta .btn-primary:hover {
             background: var(--color-bg);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            box-shadow: 0 12px 32px rgba(0,0,0,0.2);
         }
 
         .cta .btn-secondary {
             border-color: rgba(255,255,255,0.4);
             color: white;
+            background: transparent;
         }
 
         .cta .btn-secondary:hover {
@@ -1090,7 +1393,7 @@
             background: rgba(255,255,255,0.1);
         }
 
-        /* Footer */
+        /* ==================== FOOTER ==================== */
         .footer {
             background: var(--color-dark);
             color: white;
@@ -1108,23 +1411,27 @@
             margin-bottom: 1.5rem;
         }
 
+        .footer-brand .logo-text {
+            color: white;
+        }
+
         .footer-brand p {
             color: rgba(255,255,255,0.6);
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             line-height: 1.7;
-            margin-bottom: 2rem;
-            max-width: 300px;
+            margin-bottom: 1.75rem;
+            max-width: 280px;
         }
 
         .footer-social {
             display: flex;
-            gap: 1rem;
+            gap: 0.75rem;
         }
 
         .social-link {
             width: 40px;
             height: 40px;
-            background: rgba(255,255,255,0.1);
+            background: rgba(255,255,255,0.08);
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -1143,7 +1450,7 @@
         }
 
         .footer-title {
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             text-transform: uppercase;
             letter-spacing: 0.15em;
             margin-bottom: 1.5rem;
@@ -1156,13 +1463,13 @@
         }
 
         .footer-links li {
-            margin-bottom: 0.75rem;
+            margin-bottom: 0.625rem;
         }
 
         .footer-links a,
         .footer-links span {
             color: rgba(255,255,255,0.7);
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             transition: color 0.3s ease;
         }
 
@@ -1175,12 +1482,12 @@
             justify-content: space-between;
             align-items: center;
             padding-top: 2rem;
-            border-top: 1px solid rgba(255,255,255,0.1);
+            border-top: 1px solid rgba(255,255,255,0.08);
         }
 
         .footer-copyright {
             color: rgba(255,255,255,0.4);
-            font-size: 0.9rem;
+            font-size: 0.85rem;
         }
 
         .footer-legal {
@@ -1190,7 +1497,7 @@
 
         .footer-legal a {
             color: rgba(255,255,255,0.4);
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             transition: color 0.3s ease;
         }
 
@@ -1198,7 +1505,7 @@
             color: white;
         }
 
-        /* Mobile Menu */
+        /* ==================== MOBILE MENU ==================== */
         .mobile-menu {
             position: fixed;
             top: 0;
@@ -1239,24 +1546,30 @@
         }
 
         .mobile-menu-links li {
-            margin-bottom: 2rem;
+            margin-bottom: 1.75rem;
         }
 
         .mobile-menu-links a {
-            font-size: 1.75rem;
+            font-size: 1.5rem;
             font-weight: 700;
             color: var(--color-text);
             transition: color 0.3s ease;
         }
 
         .mobile-menu-links a:hover {
-            background: var(--gradient-accent);
+            background: var(--gradient-warm);
             -webkit-background-clip: text;
             background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
-        /* Responsive */
+        /* ==================== RESPONSIVE ==================== */
+        @media (max-width: 1200px) {
+            .possibilities-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
         @media (max-width: 1024px) {
             .hero-grid {
                 grid-template-columns: 1fr;
@@ -1274,7 +1587,7 @@
 
             .process-steps {
                 grid-template-columns: repeat(2, 1fr);
-                gap: 3rem;
+                gap: 2.5rem;
             }
 
             .process-steps::before {
@@ -1315,8 +1628,16 @@
                 justify-content: center;
             }
 
+            .hero-use-cases {
+                justify-content: center;
+            }
+
             .services-grid,
             .customers-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .possibilities-grid {
                 grid-template-columns: 1fr;
             }
 
@@ -1346,6 +1667,10 @@
             .footer-legal {
                 flex-wrap: wrap;
                 justify-content: center;
+            }
+
+            .app-types-grid {
+                grid-template-columns: repeat(2, 1fr);
             }
         }
 
@@ -1384,11 +1709,12 @@
                     <span class="logo-text">Edamame Inc.</span>
                 </a>
                 <ul class="nav-links">
+                    <li><a href="#possibilities" class="nav-link" data-en="Solutions" data-ja="ソリューション">Solutions</a></li>
                     <li><a href="#services" class="nav-link" data-en="Services" data-ja="サービス">Services</a></li>
-                    <li><a href="#about" class="nav-link" data-en="About" data-ja="会社概要">About</a></li>
+                    <li><a href="#about" class="nav-link" data-en="Why Kintone" data-ja="選ばれる理由">Why Kintone</a></li>
                     <li><a href="#process" class="nav-link" data-en="Process" data-ja="導入プロセス">Process</a></li>
-                    <li><a href="#customers" class="nav-link" data-en="Customers" data-ja="お客様">Customers</a></li>
-                    <li><a href="https://calendly.com/kintoneph/freekintoneappconsultation" target="_blank" class="nav-cta" data-en="Schedule Demo" data-ja="無料相談予約">Schedule Demo</a></li>
+                    <li><a href="#customers" class="nav-link" data-en="Clients" data-ja="導入事例">Clients</a></li>
+                    <li><a href="https://calendly.com/kintoneph/freekintoneappconsultation" target="_blank" class="nav-cta" data-en="Free Demo" data-ja="無料デモ">Free Demo</a></li>
                 </ul>
                 <div class="mobile-toggle" onclick="toggleMobileMenu()">
                     <span></span>
@@ -1408,10 +1734,11 @@
             </svg>
         </div>
         <ul class="mobile-menu-links">
+            <li><a href="#possibilities" onclick="toggleMobileMenu()" data-en="Solutions" data-ja="ソリューション">Solutions</a></li>
             <li><a href="#services" onclick="toggleMobileMenu()" data-en="Services" data-ja="サービス">Services</a></li>
-            <li><a href="#about" onclick="toggleMobileMenu()" data-en="About" data-ja="会社概要">About</a></li>
+            <li><a href="#about" onclick="toggleMobileMenu()" data-en="Why Kintone" data-ja="選ばれる理由">Why Kintone</a></li>
             <li><a href="#process" onclick="toggleMobileMenu()" data-en="Process" data-ja="導入プロセス">Process</a></li>
-            <li><a href="#customers" onclick="toggleMobileMenu()" data-en="Customers" data-ja="お客様">Customers</a></li>
+            <li><a href="#customers" onclick="toggleMobileMenu()" data-en="Clients" data-ja="導入事例">Clients</a></li>
             <li><a href="https://calendly.com/kintoneph/freekintoneappconsultation" target="_blank" onclick="toggleMobileMenu()" data-en="Contact" data-ja="お問い合わせ">Contact</a></li>
         </ul>
     </div>
@@ -1420,9 +1747,10 @@
     <section class="hero">
         <div class="hero-bg"></div>
         <svg class="hero-pattern" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="200" cy="200" r="150" stroke="#4A7C59" stroke-width="1" stroke-dasharray="4 4"/>
-            <circle cx="200" cy="200" r="100" stroke="#ED1C24" stroke-width="1" stroke-dasharray="4 4"/>
-            <circle cx="200" cy="200" r="50" stroke="#4A7C59" stroke-width="1" stroke-dasharray="4 4"/>
+            <circle cx="200" cy="200" r="180" stroke="#4A7C59" stroke-width="1" stroke-dasharray="4 6"/>
+            <circle cx="200" cy="200" r="130" stroke="#ED1C24" stroke-width="1" stroke-dasharray="4 6"/>
+            <circle cx="200" cy="200" r="80" stroke="#4A7C59" stroke-width="1" stroke-dasharray="4 6"/>
+            <circle cx="200" cy="200" r="30" stroke="#ED1C24" stroke-width="1"/>
         </svg>
         <div class="container">
             <div class="hero-grid">
@@ -1431,32 +1759,42 @@
                         <span data-en="Official Kintone Partner Philippines" data-ja="Kintone フィリピン公式パートナー">Official Kintone Partner Philippines</span>
                     </div>
                     <h1 class="hero-title">
-                        <span data-en="Build AI-Powered Apps with" data-ja="AIを活用した">Build AI-Powered Apps with</span>
-                        <em data-en="No-Code" data-ja="ノーコード">No-Code</em>
-                        <span data-en="Platform" data-ja="プラットフォーム">Platform</span>
+                        <span data-en="One Platform." data-ja="ひとつのプラットフォームで、">One Platform.</span><br>
+                        <em data-en="Infinite Possibilities." data-ja="無限の可能性。">Infinite Possibilities.</em>
                     </h1>
-                    <p class="hero-desc" data-en="Transform your business processes with Kintone - the intelligent no-code platform trusted by 37,000+ companies worldwide. Build custom CRM, workflow automation, and AI-powered business apps in minutes, not months." data-ja="世界37,000社以上が信頼するインテリジェントなノーコードプラットフォーム、kintoneでビジネスプロセスを変革。数ヶ月ではなく、数分でカスタムCRM、ワークフロー自動化、AI搭載ビジネスアプリを構築できます。">
-                        Transform your business processes with Kintone - the intelligent no-code platform trusted by 37,000+ companies worldwide. Build custom CRM, workflow automation, and AI-powered business apps in minutes, not months.
+                    <p class="hero-subtitle" data-en="Build Any Business App Without Code" data-ja="コード不要であらゆる業務アプリを構築">Build Any Business App Without Code</p>
+                    <p class="hero-desc" data-en="CRM, inventory, HR, accounting, projects—if you can imagine it, you can build it. Kintone is the all-in-one no-code platform trusted by 37,000+ companies to digitize and automate every business process." data-ja="CRM、在庫管理、人事、会計、プロジェクト管理—想像できるものは、すべて構築できます。Kintoneは37,000社以上に信頼されている、あらゆる業務プロセスをデジタル化・自動化するオールインワンのノーコードプラットフォームです。">
+                        CRM, inventory, HR, accounting, projects—if you can imagine it, you can build it. Kintone is the all-in-one no-code platform trusted by 37,000+ companies to digitize and automate every business process.
                     </p>
-                    <div class="hero-highlights">
-                        <div class="highlight-item">
-                            <div class="highlight-icon">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                                    <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
-                                </svg>
-                            </div>
-                            <span class="highlight-text" data-en="AI-Powered Automation" data-ja="AI搭載自動化">AI-Powered Automation</span>
-                        </div>
-                        <div class="highlight-item">
-                            <div class="highlight-icon">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                                    <polyline points="16 18 22 12 16 6"/>
-                                    <polyline points="8 6 2 12 8 18"/>
-                                </svg>
-                            </div>
-                            <span class="highlight-text" data-en="Zero Coding Required" data-ja="コーディング不要">Zero Coding Required</span>
-                        </div>
+                    
+                    <!-- Use Case Pills -->
+                    <div class="hero-use-cases">
+                        <span class="use-case-pill">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                            <span data-en="CRM" data-ja="顧客管理">CRM</span>
+                        </span>
+                        <span class="use-case-pill">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+                            <span data-en="Inventory" data-ja="在庫管理">Inventory</span>
+                        </span>
+                        <span class="use-case-pill">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                            <span data-en="HR" data-ja="人事管理">HR</span>
+                        </span>
+                        <span class="use-case-pill">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                            <span data-en="Accounting" data-ja="経理">Accounting</span>
+                        </span>
+                        <span class="use-case-pill">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+                            <span data-en="Projects" data-ja="プロジェクト">Projects</span>
+                        </span>
+                        <span class="use-case-pill">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                            <span data-en="& More" data-ja="その他">& More</span>
+                        </span>
                     </div>
+                    
                     <div class="hero-actions">
                         <a href="https://calendly.com/kintoneph/freekintoneappconsultation" target="_blank" class="btn btn-primary">
                             <span data-en="Schedule Free Demo" data-ja="無料デモを予約">Schedule Free Demo</span>
@@ -1464,14 +1802,14 @@
                                 <path d="M3 8h10M9 4l4 4-4 4"/>
                             </svg>
                         </a>
-                        <a href="#services" class="btn btn-secondary">
-                            <span data-en="Explore Features" data-ja="機能を見る">Explore Features</span>
+                        <a href="#possibilities" class="btn btn-secondary">
+                            <span data-en="Explore Solutions" data-ja="ソリューションを見る">Explore Solutions</span>
                         </a>
                     </div>
                 </div>
                 <div class="hero-visual">
                     <div class="kintone-logo-hero">
-                        <img src="https://www.kintone.com/wp-content/themes/kintone-global/assets/images//help-support/img_specialist-support.png" alt="Kintone Logo">
+                        <img src="https://www.kintone.com/wp-content/themes/kintone-global/assets/images//help-support/img_specialist-support.png" alt="Kintone Platform">
                     </div>
                     <div class="hero-card">
                         <div class="hero-stats">
@@ -1488,42 +1826,49 @@
                                 <div class="stat-label" data-en="Countries" data-ja="展開国">Countries</div>
                             </div>
                         </div>
-                        <div class="ai-features">
-                            <div class="ai-features-title">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+                        <div class="infinite-showcase">
+                            <div class="infinite-title">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M18 3a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3H6a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3V6a3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3h12a3 3 0 0 0 3-3 3 3 0 0 0-3-3z"/>
                                 </svg>
-                                <span data-en="AI-POWERED CAPABILITIES" data-ja="AI機能搭載">AI-POWERED CAPABILITIES</span>
+                                <span data-en="BUILD ANY APP YOU NEED" data-ja="必要なアプリを何でも構築">BUILD ANY APP YOU NEED</span>
                             </div>
-                            <div class="ai-features-grid">
-                                <div class="ai-feature-item">
-                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
-                                    </svg>
-                                    <span data-en="Smart Data Analysis" data-ja="スマートデータ分析">Smart Data Analysis</span>
+                            <div class="app-types-grid">
+                                <div class="app-type-item">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+                                    <span data-en="CRM" data-ja="顧客管理">CRM</span>
                                 </div>
-                                <div class="ai-feature-item">
-                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
-                                        <polyline points="7 10 12 15 17 10"/>
-                                        <line x1="12" y1="15" x2="12" y2="3"/>
-                                    </svg>
-                                    <span data-en="Auto Form Builder" data-ja="自動フォーム作成">Auto Form Builder</span>
+                                <div class="app-type-item">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/></svg>
+                                    <span data-en="Inventory" data-ja="在庫管理">Inventory</span>
                                 </div>
-                                <div class="ai-feature-item">
-                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <circle cx="12" cy="12" r="10"/>
-                                        <polyline points="12 6 12 12 16 14"/>
-                                    </svg>
-                                    <span data-en="Predictive Workflows" data-ja="予測型ワークフロー">Predictive Workflows</span>
+                                <div class="app-type-item">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/></svg>
+                                    <span data-en="Projects" data-ja="プロジェクト">Projects</span>
                                 </div>
-                                <div class="ai-feature-item">
-                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
-                                        <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
-                                        <line x1="12" y1="22.08" x2="12" y2="12"/>
-                                    </svg>
-                                    <span data-en="AI Assistants" data-ja="AIアシスタント">AI Assistants</span>
+                                <div class="app-type-item">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                                    <span data-en="HR" data-ja="人事">HR</span>
+                                </div>
+                                <div class="app-type-item">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                                    <span data-en="Accounting" data-ja="会計">Accounting</span>
+                                </div>
+                                <div class="app-type-item">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+                                    <span data-en="Sales" data-ja="営業">Sales</span>
+                                </div>
+                                <div class="app-type-item">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                                    <span data-en="Contracts" data-ja="契約管理">Contracts</span>
+                                </div>
+                                <div class="app-type-item">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+                                    <span data-en="Expenses" data-ja="経費">Expenses</span>
+                                </div>
+                                <div class="app-type-item">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 1v6M12 17v6M4.22 4.22l4.24 4.24M15.54 15.54l4.24 4.24M1 12h6M17 12h6M4.22 19.78l4.24-4.24M15.54 8.46l4.24-4.24"/></svg>
+                                    <span data-en="& More..." data-ja="他多数...">& More...</span>
                                 </div>
                             </div>
                         </div>
@@ -1536,10 +1881,158 @@
     <!-- Partners Bar -->
     <section class="partners-bar">
         <div class="container">
-            <div class="partners-label" data-en="Trusted Technology Partners" data-ja="信頼されるテクノロジーパートナー">Trusted Technology Partners</div>
+            <div class="partners-label" data-en="Powered by Cybozu — Japan's Leading Workplace Platform" data-ja="日本最大級のビジネスプラットフォーム Cybozu が提供">Powered by Cybozu — Japan's Leading Workplace Platform</div>
             <div class="partners-logos">
-                <img src="https://www.kintone.com/en-us/static/logo-cybozu-9b0b73cab3f74d47b92a24ab5d3e1a8e.svg" alt="Cybozu" class="partner-logo" style="height: 35px;">
-                <img src="https://www.kintone.com/en-us/static/logo-e0af84cc4fc3d79f9e5f4f0fe94c4655.svg" alt="Kintone" class="partner-logo" style="height: 40px;">
+                <img src="https://www.kintone.com/en-us/static/logo-cybozu-9b0b73cab3f74d47b92a24ab5d3e1a8e.svg" alt="Cybozu" class="partner-logo" style="height: 32px;">
+                <img src="https://www.kintone.com/en-us/static/logo-e0af84cc4fc3d79f9e5f4f0fe94c4655.svg" alt="Kintone" class="partner-logo" style="height: 38px;">
+            </div>
+        </div>
+    </section>
+
+    <!-- Possibilities Section (NEW) -->
+    <section class="section possibilities" id="possibilities">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label" data-en="Unlimited Possibilities" data-ja="無限の可能性">Unlimited Possibilities</span>
+                <h2 class="section-title" data-en="Replace Dozens of Tools with One Platform" data-ja="数十のツールをひとつのプラットフォームに統合">Replace Dozens of Tools with One Platform</h2>
+                <p class="section-desc" data-en="Stop paying for separate CRM, project management, HR, and accounting software. Build everything your business needs in Kintone—fully customized to your exact workflows." data-ja="CRM、プロジェクト管理、人事、会計など別々のソフトウェアへの支払いは不要です。Kintoneで、あなたのワークフローに完全にカスタマイズされた、ビジネスに必要なすべてを構築できます。">Stop paying for separate CRM, project management, HR, and accounting software. Build everything your business needs in Kintone—fully customized to your exact workflows.</p>
+            </div>
+            
+            <div class="possibilities-grid">
+                <div class="possibility-card">
+                    <div class="possibility-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                            <circle cx="9" cy="7" r="4"/>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                        </svg>
+                    </div>
+                    <h3 class="possibility-title" data-en="Sales & CRM" data-ja="営業・顧客管理">Sales & CRM</h3>
+                    <p class="possibility-desc" data-en="Track leads, manage customer relationships, and close deals faster with automated follow-ups." data-ja="リードを追跡し、顧客関係を管理し、自動フォローアップでより早く商談を成約。">Track leads, manage customer relationships, and close deals faster with automated follow-ups.</p>
+                    <div class="possibility-examples">
+                        <span data-en="Lead Tracking" data-ja="リード管理">Lead Tracking</span>
+                        <span data-en="Pipeline" data-ja="パイプライン">Pipeline</span>
+                        <span data-en="Quotations" data-ja="見積書">Quotations</span>
+                    </div>
+                </div>
+                
+                <div class="possibility-card">
+                    <div class="possibility-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+                            <line x1="3" y1="6" x2="21" y2="6"/>
+                            <path d="M16 10a4 4 0 0 1-8 0"/>
+                        </svg>
+                    </div>
+                    <h3 class="possibility-title" data-en="Inventory & Warehouse" data-ja="在庫・倉庫管理">Inventory & Warehouse</h3>
+                    <p class="possibility-desc" data-en="Real-time stock tracking, purchase orders, and supplier management in one unified system." data-ja="リアルタイムの在庫追跡、発注書、サプライヤー管理をひとつの統合システムで。">Real-time stock tracking, purchase orders, and supplier management in one unified system.</p>
+                    <div class="possibility-examples">
+                        <span data-en="Stock Levels" data-ja="在庫数量">Stock Levels</span>
+                        <span data-en="PO System" data-ja="発注管理">PO System</span>
+                        <span data-en="Vendors" data-ja="仕入先">Vendors</span>
+                    </div>
+                </div>
+                
+                <div class="possibility-card">
+                    <div class="possibility-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                            <circle cx="12" cy="7" r="4"/>
+                        </svg>
+                    </div>
+                    <h3 class="possibility-title" data-en="HR & People Ops" data-ja="人事・労務管理">HR & People Ops</h3>
+                    <p class="possibility-desc" data-en="Employee database, leave management, performance reviews, and onboarding workflows." data-ja="従業員データベース、休暇管理、人事評価、オンボーディングワークフロー。">Employee database, leave management, performance reviews, and onboarding workflows.</p>
+                    <div class="possibility-examples">
+                        <span data-en="Leave Tracker" data-ja="休暇管理">Leave Tracker</span>
+                        <span data-en="Appraisals" data-ja="評価">Appraisals</span>
+                        <span data-en="Onboarding" data-ja="入社手続き">Onboarding</span>
+                    </div>
+                </div>
+                
+                <div class="possibility-card">
+                    <div class="possibility-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="12" y1="1" x2="12" y2="23"/>
+                            <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                        </svg>
+                    </div>
+                    <h3 class="possibility-title" data-en="Finance & Accounting" data-ja="経理・会計">Finance & Accounting</h3>
+                    <p class="possibility-desc" data-en="Expense tracking, invoice management, budget approvals, and financial reporting dashboards." data-ja="経費追跡、請求書管理、予算承認、財務レポートダッシュボード。">Expense tracking, invoice management, budget approvals, and financial reporting dashboards.</p>
+                    <div class="possibility-examples">
+                        <span data-en="Expenses" data-ja="経費">Expenses</span>
+                        <span data-en="Invoices" data-ja="請求書">Invoices</span>
+                        <span data-en="Budgets" data-ja="予算">Budgets</span>
+                    </div>
+                </div>
+                
+                <div class="possibility-card">
+                    <div class="possibility-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                            <line x1="16" y1="2" x2="16" y2="6"/>
+                            <line x1="8" y1="2" x2="8" y2="6"/>
+                            <line x1="3" y1="10" x2="21" y2="10"/>
+                        </svg>
+                    </div>
+                    <h3 class="possibility-title" data-en="Project Management" data-ja="プロジェクト管理">Project Management</h3>
+                    <p class="possibility-desc" data-en="Task assignments, milestone tracking, Gantt views, and cross-team collaboration." data-ja="タスク割り当て、マイルストーン追跡、ガントチャート、チーム間コラボレーション。">Task assignments, milestone tracking, Gantt views, and cross-team collaboration.</p>
+                    <div class="possibility-examples">
+                        <span data-en="Tasks" data-ja="タスク">Tasks</span>
+                        <span data-en="Milestones" data-ja="マイルストーン">Milestones</span>
+                        <span data-en="Timelines" data-ja="タイムライン">Timelines</span>
+                    </div>
+                </div>
+                
+                <div class="possibility-card">
+                    <div class="possibility-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                            <polyline points="14 2 14 8 20 8"/>
+                            <line x1="16" y1="13" x2="8" y2="13"/>
+                            <line x1="16" y1="17" x2="8" y2="17"/>
+                        </svg>
+                    </div>
+                    <h3 class="possibility-title" data-en="Admin & Operations" data-ja="管理・オペレーション">Admin & Operations</h3>
+                    <p class="possibility-desc" data-en="Contract management, asset tracking, compliance logs, and approval workflows." data-ja="契約管理、資産追跡、コンプライアンスログ、承認ワークフロー。">Contract management, asset tracking, compliance logs, and approval workflows.</p>
+                    <div class="possibility-examples">
+                        <span data-en="Contracts" data-ja="契約">Contracts</span>
+                        <span data-en="Assets" data-ja="資産">Assets</span>
+                        <span data-en="Approvals" data-ja="承認">Approvals</span>
+                    </div>
+                </div>
+                
+                <div class="possibility-card">
+                    <div class="possibility-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+                        </svg>
+                    </div>
+                    <h3 class="possibility-title" data-en="Service & Support" data-ja="サービス・サポート">Service & Support</h3>
+                    <p class="possibility-desc" data-en="Help desk ticketing, service requests, SLA tracking, and customer feedback management." data-ja="ヘルプデスクチケット、サービスリクエスト、SLA追跡、顧客フィードバック管理。">Help desk ticketing, service requests, SLA tracking, and customer feedback management.</p>
+                    <div class="possibility-examples">
+                        <span data-en="Tickets" data-ja="チケット">Tickets</span>
+                        <span data-en="SLA" data-ja="SLA">SLA</span>
+                        <span data-en="Feedback" data-ja="フィードバック">Feedback</span>
+                    </div>
+                </div>
+                
+                <div class="possibility-card">
+                    <div class="possibility-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="18" y1="20" x2="18" y2="10"/>
+                            <line x1="12" y1="20" x2="12" y2="4"/>
+                            <line x1="6" y1="20" x2="6" y2="14"/>
+                        </svg>
+                    </div>
+                    <h3 class="possibility-title" data-en="Analytics & Reporting" data-ja="分析・レポート">Analytics & Reporting</h3>
+                    <p class="possibility-desc" data-en="Custom dashboards, real-time KPIs, automated reports, and data visualization across all apps." data-ja="カスタムダッシュボード、リアルタイムKPI、自動レポート、全アプリのデータ可視化。">Custom dashboards, real-time KPIs, automated reports, and data visualization across all apps.</p>
+                    <div class="possibility-examples">
+                        <span data-en="Dashboards" data-ja="ダッシュボード">Dashboards</span>
+                        <span data-en="KPIs" data-ja="KPI">KPIs</span>
+                        <span data-en="Charts" data-ja="グラフ">Charts</span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -1548,9 +2041,9 @@
     <section class="section services" id="services">
         <div class="container">
             <div class="section-header">
-                <span class="section-label" data-en="What We Offer" data-ja="サービス内容">What We Offer</span>
-                <h2 class="section-title" data-en="No-Code Solutions for Every Business Need" data-ja="あらゆるビジネスニーズに対応するノーコードソリューション">No-Code Solutions for Every Business Need</h2>
-                <p class="section-desc" data-en="From AI-powered automation to custom app development, we provide comprehensive Kintone solutions to transform your business operations." data-ja="AI搭載の自動化からカスタムアプリ開発まで、ビジネスオペレーションを変革する包括的なkintoneソリューションを提供します。">From AI-powered automation to custom app development, we provide comprehensive Kintone solutions to transform your business operations.</p>
+                <span class="section-label" data-en="Our Services" data-ja="サービス内容">Our Services</span>
+                <h2 class="section-title" data-en="End-to-End Kintone Solutions" data-ja="Kintoneの包括的ソリューション">End-to-End Kintone Solutions</h2>
+                <p class="section-desc" data-en="From strategy to implementation to ongoing support, we help you unlock the full potential of Kintone for your business." data-ja="戦略策定から実装、継続的なサポートまで、Kintoneの可能性を最大限に引き出すお手伝いをします。">From strategy to implementation to ongoing support, we help you unlock the full potential of Kintone for your business.</p>
             </div>
             <div class="services-grid">
                 <div class="service-card">
@@ -1562,8 +2055,18 @@
                             <rect x="3" y="14" width="7" height="7"/>
                         </svg>
                     </div>
-                    <h3 class="service-title" data-en="No-Code App Builder" data-ja="ノーコードアプリビルダー">No-Code App Builder</h3>
-                    <p class="service-desc" data-en="Build custom CRM, inventory, HR, and project management apps with drag-and-drop interface. No programming skills required." data-ja="ドラッグ&ドロップインターフェースでCRM、在庫管理、HR、プロジェクト管理アプリをカスタム構築。プログラミングスキル不要。">Build custom CRM, inventory, HR, and project management apps with drag-and-drop interface. No programming skills required.</p>
+                    <h3 class="service-title" data-en="App Development" data-ja="アプリ開発">App Development</h3>
+                    <p class="service-desc" data-en="We design and build custom Kintone apps tailored to your exact business processes—from simple forms to complex multi-app systems." data-ja="シンプルなフォームから複雑なマルチアプリシステムまで、お客様のビジネスプロセスに合わせたカスタムKintoneアプリを設計・構築します。">We design and build custom Kintone apps tailored to your exact business processes—from simple forms to complex multi-app systems.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="16 18 22 12 16 6"/>
+                            <polyline points="8 6 2 12 8 18"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-title" data-en="JavaScript Customization" data-ja="JavaScriptカスタマイズ">JavaScript Customization</h3>
+                    <p class="service-desc" data-en="Extend Kintone's capabilities with custom JavaScript: advanced UI, API integrations, automated workflows, and PDF generation." data-ja="カスタムJavaScriptでKintoneの機能を拡張：高度なUI、API連携、ワークフロー自動化、PDF生成など。">Extend Kintone's capabilities with custom JavaScript: advanced UI, API integrations, automated workflows, and PDF generation.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
@@ -1571,17 +2074,8 @@
                             <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
                         </svg>
                     </div>
-                    <h3 class="service-title" data-en="AI-Powered Automation" data-ja="AI搭載自動化">AI-Powered Automation</h3>
-                    <p class="service-desc" data-en="Leverage AI to automate repetitive tasks, predict outcomes, and generate insights from your data automatically." data-ja="AIを活用して反復作業を自動化し、結果を予測し、データから自動的にインサイトを生成。">Leverage AI to automate repetitive tasks, predict outcomes, and generate insights from your data automatically.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-                        </svg>
-                    </div>
-                    <h3 class="service-title" data-en="Enterprise Security" data-ja="エンタープライズセキュリティ">Enterprise Security</h3>
-                    <p class="service-desc" data-en="Bank-level encryption, granular permissions, and compliance with international data protection standards." data-ja="銀行レベルの暗号化、詳細な権限設定、国際的なデータ保護基準への準拠。">Bank-level encryption, granular permissions, and compliance with international data protection standards.</p>
+                    <h3 class="service-title" data-en="AI & Automation" data-ja="AI・自動化">AI & Automation</h3>
+                    <p class="service-desc" data-en="Leverage AI to automate data entry, generate insights, predict outcomes, and eliminate repetitive manual tasks." data-ja="AIを活用してデータ入力を自動化し、インサイトを生成し、結果を予測し、反復的な手作業を排除します。">Leverage AI to automate data entry, generate insights, predict outcomes, and eliminate repetitive manual tasks.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
@@ -1590,28 +2084,28 @@
                             <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/>
                         </svg>
                     </div>
-                    <h3 class="service-title" data-en="Workflow Automation" data-ja="ワークフロー自動化">Workflow Automation</h3>
-                    <p class="service-desc" data-en="Design complex approval processes, automate notifications, and streamline business operations with visual workflow builder." data-ja="ビジュアルワークフロービルダーで複雑な承認プロセスを設計し、通知を自動化し、業務を効率化。">Design complex approval processes, automate notifications, and streamline business operations with visual workflow builder.</p>
+                    <h3 class="service-title" data-en="Workflow Design" data-ja="ワークフロー設計">Workflow Design</h3>
+                    <p class="service-desc" data-en="Map and automate your approval flows, notifications, escalations, and business rules with visual process builders." data-ja="ビジュアルプロセスビルダーで承認フロー、通知、エスカレーション、ビジネスルールをマッピング・自動化。">Map and automate your approval flows, notifications, escalations, and business rules with visual process builders.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <line x1="18" y1="20" x2="18" y2="10"/>
-                            <line x1="12" y1="20" x2="12" y2="4"/>
-                            <line x1="6" y1="20" x2="6" y2="14"/>
+                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                            <polyline points="15 3 21 3 21 9"/>
+                            <line x1="10" y1="14" x2="21" y2="3"/>
                         </svg>
                     </div>
-                    <h3 class="service-title" data-en="Real-Time Analytics" data-ja="リアルタイム分析">Real-Time Analytics</h3>
-                    <p class="service-desc" data-en="Create interactive dashboards, generate reports, and visualize data with built-in analytics and AI-powered insights." data-ja="インタラクティブダッシュボードを作成し、レポートを生成し、組み込み分析とAIインサイトでデータを可視化。">Create interactive dashboards, generate reports, and visualize data with built-in analytics and AI-powered insights.</p>
+                    <h3 class="service-title" data-en="System Integration" data-ja="システム連携">System Integration</h3>
+                    <p class="service-desc" data-en="Connect Kintone with your existing tools—ERP, accounting, email, Slack, and 1,000+ apps via API and webhooks." data-ja="Kintoneを既存ツール（ERP、会計、メール、Slack、その他1,000以上のアプリ）とAPI・Webhookで連携。">Connect Kintone with your existing tools—ERP, accounting, email, Slack, and 1,000+ apps via API and webhooks.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
                         </svg>
                     </div>
-                    <h3 class="service-title" data-en="Seamless Integration" data-ja="シームレスな連携">Seamless Integration</h3>
-                    <p class="service-desc" data-en="Connect with 1000+ apps including Salesforce, Google Workspace, Microsoft 365, Slack, and custom APIs." data-ja="Salesforce、Google Workspace、Microsoft 365、Slackなど1000以上のアプリ、カスタムAPIと連携。">Connect with 1000+ apps including Salesforce, Google Workspace, Microsoft 365, Slack, and custom APIs.</p>
+                    <h3 class="service-title" data-en="Training & Support" data-ja="研修・サポート">Training & Support</h3>
+                    <p class="service-desc" data-en="Hands-on training for your team plus ongoing technical support from our local Philippine-based experts." data-ja="チームへの実践的な研修と、フィリピン現地の専門家による継続的な技術サポート。">Hands-on training for your team plus ongoing technical support from our local Philippine-based experts.</p>
                 </div>
             </div>
         </div>
@@ -1622,10 +2116,13 @@
         <div class="container">
             <div class="about-grid">
                 <div class="about-content">
-                    <span class="about-label" data-en="Why Kintone Philippines" data-ja="なぜKintoneフィリピンか">Why Kintone Philippines</span>
-                    <h2 class="about-title" data-en="The Smarter Alternative to Airtable, Smartsheet & Monday.com" data-ja="Airtable、Smartsheet、Monday.comのスマートな代替">The Smarter Alternative to Airtable, Smartsheet & Monday.com</h2>
-                    <p class="about-text" data-en="Kintone combines the simplicity of no-code platforms with enterprise-grade power. Unlike Airtable's record limits or Smartsheet's complexity, Kintone offers unlimited data, AI automation, and dedicated local support in the Philippines." data-ja="Kintoneは、ノーコードプラットフォームのシンプルさとエンタープライズグレードのパワーを組み合わせています。Airtableのレコード制限やSmartsheetの複雑さとは異なり、Kintoneは無制限のデータ、AI自動化、フィリピンでの専用ローカルサポートを提供します。">
-                        Kintone combines the simplicity of no-code platforms with enterprise-grade power. Unlike Airtable's record limits or Smartsheet's complexity, Kintone offers unlimited data, AI automation, and dedicated local support in the Philippines.
+                    <span class="about-label" data-en="Why Choose Kintone" data-ja="Kintoneが選ばれる理由">Why Choose Kintone</span>
+                    <h2 class="about-title" data-en="The Smarter Alternative to Spreadsheets & Disconnected Tools" data-ja="スプレッドシートやバラバラのツールに代わるスマートな選択">The Smarter Alternative to Spreadsheets & Disconnected Tools</h2>
+                    <p class="about-text" data-en="Unlike Airtable (record limits), Smartsheet (complexity), or Monday.com (limited customization), Kintone gives you unlimited data, true workflow automation, and the flexibility to build exactly what your business needs." data-ja="Airtable（レコード制限）、Smartsheet（複雑さ）、Monday.com（カスタマイズの制限）とは異なり、Kintoneは無制限のデータ、真のワークフロー自動化、そしてビジネスに必要なものを正確に構築できる柔軟性を提供します。">
+                        Unlike Airtable (record limits), Smartsheet (complexity), or Monday.com (limited customization), Kintone gives you unlimited data, true workflow automation, and the flexibility to build exactly what your business needs.
+                    </p>
+                    <p class="about-text" data-en="As the official Kintone partner in the Philippines, we provide dedicated local support, Japanese-quality implementation, and a proven track record with Filipino and Japanese enterprises." data-ja="フィリピンの公式Kintoneパートナーとして、専任の現地サポート、日本品質の導入支援、そしてフィリピン・日本企業での実績を提供します。">
+                        As the official Kintone partner in the Philippines, we provide dedicated local support, Japanese-quality implementation, and a proven track record with Filipino and Japanese enterprises.
                     </p>
                     <div class="about-features">
                         <div class="about-feature">
@@ -1634,7 +2131,7 @@
                                     <polyline points="20 6 9 17 4 12"/>
                                 </svg>
                             </div>
-                            <span data-en="Unlimited Records & Users" data-ja="無制限のレコード&ユーザー">Unlimited Records & Users</span>
+                            <span data-en="Unlimited Records & Storage" data-ja="無制限のレコード・ストレージ">Unlimited Records & Storage</span>
                         </div>
                         <div class="about-feature">
                             <div class="feature-check">
@@ -1642,7 +2139,7 @@
                                     <polyline points="20 6 9 17 4 12"/>
                                 </svg>
                             </div>
-                            <span data-en="AI-Powered Automation" data-ja="AI搭載自動化">AI-Powered Automation</span>
+                            <span data-en="True Workflow Automation" data-ja="真のワークフロー自動化">True Workflow Automation</span>
                         </div>
                         <div class="about-feature">
                             <div class="feature-check">
@@ -1658,7 +2155,23 @@
                                     <polyline points="20 6 9 17 4 12"/>
                                 </svg>
                             </div>
-                            <span data-en="Enterprise-Grade Security" data-ja="エンタープライズグレードセキュリティ">Enterprise-Grade Security</span>
+                            <span data-en="Enterprise-Grade Security" data-ja="エンタープライズグレードのセキュリティ">Enterprise-Grade Security</span>
+                        </div>
+                        <div class="about-feature">
+                            <div class="feature-check">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                                    <polyline points="20 6 9 17 4 12"/>
+                                </svg>
+                            </div>
+                            <span data-en="Fully Customizable Apps" data-ja="完全カスタマイズ可能なアプリ">Fully Customizable Apps</span>
+                        </div>
+                        <div class="about-feature">
+                            <div class="feature-check">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                                    <polyline points="20 6 9 17 4 12"/>
+                                </svg>
+                            </div>
+                            <span data-en="API & Integration Ready" data-ja="API・連携対応">API & Integration Ready</span>
                         </div>
                     </div>
                     <a href="https://calendly.com/kintoneph/freekintoneappconsultation" target="_blank" class="btn btn-primary">
@@ -1678,19 +2191,17 @@
                                         <path d="M9 9h6M9 13h6M9 17h4"/>
                                     </svg>
                                 </div>
-                                <h4 class="preview-title" data-en="Custom Forms" data-ja="カスタムフォーム">Custom Forms</h4>
-                                <p class="preview-desc" data-en="Drag & drop builder" data-ja="ドラッグ&ドロップビルダー">Drag & drop builder</p>
+                                <h4 class="preview-title" data-en="Drag & Drop Builder" data-ja="ドラッグ＆ドロップ">Drag & Drop Builder</h4>
+                                <p class="preview-desc" data-en="Build apps visually" data-ja="視覚的にアプリを構築">Build apps visually</p>
                             </div>
                             <div class="preview-screen">
                                 <div class="preview-icon">
                                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
-                                        <polyline points="17 8 12 3 7 8"/>
-                                        <line x1="12" y1="3" x2="12" y2="15"/>
+                                        <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
                                     </svg>
                                 </div>
-                                <h4 class="preview-title" data-en="Auto Workflows" data-ja="自動ワークフロー">Auto Workflows</h4>
-                                <p class="preview-desc" data-en="AI-powered routing" data-ja="AI搭載ルーティング">AI-powered routing</p>
+                                <h4 class="preview-title" data-en="Smart Workflows" data-ja="スマートワークフロー">Smart Workflows</h4>
+                                <p class="preview-desc" data-en="Automate approvals" data-ja="承認を自動化">Automate approvals</p>
                             </div>
                             <div class="preview-screen">
                                 <div class="preview-icon">
@@ -1701,19 +2212,16 @@
                                     </svg>
                                 </div>
                                 <h4 class="preview-title" data-en="Live Dashboards" data-ja="ライブダッシュボード">Live Dashboards</h4>
-                                <p class="preview-desc" data-en="Real-time insights" data-ja="リアルタイムインサイト">Real-time insights</p>
+                                <p class="preview-desc" data-en="Real-time insights" data-ja="リアルタイムの洞察">Real-time insights</p>
                             </div>
                             <div class="preview-screen">
                                 <div class="preview-icon">
                                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
-                                        <circle cx="9" cy="7" r="4"/>
-                                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
-                                        <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
                                     </svg>
                                 </div>
-                                <h4 class="preview-title" data-en="Team Collab" data-ja="チーム協業">Team Collab</h4>
-                                <p class="preview-desc" data-en="Built-in messaging" data-ja="内蔵メッセージング">Built-in messaging</p>
+                                <h4 class="preview-title" data-en="Team Collaboration" data-ja="チームコラボレーション">Team Collaboration</h4>
+                                <p class="preview-desc" data-en="Built-in communication" data-ja="内蔵コミュニケーション">Built-in communication</p>
                             </div>
                         </div>
                     </div>
@@ -1727,29 +2235,29 @@
         <div class="container">
             <div class="section-header">
                 <span class="section-label" data-en="How It Works" data-ja="導入プロセス">How It Works</span>
-                <h2 class="section-title" data-en="From Zero to Production in Days, Not Months" data-ja="数ヶ月ではなく、数日で本番稼働">From Zero to Production in Days, Not Months</h2>
-                <p class="section-desc" data-en="Our proven implementation process ensures your team is building apps and automating workflows within the first week." data-ja="実証済みの導入プロセスにより、チームは最初の週からアプリを構築しワークフローを自動化できます。">Our proven implementation process ensures your team is building apps and automating workflows within the first week.</p>
+                <h2 class="section-title" data-en="Go Live in Days, Not Months" data-ja="数ヶ月ではなく、数日で本番稼働">Go Live in Days, Not Months</h2>
+                <p class="section-desc" data-en="Our proven implementation process ensures your team is building apps and automating workflows within the first week—not months of waiting." data-ja="実証済みの導入プロセスにより、チームは何ヶ月も待つことなく、最初の1週間でアプリ構築とワークフロー自動化を開始できます。">Our proven implementation process ensures your team is building apps and automating workflows within the first week—not months of waiting.</p>
             </div>
             <div class="process-steps">
                 <div class="process-step">
                     <div class="step-number">1</div>
-                    <h3 class="step-title" data-en="Discovery Call" data-ja="発見">Discovery Call</h3>
-                    <p class="step-desc" data-en="Free consultation to understand your needs and demonstrate Kintone's capabilities for your specific use cases." data-ja="ニーズを理解し、具体的なユースケースに対するkintoneの機能をデモンストレーション。">Free consultation to understand your needs and demonstrate Kintone's capabilities for your specific use cases.</p>
+                    <h3 class="step-title" data-en="Discovery" data-ja="ヒアリング">Discovery</h3>
+                    <p class="step-desc" data-en="Free consultation to understand your processes, pain points, and goals. We identify quick wins and high-impact opportunities." data-ja="業務プロセス、課題、目標を理解するための無料相談。短期的な成果と大きなインパクトが見込める機会を特定します。">Free consultation to understand your processes, pain points, and goals. We identify quick wins and high-impact opportunities.</p>
                 </div>
                 <div class="process-step">
                     <div class="step-number">2</div>
-                    <h3 class="step-title" data-en="App Design" data-ja="設計">App Design</h3>
-                    <p class="step-desc" data-en="Collaboratively design your first apps with our experts, focusing on quick wins and high-impact processes." data-ja="専門家と協力して最初のアプリを設計し、迅速な成果と高影響プロセスに焦点を当てます。">Collaboratively design your first apps with our experts, focusing on quick wins and high-impact processes.</p>
+                    <h3 class="step-title" data-en="Design" data-ja="設計">Design</h3>
+                    <p class="step-desc" data-en="We collaboratively design your first apps, mapping fields, workflows, and automations to your exact requirements." data-ja="お客様と協力して最初のアプリを設計し、フィールド、ワークフロー、自動化をご要望に合わせてマッピングします。">We collaboratively design your first apps, mapping fields, workflows, and automations to your exact requirements.</p>
                 </div>
                 <div class="process-step">
                     <div class="step-number">3</div>
-                    <h3 class="step-title" data-en="Team Training" data-ja="構築">Team Training</h3>
-                    <p class="step-desc" data-en="Hands-on training for your team to build, customize, and manage apps independently using no-code tools." data-ja="ノーコードツールを使用してアプリを構築、カスタマイズ、管理するための実践的なトレーニング。">Hands-on training for your team to build, customize, and manage apps independently using no-code tools.</p>
+                    <h3 class="step-title" data-en="Build & Train" data-ja="構築・研修">Build & Train</h3>
+                    <p class="step-desc" data-en="We build your apps and train your team hands-on—so they can create, modify, and manage apps independently." data-ja="アプリを構築し、チームへの実践的な研修を実施。チームが独自にアプリを作成・修正・管理できるようになります。">We build your apps and train your team hands-on—so they can create, modify, and manage apps independently.</p>
                 </div>
                 <div class="process-step">
                     <div class="step-number">4</div>
-                    <h3 class="step-title" data-en="Go Live" data-ja="運用開始">Go Live</h3>
-                    <p class="step-desc" data-en="Launch your apps with ongoing support, optimization, and access to our Philippine-based customer success team." data-ja="継続的なサポート、最適化、フィリピンベースのカスタマーサクセスチームへのアクセスでアプリを開始。">Launch your apps with ongoing support, optimization, and access to our Philippine-based customer success team.</p>
+                    <h3 class="step-title" data-en="Launch & Support" data-ja="稼働・サポート">Launch & Support</h3>
+                    <p class="step-desc" data-en="Go live with confidence. Our Philippine-based team provides ongoing support, optimization, and scaling assistance." data-ja="安心して本番稼働。フィリピン現地チームが継続的なサポート、最適化、拡張支援を提供します。">Go live with confidence. Our Philippine-based team provides ongoing support, optimization, and scaling assistance.</p>
                 </div>
             </div>
         </div>
@@ -1759,9 +2267,9 @@
     <section class="section customers" id="customers">
         <div class="container">
             <div class="section-header">
-                <span class="section-label" data-en="Trusted By" data-ja="お客様">Trusted By</span>
-                <h2 class="section-title" data-en="Leading Companies in the Philippines" data-ja="フィリピンの主要企業">Leading Companies in the Philippines</h2>
-                <p class="section-desc" data-en="Filipino and Japanese companies trust Edamame Inc. to power their digital transformation with Kintone." data-ja="フィリピンと日本企業がEdamame Inc.を信頼し、Kintoneでデジタル変革を推進しています。">Filipino and Japanese companies trust Edamame Inc. to power their digital transformation with Kintone.</p>
+                <span class="section-label" data-en="Trusted By" data-ja="導入企業">Trusted By</span>
+                <h2 class="section-title" data-en="Leading Companies in the Philippines" data-ja="フィリピンをリードする企業様">Leading Companies in the Philippines</h2>
+                <p class="section-desc" data-en="Filipino and Japanese enterprises trust Edamame Inc. to digitize their operations with Kintone." data-ja="フィリピン・日本の企業がEdamame Inc.を信頼し、Kintoneで業務をデジタル化しています。">Filipino and Japanese enterprises trust Edamame Inc. to digitize their operations with Kintone.</p>
             </div>
             <div class="customers-grid">
                 <div class="customer-card">
@@ -1795,7 +2303,7 @@
         <div class="container">
             <div class="cta-content">
                 <h2 class="cta-title" data-en="Ready to Build Your First App?" data-ja="最初のアプリを構築する準備はできましたか？">Ready to Build Your First App?</h2>
-                <p class="cta-desc" data-en="Schedule a free consultation with our Kintone experts. See how companies across the Philippines are automating workflows and building custom business apps without code." data-ja="Kintone専門家との無料相談を予約してください。フィリピン全土の企業がどのようにワークフローを自動化し、コードなしでカスタムビジネスアプリを構築しているかをご覧ください。">Schedule a free consultation with our Kintone experts. See how companies across the Philippines are automating workflows and building custom business apps without code.</p>
+                <p class="cta-desc" data-en="Schedule a free consultation with our Kintone experts. Discover how one platform can replace your spreadsheets, disconnected tools, and manual processes—all without writing a single line of code." data-ja="Kintone専門家との無料相談を予約してください。スプレッドシート、バラバラのツール、手作業のプロセスを、コードを一行も書かずに、ひとつのプラットフォームでどのように置き換えられるかをご覧ください。">Schedule a free consultation with our Kintone experts. Discover how one platform can replace your spreadsheets, disconnected tools, and manual processes—all without writing a single line of code.</p>
                 <div class="cta-actions">
                     <a href="https://calendly.com/kintoneph/freekintoneappconsultation" target="_blank" class="btn btn-primary">
                         <span data-en="Schedule Free Demo" data-ja="無料デモを予約">Schedule Free Demo</span>
@@ -1807,7 +2315,7 @@
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
                         </svg>
-                        <span data-en="Call Us" data-ja="電話する">Call Us</span>
+                        <span data-en="Call Us Now" data-ja="今すぐ電話">Call Us Now</span>
                     </a>
                 </div>
             </div>
@@ -1829,16 +2337,16 @@
                         </svg>
                         <span class="logo-text">Edamame Inc.</span>
                     </a>
-                    <p data-en="Official Kintone Partner in the Philippines. Empowering businesses with AI-powered no-code solutions." data-ja="フィリピンの公式Kintoneパートナー。AI搭載のノーコードソリューションでビジネスを支援。">Official Kintone Partner in the Philippines. Empowering businesses with AI-powered no-code solutions.</p>
+                    <p data-en="Official Kintone Partner in the Philippines. One platform for CRM, inventory, HR, accounting, projects, and every business app you need." data-ja="フィリピンの公式Kintoneパートナー。CRM、在庫、人事、会計、プロジェクト、その他あらゆる業務アプリをひとつのプラットフォームで。">Official Kintone Partner in the Philippines. One platform for CRM, inventory, HR, accounting, projects, and every business app you need.</p>
                     <div class="footer-social">
-                        <a href="https://ph.linkedin.com/company/kintonephilippines" class="social-link" target="_blank">
+                        <a href="https://ph.linkedin.com/company/kintonephilippines" class="social-link" target="_blank" aria-label="LinkedIn">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
                                 <rect x="2" y="9" width="4" height="12"/>
                                 <circle cx="4" cy="4" r="2"/>
                             </svg>
                         </a>
-                        <a href="https://www.facebook.com/kintoneph/" class="social-link" target="_blank">
+                        <a href="https://www.facebook.com/kintoneph/" class="social-link" target="_blank" aria-label="Facebook">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
                             </svg>
@@ -1846,25 +2354,27 @@
                     </div>
                 </div>
                 <div class="footer-col">
-                    <h4 class="footer-title" data-en="Services" data-ja="サービス">Services</h4>
+                    <h4 class="footer-title" data-en="Solutions" data-ja="ソリューション">Solutions</h4>
                     <ul class="footer-links">
-                        <li><a href="#services" data-en="No-Code Apps" data-ja="ノーコードアプリ">No-Code Apps</a></li>
-                        <li><a href="#services" data-en="AI Automation" data-ja="AI自動化">AI Automation</a></li>
-                        <li><a href="#services" data-en="Workflow Design" data-ja="ワークフロー設計">Workflow Design</a></li>
-                        <li><a href="#services" data-en="Integration" data-ja="連携">Integration</a></li>
+                        <li><a href="#possibilities" data-en="CRM & Sales" data-ja="CRM・営業">CRM & Sales</a></li>
+                        <li><a href="#possibilities" data-en="Inventory Management" data-ja="在庫管理">Inventory Management</a></li>
+                        <li><a href="#possibilities" data-en="HR & People Ops" data-ja="人事・労務">HR & People Ops</a></li>
+                        <li><a href="#possibilities" data-en="Finance & Accounting" data-ja="経理・会計">Finance & Accounting</a></li>
+                        <li><a href="#possibilities" data-en="Project Management" data-ja="プロジェクト管理">Project Management</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
                     <h4 class="footer-title" data-en="Company" data-ja="会社情報">Company</h4>
                     <ul class="footer-links">
                         <li><a href="#about" data-en="About Us" data-ja="会社概要">About Us</a></li>
+                        <li><a href="#services" data-en="Services" data-ja="サービス">Services</a></li>
                         <li><a href="#process" data-en="Our Process" data-ja="導入プロセス">Our Process</a></li>
-                        <li><a href="#customers" data-en="Customers" data-ja="お客様">Customers</a></li>
+                        <li><a href="#customers" data-en="Clients" data-ja="導入事例">Clients</a></li>
                         <li><a href="https://calendly.com/kintoneph/freekintoneappconsultation" target="_blank" data-en="Contact" data-ja="お問い合わせ">Contact</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h4 class="footer-title" data-en="Contact" data-ja="お問い合わせ">Contact</h4>
+                    <h4 class="footer-title" data-en="Contact" data-ja="連絡先">Contact</h4>
                     <ul class="footer-links">
                         <li><span>15F Jollibee Tower</span></li>
                         <li><span>Ortigas Center, Pasig</span></li>
@@ -1886,19 +2396,22 @@
 
     <!-- SEO Content (hidden but crawlable) -->
     <div class="seo-content" aria-hidden="true">
-        <h2>Kintone Philippines - AI-Powered No-Code Platform for Business Automation</h2>
-        <p>Looking for Airtable alternative Philippines? Smartsheet replacement? Monday.com competitor? Kintone offers superior AI-powered no-code app development, unlimited workflow automation, enterprise BPM software, and digital transformation solutions for Filipino and Japanese companies in Metro Manila, Makati, BGC, Pasig, Ortigas, Quezon City. Build custom CRM, inventory management, HR systems, sales automation, project management apps without coding.</p>
-        <h3>Comprehensive AI Business Solutions Philippines</h3>
-        <p>CRM Philippines, inventory management system, HR management software, sales automation, project management, business process management, database management, team collaboration platform, productivity software, enterprise solutions for SMEs and large corporations. No-code platform, low-code development, workflow automation, business intelligence, data analytics, process optimization.</p>
-        <h3>Why Choose Kintone Over Competitors</h3>
-        <p>Unlike Airtable (record limits), Smartsheet (complexity), Monday.com (pricing), ClickUp (limited BPM), Kintone provides: Unlimited records, AI automation, enterprise security, local Philippine support, Japanese quality, proven track record with 37,000+ companies, 2M+ apps built, available in 11 countries.</p>
+        <h2>Kintone Philippines - One Platform, Infinite Possibilities for Business App Development</h2>
+        <p>Looking for Airtable alternative Philippines? Smartsheet replacement? Monday.com competitor? Notion alternative? Kintone is your all-in-one no-code platform to build any business app without coding: CRM customer relationship management, inventory management system, HR human resources management, accounting finance apps, project management, sales pipeline, purchase order system, vendor management, contract management, expense tracking, asset management, help desk ticketing, approval workflows, and more. Official Cybozu partner serving Metro Manila, Makati, BGC, Pasig, Ortigas, Quezon City, Cebu, Davao and all of Philippines.</p>
+        <h3>Comprehensive Business Solutions for Filipino Enterprises</h3>
+        <p>Build custom CRM Philippines, inventory tracking system Philippines, HR management software Philippines, accounting software Philippines, project management Philippines, sales automation, quotation system, invoice management, budget tracking, employee database, leave management, performance reviews, contract tracking, asset inventory, procurement system, vendor portal, customer database, lead management, opportunity tracking, service request system, help desk software, SLA tracking, quality management, compliance tracking, document management, and any custom business application your company needs.</p>
+        <h3>Why Philippine Companies Choose Kintone Over Competitors</h3>
+        <p>Unlike Airtable (record limits, no true workflows), Smartsheet (complexity, expensive), Monday.com (limited customization), ClickUp (not built for BPM), Notion (no real database), Kintone provides: Unlimited records and storage, true workflow automation with process management, enterprise-grade security, full JavaScript customization, API integrations, local Philippine support team, Japanese quality standards. Trusted by 37,000+ companies worldwide, 2M+ apps built, available in 11 countries.</p>
     </div>
 
     <script>
-        // Language switching with full translation support
+        // Language switching with URL update
         function switchLanguage(lang) {
             document.body.setAttribute('lang', lang);
             document.documentElement.setAttribute('lang', lang);
+            
+            // Update URL (for real deployment)
+            // history.pushState({}, '', '/' + lang);
             
             // Update active button
             document.querySelectorAll('.lang-btn').forEach(btn => {
@@ -1910,25 +2423,25 @@
             });
 
             // Update all translatable elements
-            document.querySelectorAll('[data-en]').forEach(el => {
-                const key = 'data-' + lang;
-                if (el.hasAttribute(key)) {
-                    el.textContent = el.getAttribute(key);
-                }
+            document.querySelectorAll('[data-' + lang + ']').forEach(el => {
+                el.textContent = el.getAttribute('data-' + lang);
             });
 
             // Update HTML lang attribute for SEO
-            document.querySelector('html').lang = lang === 'ja' ? 'ja' : 'en-ph';
+            document.querySelector('html').lang = lang === 'ja' ? 'ja' : 'en';
         }
 
         // Navigation scroll effect
         const nav = document.getElementById('nav');
+        let lastScrollY = window.scrollY;
+        
         window.addEventListener('scroll', () => {
             if (window.scrollY > 50) {
                 nav.classList.add('scrolled');
             } else {
                 nav.classList.remove('scrolled');
             }
+            lastScrollY = window.scrollY;
         });
 
         // Mobile menu toggle
@@ -1944,13 +2457,43 @@
                 e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
                 if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
+                    const offset = 80; // Account for fixed header
+                    const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset;
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
                     });
                 }
             });
         });
+
+        // Intersection Observer for scroll animations
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements that should animate on scroll
+        document.querySelectorAll('.possibility-card, .service-card, .customer-card, .process-step').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+
+        // Check URL for language on page load (for real deployment)
+        // const path = window.location.pathname;
+        // if (path.includes('/ja')) switchLanguage('ja');
     </script>
 </body>
 </html>
