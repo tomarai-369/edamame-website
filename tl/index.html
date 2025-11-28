@@ -44,7 +44,7 @@
     <meta name="DC.creator" content="Edamame Inc.">
     <meta name="DC.subject" content="No-code business app development Philippines">
     <meta name="DC.description" content="Build any business app without code - CRM, inventory, HR, accounting">
-    <meta name="DC.language" content="fil">
+    <meta name="DC.language" content="en">
     
     <!-- LANGUAGE ALTERNATES -->
     <link rel="alternate" hreflang="en" href="https://edamame-jp.com/en/">
@@ -56,14 +56,14 @@
     
     <!-- OPEN GRAPH - ENHANCED -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://edamame-jp.com/tl/">
-    <meta property="og:title" content="Kintone Philippines | Gumawa ng Business App Walang Coding">
-    <meta property="og:description" content="Opisyal na Kintone Partner. Gumawa ng CRM, inventory, HR, accounting apps—walang coding. Libreng consultation. 37,000+ companies ang gumagamit.">
+    <meta property="og:url" content="https://edamame-jp.com/en/">
+    <meta property="og:title" content="Kintone Philippines | Build Any Business App Without Code">
+    <meta property="og:description" content="Official Kintone Partner. Build CRM, inventory, HR, accounting apps—no coding required. Free consultation. Trusted by 37,000+ companies worldwide.">
     <meta property="og:image" content="https://edamame-jp.com/og-image-kintone-philippines.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="Kintone Philippines - Build Business Apps Without Code">
-    <meta property="og:locale" content="fil_PH">
+    <meta property="og:locale" content="en_PH">
     <meta property="og:locale:alternate" content="ja_JP">
     <meta property="og:locale:alternate" content="fil_PH">
     <meta property="og:site_name" content="Edamame Inc. - Kintone Philippines">
@@ -73,8 +73,8 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@kintoneph">
     <meta name="twitter:creator" content="@kintoneph">
-    <meta name="twitter:title" content="Kintone Philippines | Gumawa ng Business App Walang Coding">
-    <meta name="twitter:description" content="Opisyal na Kintone Partner Philippines. CRM, inventory, HR, accounting—walang coding. Libreng consultation.">
+    <meta name="twitter:title" content="Kintone Philippines | Build Any Business App Without Code">
+    <meta name="twitter:description" content="Official Kintone Partner Philippines. CRM, inventory, HR, accounting—no coding. Free consultation available.">
     <meta name="twitter:image" content="https://edamame-jp.com/og-image-kintone-philippines.png">
     <meta name="twitter:image:alt" content="Kintone Philippines - No-Code Business Apps">
     
@@ -1996,6 +1996,196 @@
             left: -9999px;
             opacity: 0;
         }
+
+        /* Contact Form Section */
+        .contact-section {
+            padding: 100px 0;
+            background: var(--color-bg-alt);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 60px;
+            align-items: start;
+        }
+
+        .contact-info h2 {
+            font-size: clamp(2rem, 4vw, 2.5rem);
+            font-weight: 700;
+            color: var(--color-dark);
+            margin-bottom: 16px;
+            line-height: 1.2;
+        }
+
+        .contact-info > p {
+            font-size: 1.1rem;
+            color: var(--color-text-muted);
+            margin-bottom: 32px;
+            line-height: 1.7;
+        }
+
+        .contact-details {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+        }
+
+        .contact-item-icon {
+            width: 44px;
+            height: 44px;
+            border-radius: 12px;
+            background: var(--color-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .contact-item-icon svg {
+            width: 20px;
+            height: 20px;
+            stroke: white;
+        }
+
+        .contact-item-text h4 {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--color-text-muted);
+            margin-bottom: 4px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .contact-item-text p,
+        .contact-item-text a {
+            font-size: 1rem;
+            color: var(--color-dark);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .contact-item-text a:hover {
+            color: var(--color-primary);
+        }
+
+        .contact-form-card {
+            background: white;
+            border-radius: var(--radius-xl);
+            padding: 40px;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .form-group.full-width {
+            grid-column: 1 / -1;
+        }
+
+        .form-label {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--color-dark);
+        }
+
+        .form-label .required {
+            color: var(--color-kintone);
+        }
+
+        .form-input,
+        .form-textarea,
+        .form-select {
+            padding: 14px 16px;
+            border: 2px solid var(--color-bg-alt);
+            border-radius: var(--radius-md);
+            font-size: 1rem;
+            font-family: var(--font-main);
+            color: var(--color-dark);
+            background: var(--color-bg);
+            transition: all 0.2s ease;
+        }
+
+        .form-input:focus,
+        .form-textarea:focus,
+        .form-select:focus {
+            outline: none;
+            border-color: var(--color-primary);
+            background: white;
+        }
+
+        .form-input::placeholder,
+        .form-textarea::placeholder {
+            color: var(--color-text-light);
+        }
+
+        .form-textarea {
+            min-height: 140px;
+            resize: vertical;
+        }
+
+        .form-submit {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 16px 32px;
+            background: var(--gradient-accent);
+            color: white;
+            font-size: 1rem;
+            font-weight: 600;
+            border: none;
+            border-radius: var(--radius-md);
+            cursor: pointer;
+            transition: all 0.3s var(--ease-out-expo);
+            margin-top: 8px;
+        }
+
+        .form-submit:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(237, 28, 36, 0.3);
+        }
+
+        .form-submit svg {
+            width: 18px;
+            height: 18px;
+        }
+
+        @media (max-width: 900px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .contact-form-card {
+                padding: 28px;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+        }
     </style>
 </head>
 <body lang="tl">
@@ -2021,12 +2211,13 @@
                     <span class="logo-text">Edamame Inc.</span>
                 </a>
                 <ul class="nav-links">
-                    <li><a href="#possibilities" class="nav-link" data-en="Solutions" data-ja="ソリューション">Solutions</a></li>
-                    <li><a href="#services" class="nav-link" data-en="Services" data-ja="サービス">Services</a></li>
-                    <li><a href="#about" class="nav-link" data-en="Why Kintone" data-ja="選ばれる理由">Why Kintone</a></li>
-                    <li><a href="#process" class="nav-link" data-en="Process" data-ja="導入プロセス">Process</a></li>
-                    <li><a href="#customers" class="nav-link" data-en="Clients" data-ja="導入事例">Clients</a></li>
-                    <li><a href="https://calendly.com/kintoneph/freekintoneappconsultation" target="_blank" class="nav-cta" data-en="Free Demo" data-ja="無料デモ">Free Demo</a></li>
+                    <li><a href="#possibilities" class="nav-link" data-en="Solutions" data-ja="できること" data-tl="Solutions">Solutions</a></li>
+                    <li><a href="#services" class="nav-link" data-en="Services" data-ja="サービス" data-tl="Services">Services</a></li>
+                    <li><a href="#about" class="nav-link" data-en="Why Kintone" data-ja="選ばれる理由" data-tl="Bakit Kintone">Why Kintone</a></li>
+                    <li><a href="#process" class="nav-link" data-en="Process" data-ja="導入の流れ" data-tl="Proseso">Process</a></li>
+                    <li><a href="#customers" class="nav-link" data-en="Clients" data-ja="導入実績" data-tl="Clients">Clients</a></li>
+                    <li><a href="#contact-form" class="nav-link" data-en="Contact" data-ja="お問い合わせ" data-tl="Contact">Contact</a></li>
+                    <li><a href="https://calendly.com/kintoneph/freekintoneappconsultation" target="_blank" class="nav-cta" data-en="Free Demo" data-ja="無料相談" data-tl="Libreng Demo">Free Demo</a></li>
                 </ul>
                 <div class="mobile-toggle" onclick="toggleMobileMenu()">
                     <span></span>
@@ -2610,8 +2801,110 @@
         </div>
     </section>
 
+    <!-- Contact Form Section -->
+    <section class="contact-section" id="contact-form">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h2 data-en="Get in Touch" data-ja="お問い合わせ" data-tl="Makipag-ugnayan">Get in Touch</h2>
+                    <p data-en="Have questions about Kintone? Want to see a demo? Fill out the form and our team will get back to you within 24 hours." data-ja="Kintoneについてご質問がありますか？デモをご覧になりたいですか？フォームにご記入ください。24時間以内にご連絡いたします。" data-tl="May tanong tungkol sa Kintone? Gusto mong makakita ng demo? Punan ang form at babalikan ka namin within 24 hours.">Have questions about Kintone? Want to see a demo? Fill out the form and our team will get back to you within 24 hours.</p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-item-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                    <circle cx="12" cy="10" r="3"/>
+                                </svg>
+                            </div>
+                            <div class="contact-item-text">
+                                <h4 data-en="Office" data-ja="オフィス" data-tl="Opisina">Office</h4>
+                                <p>15F Jollibee Tower, Ortigas Center<br>Pasig City, Metro Manila 1605</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-item-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                    <polyline points="22,6 12,13 2,6"/>
+                                </svg>
+                            </div>
+                            <div class="contact-item-text">
+                                <h4 data-en="Email" data-ja="メール" data-tl="Email">Email</h4>
+                                <a href="mailto:kintone@edamame-jp.com">kintone@edamame-jp.com</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-item-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                                </svg>
+                            </div>
+                            <div class="contact-item-text">
+                                <h4 data-en="Phone" data-ja="電話" data-tl="Telepono">Phone</h4>
+                                <a href="tel:+639288727958">+63 928 872 7958</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form-card">
+                    <form action="https://formspree.io/f/mwpdrrov" method="POST" class="contact-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label" data-en="Name" data-ja="お名前" data-tl="Pangalan">Name <span class="required">*</span></label>
+                                <input type="text" name="name" class="form-input" required placeholder="Your name">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" data-en="Email" data-ja="メールアドレス" data-tl="Email">Email <span class="required">*</span></label>
+                                <input type="email" name="email" class="form-input" required placeholder="your@email.com">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label" data-en="Company" data-ja="会社名" data-tl="Kumpanya">Company</label>
+                                <input type="text" name="company" class="form-input" placeholder="Your company">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" data-en="Phone" data-ja="電話番号" data-tl="Telepono">Phone</label>
+                                <input type="tel" name="phone" class="form-input" placeholder="+63 XXX XXX XXXX">
+                            </div>
+                        </div>
+                        <div class="form-group full-width">
+                            <label class="form-label" data-en="What are you interested in?" data-ja="ご興味のある内容" data-tl="Ano ang interest mo?">What are you interested in?</label>
+                            <select name="interest" class="form-select">
+                                <option value="" data-en="Select an option" data-ja="選択してください" data-tl="Pumili ng option">Select an option</option>
+                                <option value="demo" data-en="Free Demo / Consultation" data-ja="無料デモ・相談" data-tl="Libreng Demo / Consultation">Free Demo / Consultation</option>
+                                <option value="crm" data-en="CRM / Sales Management" data-ja="CRM・営業管理" data-tl="CRM / Sales Management">CRM / Sales Management</option>
+                                <option value="inventory" data-en="Inventory Management" data-ja="在庫管理" data-tl="Inventory Management">Inventory Management</option>
+                                <option value="hr" data-en="HR / Employee Management" data-ja="人事・労務管理" data-tl="HR / Employee Management">HR / Employee Management</option>
+                                <option value="accounting" data-en="Accounting / Finance" data-ja="経理・会計" data-tl="Accounting / Finance">Accounting / Finance</option>
+                                <option value="project" data-en="Project Management" data-ja="プロジェクト管理" data-tl="Project Management">Project Management</option>
+                                <option value="custom" data-en="Custom App Development" data-ja="カスタムアプリ開発" data-tl="Custom App Development">Custom App Development</option>
+                                <option value="other" data-en="Other" data-ja="その他" data-tl="Iba pa">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group full-width">
+                            <label class="form-label" data-en="Message" data-ja="メッセージ" data-tl="Mensahe">Message <span class="required">*</span></label>
+                            <textarea name="message" class="form-textarea" required placeholder="Tell us about your project or questions..."></textarea>
+                        </div>
+                        <input type="hidden" name="_subject" value="New Contact Form Submission - Kintone Philippines">
+                        <input type="hidden" name="_template" value="table">
+                        <button type="submit" class="form-submit">
+                            <span data-en="Send Message" data-ja="送信する" data-tl="Ipadala">Send Message</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="22" y1="2" x2="11" y2="13"/>
+                                <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+                            </svg>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- CTA Section -->
-    <section class="section cta" id="contact">
+    <section class="section cta" id="cta">
         <div class="cta-pattern"></div>
         <div class="container">
             <div class="cta-content">
@@ -2753,7 +3046,13 @@
         // Show Tagalog content on page load
         document.addEventListener('DOMContentLoaded', function() {
             document.querySelectorAll('[data-tl]').forEach(el => {
-                el.textContent = el.getAttribute('data-tl');
+                if (el.tagName === 'OPTION') {
+                    el.textContent = el.getAttribute('data-tl');
+                } else if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+                    // Don't change input values
+                } else {
+                    el.textContent = el.getAttribute('data-tl');
+                }
             });
         });
 
