@@ -34,7 +34,7 @@
     <meta name="geo.position" content="14.5876;121.0614">
     <meta name="ICBM" content="14.5876, 121.0614">
     
-    <!-- Favicon (add your own later) -->
+    <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg viewBox='0 0 42 42' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='42' height='42' rx='10' fill='%234A7C59'/%3E%3Cellipse cx='14' cy='21' rx='5' ry='8' fill='%236B9B7A'/%3E%3Cellipse cx='21' cy='21' rx='5' ry='8' fill='%238AB898'/%3E%3Cellipse cx='28' cy='21' rx='5' ry='8' fill='%23A8D4B6'/%3E%3C/svg%3E">
     
     <!-- Structured Data / Schema.org -->
@@ -67,10 +67,11 @@
         "serviceType": ["Kintone Implementation", "Custom App Development", "Workflow Automation", "Digital Transformation"]
     }
     </script>
-    
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Carlito:wght@400;700&display=swap" rel="stylesheet">
+    
     <style>
         :root {
             --color-bg: #FAFAF8;
@@ -83,8 +84,8 @@
             --color-primary-dark: #3A6349;
             --color-accent: #C4A35A;
             --color-accent-light: #E8D5A3;
-            --font-serif: 'Carlito', Calibri, 'Segoe UI', sans-serif;
-            --font-sans: 'Carlito', Calibri, 'Segoe UI', sans-serif;
+            --color-kintone: #ED1C24;
+            --font-main: 'Carlito', Calibri, 'Segoe UI', sans-serif;
             --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
             --ease-out-quint: cubic-bezier(0.22, 1, 0.36, 1);
         }
@@ -101,7 +102,7 @@
         }
 
         body {
-            font-family: var(--font-sans);
+            font-family: var(--font-main);
             background: var(--color-bg);
             color: var(--color-text);
             line-height: 1.6;
@@ -174,9 +175,8 @@
         }
 
         .logo-text {
-            font-family: var(--font-serif);
             font-size: 1.5rem;
-            font-weight: 400;
+            font-weight: 700;
             letter-spacing: -0.02em;
         }
 
@@ -188,8 +188,8 @@
         }
 
         .nav-link {
-            font-size: 0.9rem;
-            font-weight: 500;
+            font-size: 0.95rem;
+            font-weight: 600;
             color: var(--color-text-muted);
             transition: color 0.3s ease;
             position: relative;
@@ -201,7 +201,7 @@
             bottom: -4px;
             left: 0;
             width: 0;
-            height: 1.5px;
+            height: 2px;
             background: var(--color-primary);
             transition: width 0.3s var(--ease-out-expo);
         }
@@ -219,8 +219,8 @@
             color: white;
             padding: 0.75rem 1.75rem;
             border-radius: 100px;
-            font-size: 0.9rem;
-            font-weight: 500;
+            font-size: 0.95rem;
+            font-weight: 600;
             transition: all 0.3s var(--ease-out-expo);
         }
 
@@ -284,7 +284,16 @@
         }
 
         .hero-content {
-            animation: fadeInUp 1s var(--ease-out-expo) 0.2s both;
+            opacity: 0;
+            transform: translateY(40px);
+            animation: fadeInUp 1s var(--ease-out-expo) 0.2s forwards;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         .hero-badge {
@@ -295,8 +304,8 @@
             color: var(--color-primary);
             padding: 0.5rem 1rem;
             border-radius: 100px;
-            font-size: 0.85rem;
-            font-weight: 500;
+            font-size: 0.9rem;
+            font-weight: 600;
             margin-bottom: 1.5rem;
         }
 
@@ -315,16 +324,15 @@
         }
 
         .hero-title {
-            font-family: var(--font-serif);
-            font-size: clamp(3rem, 6vw, 4.5rem);
-            font-weight: 400;
+            font-size: clamp(2.75rem, 5.5vw, 4rem);
+            font-weight: 700;
             line-height: 1.1;
             letter-spacing: -0.03em;
             margin-bottom: 1.5rem;
         }
 
         .hero-title em {
-            font-style: italic;
+            font-style: normal;
             color: var(--color-primary);
         }
 
@@ -348,11 +356,12 @@
             gap: 0.5rem;
             padding: 1rem 2rem;
             border-radius: 100px;
-            font-size: 0.95rem;
-            font-weight: 500;
+            font-size: 1rem;
+            font-weight: 600;
             transition: all 0.3s var(--ease-out-expo);
             cursor: pointer;
             border: none;
+            font-family: var(--font-main);
         }
 
         .btn-primary {
@@ -369,7 +378,7 @@
         .btn-secondary {
             background: transparent;
             color: var(--color-text);
-            border: 1.5px solid rgba(0,0,0,0.15);
+            border: 2px solid rgba(0,0,0,0.15);
         }
 
         .btn-secondary:hover {
@@ -387,13 +396,15 @@
 
         .hero-visual {
             position: relative;
-            animation: fadeInUp 1s var(--ease-out-expo) 0.4s both;
+            opacity: 0;
+            transform: translateY(40px);
+            animation: fadeInUp 1s var(--ease-out-expo) 0.4s forwards;
         }
 
         .hero-card {
             background: white;
             border-radius: 24px;
-            padding: 2.5rem;
+            padding: 2rem;
             box-shadow: 0 40px 80px rgba(0,0,0,0.08), 0 0 0 1px rgba(0,0,0,0.03);
             position: relative;
             overflow: hidden;
@@ -412,8 +423,8 @@
         .hero-stats {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 2rem;
-            margin-bottom: 2rem;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
         }
 
         .stat-item {
@@ -421,8 +432,8 @@
         }
 
         .stat-number {
-            font-family: var(--font-serif);
-            font-size: 2.5rem;
+            font-size: 2.25rem;
+            font-weight: 700;
             color: var(--color-primary);
             line-height: 1;
             margin-bottom: 0.25rem;
@@ -433,37 +444,44 @@
             color: var(--color-text-muted);
             text-transform: uppercase;
             letter-spacing: 0.1em;
+            font-weight: 600;
         }
 
-        .hero-app-preview {
+        .hero-screenshot {
             background: var(--color-bg-alt);
             border-radius: 16px;
-            padding: 1.5rem;
-            display: flex;
-            align-items: center;
-            gap: 1rem;
+            overflow: hidden;
+            border: 1px solid rgba(0,0,0,0.05);
         }
 
-        .app-icon {
-            width: 48px;
-            height: 48px;
-            background: linear-gradient(135deg, var(--color-primary), var(--color-primary-light));
-            border-radius: 12px;
+        .hero-screenshot img {
+            width: 100%;
+            display: block;
+        }
+
+        .screenshot-placeholder {
+            width: 100%;
+            aspect-ratio: 16/10;
+            background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
-            flex-shrink: 0;
+            gap: 1rem;
+            padding: 2rem;
         }
 
-        .app-info h4 {
-            font-size: 1rem;
-            font-weight: 600;
-            margin-bottom: 0.25rem;
+        .screenshot-placeholder svg {
+            width: 60px;
+            height: 60px;
+            color: var(--color-primary);
+            opacity: 0.5;
         }
 
-        .app-info p {
-            font-size: 0.85rem;
+        .screenshot-placeholder span {
+            font-size: 0.9rem;
             color: var(--color-text-muted);
+            font-weight: 600;
         }
 
         .floating-element {
@@ -480,13 +498,13 @@
 
         .floating-element.f1 {
             top: -20px;
-            right: -40px;
+            right: -20px;
             animation-delay: 0s;
         }
 
         .floating-element.f2 {
-            bottom: 60px;
-            left: -60px;
+            bottom: 40px;
+            left: -40px;
             animation-delay: 2s;
         }
 
@@ -511,7 +529,7 @@
 
         .floating-text strong {
             display: block;
-            font-weight: 600;
+            font-weight: 700;
         }
 
         .floating-text span {
@@ -529,11 +547,12 @@
 
         .partners-label {
             text-align: center;
-            font-size: 0.8rem;
+            font-size: 0.85rem;
             text-transform: uppercase;
             letter-spacing: 0.15em;
             color: var(--color-text-muted);
             margin-bottom: 2rem;
+            font-weight: 600;
         }
 
         .partners-logos {
@@ -545,20 +564,18 @@
         }
 
         .partner-logo {
-            height: 40px;
-            opacity: 0.6;
-            filter: grayscale(100%);
+            height: 45px;
+            opacity: 0.7;
             transition: all 0.3s ease;
         }
 
         .partner-logo:hover {
             opacity: 1;
-            filter: grayscale(0%);
         }
 
         /* Section Styles */
         .section {
-            padding: 8rem 0;
+            padding: 6rem 0;
         }
 
         .section-header {
@@ -569,18 +586,17 @@
 
         .section-label {
             display: inline-block;
-            font-size: 0.8rem;
+            font-size: 0.85rem;
             text-transform: uppercase;
             letter-spacing: 0.15em;
             color: var(--color-primary);
             margin-bottom: 1rem;
-            font-weight: 600;
+            font-weight: 700;
         }
 
         .section-title {
-            font-family: var(--font-serif);
-            font-size: clamp(2.25rem, 4vw, 3rem);
-            font-weight: 400;
+            font-size: clamp(2rem, 4vw, 2.75rem);
+            font-weight: 700;
             line-height: 1.2;
             letter-spacing: -0.02em;
             margin-bottom: 1rem;
@@ -671,7 +687,7 @@
 
         .service-title {
             font-size: 1.35rem;
-            font-weight: 600;
+            font-weight: 700;
             margin-bottom: 0.75rem;
         }
 
@@ -705,7 +721,7 @@
         .about-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 6rem;
+            gap: 5rem;
             align-items: center;
         }
 
@@ -717,14 +733,135 @@
             width: 100%;
             border-radius: 24px;
             box-shadow: 0 40px 80px rgba(0,0,0,0.1);
+            overflow: hidden;
         }
+
+        .about-img-main img {
+            width: 100%;
+            display: block;
+        }
+
+        .kintone-preview {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 24px;
+            box-shadow: 0 40px 80px rgba(0,0,0,0.1);
+        }
+
+        .kintone-header {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+            margin-bottom: 1rem;
+        }
+
+        .kintone-dots {
+            display: flex;
+            gap: 6px;
+        }
+
+        .kintone-dots span {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+        }
+
+        .kintone-dots span:nth-child(1) { background: #FF5F57; }
+        .kintone-dots span:nth-child(2) { background: #FFBD2E; }
+        .kintone-dots span:nth-child(3) { background: #28CA41; }
+
+        .kintone-url {
+            flex: 1;
+            background: var(--color-bg-alt);
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            font-size: 0.8rem;
+            color: var(--color-text-muted);
+        }
+
+        .kintone-body {
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            gap: 1rem;
+        }
+
+        .kintone-sidebar {
+            background: var(--color-bg-alt);
+            border-radius: 12px;
+            padding: 1rem;
+        }
+
+        .sidebar-item {
+            padding: 0.75rem;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .sidebar-item.active {
+            background: var(--color-primary);
+            color: white;
+        }
+
+        .sidebar-item svg {
+            width: 16px;
+            height: 16px;
+        }
+
+        .kintone-main {
+            background: var(--color-bg-alt);
+            border-radius: 12px;
+            padding: 1rem;
+        }
+
+        .kintone-table {
+            width: 100%;
+        }
+
+        .kintone-table-header {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 80px;
+            gap: 0.5rem;
+            padding: 0.5rem;
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: var(--color-text-muted);
+            text-transform: uppercase;
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+        }
+
+        .kintone-table-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 80px;
+            gap: 0.5rem;
+            padding: 0.75rem 0.5rem;
+            font-size: 0.85rem;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .status-badge {
+            padding: 0.25rem 0.5rem;
+            border-radius: 100px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-align: center;
+        }
+
+        .status-badge.active { background: #D4EDDA; color: #155724; }
+        .status-badge.pending { background: #FFF3CD; color: #856404; }
+        .status-badge.new { background: #CCE5FF; color: #004085; }
 
         .about-img-badge {
             position: absolute;
-            bottom: -30px;
-            right: -30px;
+            bottom: -20px;
+            right: -20px;
             background: white;
-            padding: 1.5rem 2rem;
+            padding: 1.25rem 1.5rem;
             border-radius: 20px;
             box-shadow: 0 20px 40px rgba(0,0,0,0.1);
             display: flex;
@@ -749,7 +886,7 @@
         .badge-text strong {
             display: block;
             font-size: 1.1rem;
-            font-weight: 600;
+            font-weight: 700;
         }
 
         .about-content {
@@ -758,18 +895,17 @@
         }
 
         .about-label {
-            font-size: 0.8rem;
+            font-size: 0.85rem;
             text-transform: uppercase;
             letter-spacing: 0.15em;
             color: var(--color-primary);
-            font-weight: 600;
+            font-weight: 700;
             margin-bottom: 1rem;
         }
 
         .about-title {
-            font-family: var(--font-serif);
-            font-size: clamp(2rem, 3.5vw, 2.75rem);
-            font-weight: 400;
+            font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+            font-weight: 700;
             line-height: 1.2;
             margin-bottom: 1.5rem;
         }
@@ -778,14 +914,14 @@
             color: var(--color-text-muted);
             font-size: 1.05rem;
             line-height: 1.8;
-            margin-bottom: 2rem;
+            margin-bottom: 1.5rem;
         }
 
         .about-features {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 1.5rem;
-            margin-bottom: 2.5rem;
+            gap: 1.25rem;
+            margin-bottom: 2rem;
         }
 
         .about-feature {
@@ -815,6 +951,7 @@
         .about-feature span {
             font-size: 0.95rem;
             color: var(--color-text);
+            font-weight: 500;
         }
 
         /* Process Section */
@@ -847,7 +984,7 @@
         .process-steps::before {
             content: '';
             position: absolute;
-            top: 50px;
+            top: 40px;
             left: 12.5%;
             right: 12.5%;
             height: 2px;
@@ -861,24 +998,23 @@
         }
 
         .step-number {
-            width: 60px;
-            height: 60px;
+            width: 56px;
+            height: 56px;
             background: linear-gradient(135deg, var(--color-primary), var(--color-primary-light));
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 0 auto 1.5rem;
-            font-family: var(--font-serif);
-            font-size: 1.5rem;
-            font-weight: 400;
+            margin: 0 auto 1.25rem;
+            font-size: 1.35rem;
+            font-weight: 700;
             position: relative;
             z-index: 1;
         }
 
         .step-title {
             font-size: 1.15rem;
-            font-weight: 600;
+            font-weight: 700;
             margin-bottom: 0.5rem;
         }
 
@@ -947,14 +1083,14 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            font-weight: 600;
+            font-weight: 700;
             color: white;
         }
 
         .author-info strong {
             display: block;
             font-size: 0.95rem;
-            font-weight: 600;
+            font-weight: 700;
         }
 
         .author-info span {
@@ -989,9 +1125,8 @@
         }
 
         .cta-title {
-            font-family: var(--font-serif);
-            font-size: clamp(2.25rem, 4vw, 3rem);
-            font-weight: 400;
+            font-size: clamp(2rem, 4vw, 2.75rem);
+            font-weight: 700;
             margin-bottom: 1rem;
         }
 
@@ -1000,6 +1135,13 @@
             opacity: 0.9;
             margin-bottom: 2.5rem;
             line-height: 1.7;
+        }
+
+        .cta-actions {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
         }
 
         .cta .btn-primary {
@@ -1036,11 +1178,15 @@
             margin-bottom: 4rem;
         }
 
+        .footer-brand .logo {
+            margin-bottom: 1.5rem;
+        }
+
         .footer-brand p {
             color: rgba(255,255,255,0.6);
             font-size: 0.95rem;
             line-height: 1.7;
-            margin: 1.5rem 0 2rem;
+            margin-bottom: 2rem;
             max-width: 300px;
         }
 
@@ -1071,11 +1217,12 @@
         }
 
         .footer-title {
-            font-size: 0.8rem;
+            font-size: 0.85rem;
             text-transform: uppercase;
             letter-spacing: 0.15em;
             margin-bottom: 1.5rem;
             color: rgba(255,255,255,0.4);
+            font-weight: 700;
         }
 
         .footer-links {
@@ -1086,7 +1233,8 @@
             margin-bottom: 0.75rem;
         }
 
-        .footer-links a {
+        .footer-links a,
+        .footer-links span {
             color: rgba(255,255,255,0.7);
             font-size: 0.95rem;
             transition: color 0.3s ease;
@@ -1124,29 +1272,6 @@
             color: white;
         }
 
-        /* Animations */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(40px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .fade-in {
-            opacity: 0;
-            transform: translateY(40px);
-            transition: all 0.8s var(--ease-out-expo);
-        }
-
-        .fade-in.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
         /* Responsive */
         @media (max-width: 1024px) {
             .hero-grid {
@@ -1155,7 +1280,7 @@
             }
 
             .hero-visual {
-                max-width: 500px;
+                max-width: 550px;
                 margin: 0 auto;
             }
 
@@ -1168,7 +1293,7 @@
             }
 
             .services-grid {
-                grid-template-columns: 1fr;
+                grid-template-columns: repeat(2, 1fr);
             }
 
             .about-grid {
@@ -1178,7 +1303,7 @@
 
             .about-image {
                 order: -1;
-                max-width: 500px;
+                max-width: 550px;
                 margin: 0 auto;
             }
 
@@ -1192,7 +1317,7 @@
             }
 
             .testimonials-grid {
-                grid-template-columns: 1fr;
+                grid-template-columns: repeat(2, 1fr);
             }
 
             .footer-grid {
@@ -1223,12 +1348,32 @@
                 justify-content: center;
             }
 
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
             .about-features {
                 grid-template-columns: 1fr;
             }
 
+            .kintone-body {
+                grid-template-columns: 1fr;
+            }
+
+            .kintone-sidebar {
+                display: none;
+            }
+
             .process-steps {
                 grid-template-columns: 1fr;
+            }
+
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-actions {
+                flex-direction: column;
             }
 
             .footer-grid {
@@ -1293,8 +1438,8 @@
         }
 
         .mobile-menu-links a {
-            font-family: var(--font-serif);
-            font-size: 2rem;
+            font-size: 1.75rem;
+            font-weight: 700;
             color: var(--color-text);
             transition: color 0.3s ease;
         }
@@ -1392,16 +1537,13 @@
                                 <div class="stat-label">Countries</div>
                             </div>
                         </div>
-                        <div class="hero-app-preview">
-                            <div class="app-icon">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                        <div class="hero-screenshot">
+                            <div class="screenshot-placeholder">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                                     <rect x="3" y="3" width="18" height="18" rx="2"/>
                                     <path d="M9 9h6M9 13h6M9 17h4"/>
                                 </svg>
-                            </div>
-                            <div class="app-info">
-                                <h4>Build Apps in Minutes</h4>
-                                <p>No coding required — just drag, drop, and deploy</p>
+                                <span>Build Apps in Minutes — No Code Required</span>
                             </div>
                         </div>
                     </div>
@@ -1441,15 +1583,8 @@
         <div class="container">
             <div class="partners-label">Trusted Technology Partners</div>
             <div class="partners-logos">
-                <svg class="partner-logo" viewBox="0 0 140 40" fill="#4A7C59">
-                    <text x="0" y="30" font-family="Arial" font-weight="bold" font-size="24">Cybozu</text>
-                </svg>
-                <svg class="partner-logo" viewBox="0 0 140 40" fill="#4A7C59">
-                    <text x="0" y="30" font-family="Arial" font-weight="bold" font-size="24">Kintone</text>
-                </svg>
-                <svg class="partner-logo" viewBox="0 0 180 40" fill="#4A7C59">
-                    <text x="0" y="30" font-family="Arial" font-weight="bold" font-size="20">Kintone SEA</text>
-                </svg>
+                <img src="https://www.kintone.com/en-us/static/logo-cybozu-9b0b73cab3f74d47b92a24ab5d3e1a8e.svg" alt="Cybozu" class="partner-logo" style="height: 35px;">
+                <img src="https://www.kintone.com/en-us/static/logo-e0af84cc4fc3d79f9e5f4f0fe94c4655.svg" alt="Kintone" class="partner-logo" style="height: 40px;">
             </div>
         </div>
     </section>
@@ -1457,13 +1592,13 @@
     <!-- Services Section -->
     <section class="section services" id="services">
         <div class="container">
-            <div class="section-header fade-in">
+            <div class="section-header">
                 <span class="section-label">What We Offer</span>
                 <h2 class="section-title">Comprehensive Kintone Solutions for Your Business</h2>
                 <p class="section-desc">From consultation to deployment and beyond, we provide end-to-end services to help you maximize your Kintone investment.</p>
             </div>
             <div class="services-grid">
-                <div class="service-card fade-in">
+                <div class="service-card">
                     <div class="service-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <circle cx="12" cy="12" r="3"/>
@@ -1473,7 +1608,7 @@
                     <h3 class="service-title">Implementation & Setup</h3>
                     <p class="service-desc">We handle the complete Kintone deployment process, from initial configuration to user onboarding, ensuring a smooth transition for your organization.</p>
                 </div>
-                <div class="service-card fade-in">
+                <div class="service-card">
                     <div class="service-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <polyline points="16 18 22 12 16 6"/>
@@ -1483,7 +1618,7 @@
                     <h3 class="service-title">Custom Development</h3>
                     <p class="service-desc">Extend Kintone's capabilities with custom JavaScript solutions, API integrations, and advanced workflows tailored to your unique business requirements.</p>
                 </div>
-                <div class="service-card fade-in">
+                <div class="service-card">
                     <div class="service-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
@@ -1493,7 +1628,7 @@
                     <h3 class="service-title">Training & Support</h3>
                     <p class="service-desc">Comprehensive training programs and ongoing support to empower your team to maximize productivity with Kintone's powerful features.</p>
                 </div>
-                <div class="service-card fade-in">
+                <div class="service-card">
                     <div class="service-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
@@ -1504,7 +1639,7 @@
                     <h3 class="service-title">App Development</h3>
                     <p class="service-desc">Design and build custom business applications that streamline your operations — from CRM and project management to inventory and HR systems.</p>
                 </div>
-                <div class="service-card fade-in">
+                <div class="service-card">
                     <div class="service-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <line x1="18" y1="20" x2="18" y2="10"/>
@@ -1515,7 +1650,7 @@
                     <h3 class="service-title">Analytics & Dashboards</h3>
                     <p class="service-desc">Transform your data into actionable insights with custom dashboards, reports, and analytics solutions built on the Kintone platform.</p>
                 </div>
-                <div class="service-card fade-in">
+                <div class="service-card">
                     <div class="service-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
@@ -1533,24 +1668,65 @@
         <div class="about-deco"></div>
         <div class="container">
             <div class="about-grid">
-                <div class="about-image fade-in">
-                    <svg class="about-img-main" viewBox="0 0 500 400" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect width="500" height="400" rx="24" fill="#E8E4DD"/>
-                        <rect x="40" y="40" width="420" height="280" rx="16" fill="white"/>
-                        <rect x="60" y="60" width="180" height="120" rx="12" fill="#4A7C59" opacity="0.1"/>
-                        <rect x="260" y="60" width="180" height="55" rx="8" fill="#4A7C59" opacity="0.2"/>
-                        <rect x="260" y="125" width="120" height="55" rx="8" fill="#C4A35A" opacity="0.2"/>
-                        <rect x="60" y="200" width="380" height="100" rx="12" fill="#F0EDE8"/>
-                        <circle cx="100" cy="120" r="30" fill="#4A7C59" opacity="0.3"/>
-                        <rect x="80" y="220" width="100" height="12" rx="6" fill="#4A7C59" opacity="0.4"/>
-                        <rect x="80" y="240" width="60" height="8" rx="4" fill="#4A7C59" opacity="0.2"/>
-                        <rect x="200" y="220" width="100" height="12" rx="6" fill="#C4A35A" opacity="0.4"/>
-                        <rect x="200" y="240" width="60" height="8" rx="4" fill="#C4A35A" opacity="0.2"/>
-                        <rect x="320" y="220" width="100" height="12" rx="6" fill="#6B9B7A" opacity="0.4"/>
-                        <rect x="320" y="240" width="60" height="8" rx="4" fill="#6B9B7A" opacity="0.2"/>
-                        <rect x="40" y="340" width="200" height="40" rx="8" fill="#4A7C59"/>
-                        <text x="100" y="365" fill="white" font-family="Arial" font-size="14" text-anchor="middle">Deploy App</text>
-                    </svg>
+                <div class="about-image">
+                    <div class="kintone-preview">
+                        <div class="kintone-header">
+                            <div class="kintone-dots">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <div class="kintone-url">kintone.com/your-company</div>
+                        </div>
+                        <div class="kintone-body">
+                            <div class="kintone-sidebar">
+                                <div class="sidebar-item active">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/></svg>
+                                    Dashboard
+                                </div>
+                                <div class="sidebar-item">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+                                    Customers
+                                </div>
+                                <div class="sidebar-item">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+                                    Reports
+                                </div>
+                                <div class="sidebar-item">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33"/></svg>
+                                    Settings
+                                </div>
+                            </div>
+                            <div class="kintone-main">
+                                <div class="kintone-table">
+                                    <div class="kintone-table-header">
+                                        <span>Company</span>
+                                        <span>Contact</span>
+                                        <span>Value</span>
+                                        <span>Status</span>
+                                    </div>
+                                    <div class="kintone-table-row">
+                                        <span>Acme Corp</span>
+                                        <span>John Smith</span>
+                                        <span>₱450,000</span>
+                                        <span class="status-badge active">Active</span>
+                                    </div>
+                                    <div class="kintone-table-row">
+                                        <span>TechStart PH</span>
+                                        <span>Maria Santos</span>
+                                        <span>₱280,000</span>
+                                        <span class="status-badge pending">Pending</span>
+                                    </div>
+                                    <div class="kintone-table-row">
+                                        <span>Global Trade</span>
+                                        <span>Juan Cruz</span>
+                                        <span>₱650,000</span>
+                                        <span class="status-badge new">New</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <div class="about-img-badge">
                         <div class="badge-icon">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C4A35A" stroke-width="2">
@@ -1563,7 +1739,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="about-content fade-in">
+                <div class="about-content">
                     <span class="about-label">About Edamame Inc.</span>
                     <h2 class="about-title">Your Trusted Digital Transformation Partner in the Philippines</h2>
                     <p class="about-text">Established as the official Channel Partner for Kintone, Edamame Inc. is at the forefront of revolutionizing how organizations operate in the digital age. Based in Ortigas Center, we serve businesses across healthcare, education, finance, manufacturing, and beyond.</p>
@@ -1616,28 +1792,28 @@
     <!-- Process Section -->
     <section class="section process" id="process">
         <div class="container">
-            <div class="section-header fade-in">
+            <div class="section-header">
                 <span class="section-label">How We Work</span>
                 <h2 class="section-title">A Proven Process for Digital Success</h2>
                 <p class="section-desc">Our streamlined approach ensures your Kintone implementation is smooth, efficient, and aligned with your business goals.</p>
             </div>
             <div class="process-steps">
-                <div class="process-step fade-in">
+                <div class="process-step">
                     <div class="step-number">1</div>
                     <h3 class="step-title">Discovery</h3>
                     <p class="step-desc">We analyze your workflows, pain points, and goals to understand exactly what you need from Kintone.</p>
                 </div>
-                <div class="process-step fade-in">
+                <div class="process-step">
                     <div class="step-number">2</div>
                     <h3 class="step-title">Design</h3>
                     <p class="step-desc">Our team creates a customized solution blueprint, including app architecture and integration plans.</p>
                 </div>
-                <div class="process-step fade-in">
+                <div class="process-step">
                     <div class="step-number">3</div>
                     <h3 class="step-title">Build</h3>
                     <p class="step-desc">We develop and configure your Kintone apps, adding custom functionality as needed.</p>
                 </div>
-                <div class="process-step fade-in">
+                <div class="process-step">
                     <div class="step-number">4</div>
                     <h3 class="step-title">Launch</h3>
                     <p class="step-desc">Deployment, training, and ongoing support ensure your team succeeds from day one.</p>
@@ -1649,13 +1825,13 @@
     <!-- Testimonials -->
     <section class="section testimonials" id="testimonials">
         <div class="container">
-            <div class="section-header fade-in">
+            <div class="section-header">
                 <span class="section-label">Testimonials</span>
                 <h2 class="section-title">What Our Clients Say</h2>
                 <p class="section-desc">Businesses across the Philippines trust Edamame Inc. to power their digital transformation.</p>
             </div>
             <div class="testimonials-grid">
-                <div class="testimonial-card fade-in">
+                <div class="testimonial-card">
                     <div class="testimonial-rating">
                         <svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
                         <svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
@@ -1672,7 +1848,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="testimonial-card fade-in">
+                <div class="testimonial-card">
                     <div class="testimonial-rating">
                         <svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
                         <svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
@@ -1689,7 +1865,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="testimonial-card fade-in">
+                <div class="testimonial-card">
                     <div class="testimonial-rating">
                         <svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
                         <svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
@@ -1714,11 +1890,11 @@
     <section class="section cta" id="contact">
         <div class="cta-pattern"></div>
         <div class="container">
-            <div class="cta-content fade-in">
+            <div class="cta-content">
                 <h2 class="cta-title">Ready to Transform Your Business?</h2>
                 <p class="cta-desc">Schedule a free consultation and discover how Kintone can streamline your operations, boost productivity, and drive growth.</p>
-                <div class="hero-actions" style="justify-content: center;">
-                    <a href="/cdn-cgi/l/email-protection#dcb7b5b2a8b3b2b99cb9b8bdb1bdb1b9f1b6acf2bfb3b1" class="btn btn-primary">
+                <div class="cta-actions">
+                    <a href="mailto:kintone@edamame-jp.com" class="btn btn-primary">
                         Schedule Free Demo
                         <svg class="btn-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M3 8h10M9 4l4 4-4 4"/>
@@ -1752,19 +1928,14 @@
                     </a>
                     <p>Official Kintone Partner in the Philippines. Empowering businesses with no-code solutions since day one.</p>
                     <div class="footer-social">
-                        <a href="#" class="social-link">
+                        <a href="https://www.linkedin.com/company/edamame-inc" class="social-link" target="_blank">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
                                 <rect x="2" y="9" width="4" height="12"/>
                                 <circle cx="4" cy="4" r="2"/>
                             </svg>
                         </a>
-                        <a href="#" class="social-link">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/>
-                            </svg>
-                        </a>
-                        <a href="#" class="social-link">
+                        <a href="https://www.facebook.com/edamameinc" class="social-link" target="_blank">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
                             </svg>
@@ -1774,28 +1945,29 @@
                 <div class="footer-col">
                     <h4 class="footer-title">Services</h4>
                     <ul class="footer-links">
-                        <li><a href="#">Implementation</a></li>
-                        <li><a href="#">Custom Development</a></li>
-                        <li><a href="#">Training</a></li>
-                        <li><a href="#">Support</a></li>
+                        <li><a href="#services">Implementation</a></li>
+                        <li><a href="#services">Custom Development</a></li>
+                        <li><a href="#services">Training</a></li>
+                        <li><a href="#services">Support</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
                     <h4 class="footer-title">Company</h4>
                     <ul class="footer-links">
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Careers</a></li>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#process">Our Process</a></li>
+                        <li><a href="#testimonials">Testimonials</a></li>
+                        <li><a href="#contact">Contact</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
                     <h4 class="footer-title">Contact</h4>
                     <ul class="footer-links">
-                        <li>15F Jollibee Tower</li>
-                        <li>Ortigas Center, Pasig</li>
-                        <li>Metro Manila, Philippines</li>
-                        <li><a href="/cdn-cgi/l/email-protection#cda6a4a3b9a2a3a88da8a9aca0aca0a8e0a7bde3aea2a0"><span class="__cf_email__" data-cfemail="42292b2c362d2c27022726232f232f276f28326c212d2f">[email&#160;protected]</span></a></li>
+                        <li><span>15F Jollibee Tower</span></li>
+                        <li><span>Ortigas Center, Pasig</span></li>
+                        <li><span>Metro Manila, Philippines</span></li>
+                        <li><a href="mailto:kintone@edamame-jp.com">kintone@edamame-jp.com</a></li>
+                        <li><a href="tel:+639288727958">+63 928 872 7958</a></li>
                     </ul>
                 </div>
             </div>
@@ -1804,13 +1976,12 @@
                 <div class="footer-legal">
                     <a href="#">Privacy Policy</a>
                     <a href="#">Terms of Service</a>
-                    <a href="#">Cookie Policy</a>
                 </div>
             </div>
         </div>
     </footer>
 
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+    <script>
         // Navigation scroll effect
         const nav = document.getElementById('nav');
         window.addEventListener('scroll', () => {
@@ -1828,24 +1999,6 @@
             document.body.style.overflow = menu.classList.contains('active') ? 'hidden' : '';
         }
 
-        // Intersection Observer for fade-in animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach((entry, index) => {
-                if (entry.isIntersecting) {
-                    setTimeout(() => {
-                        entry.target.classList.add('visible');
-                    }, index * 100);
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
-
         // Smooth scroll for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
@@ -1859,3 +2012,18 @@
                 }
             });
         });
+
+        // Parallax effect for floating elements
+        document.addEventListener('mousemove', (e) => {
+            const floatingElements = document.querySelectorAll('.floating-element');
+            const x = (e.clientX / window.innerWidth - 0.5) * 20;
+            const y = (e.clientY / window.innerHeight - 0.5) * 20;
+            
+            floatingElements.forEach((el, index) => {
+                const factor = index === 0 ? 1 : -1;
+                el.style.transform = `translate(${x * factor}px, ${y * factor}px)`;
+            });
+        });
+    </script>
+</body>
+</html>
