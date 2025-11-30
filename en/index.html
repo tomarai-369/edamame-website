@@ -4059,12 +4059,9 @@
             observer.observe(el);
         });
 
-        // Kintone API Configuration
-        const KINTONE_CONFIG = {
-            subdomain: 'edamame',
-            appId: 906,
-            apiToken: 'BcM1q0uHhMbhxnKj3SBD4tahW4cPSAJIUNuRWY5j'
-        };
+        // Kintone Form Proxy Configuration
+        // Deploy worker from kintone-form-worker.js to Cloudflare, then update URL below
+        const FORM_PROXY_URL = 'https://kintone-form-proxy.edamame-ph.workers.dev';
         
         async function submitToKintone(event) {
             event.preventDefault();
@@ -4093,35 +4090,31 @@
             // Get current language
             const lang = document.body.getAttribute('lang') || 'en';
             
-            // Kintone record payload
+            // Simple payload - worker handles Kintone formatting
             const payload = {
-                app: KINTONE_CONFIG.appId,
-                record: {
-                    Name: { value: name },
-                    Email: { value: email },
-                    Company: { value: company },
-                    Phone: { value: phone },
-                    Message: { value: fullMessage }
-                }
+                Name: name,
+                Email: email,
+                Company: company,
+                Phone: phone,
+                Message: fullMessage
             };
             
             try {
-                const response = await fetch(`https://${KINTONE_CONFIG.subdomain}.kintone.com/k/v1/record.json`, {
+                const response = await fetch(FORM_PROXY_URL, {
                     method: 'POST',
                     headers: {
-                        'Content-Type': 'application/json',
-                        'X-Cybozu-API-Token': KINTONE_CONFIG.apiToken
+                        'Content-Type': 'application/json'
                     },
                     body: JSON.stringify(payload)
                 });
                 
                 const result = await response.json();
                 
-                if (!response.ok || result.code) {
-                    throw new Error(result.message || 'Submission failed');
+                if (!response.ok || result.error) {
+                    throw new Error(result.error || result.details || 'Submission failed');
                 }
                 
-                console.log('Form submitted to Kintone - Record ID:', result.id);
+                console.log('Form submitted to Kintone - Record ID:', result.recordId);
                 
                 // GA4 event tracking
                 if (typeof gtag === 'function') {
