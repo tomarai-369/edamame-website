@@ -1,0 +1,33 @@
+# Robots.txt for Edamame Inc. - Kintone Philippines
+# https://edamame-jp.com
+
+# Allow all crawlers
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://edamame-jp.com/sitemap.xml
+
+# Crawl delay (optional - be nice to the server)
+Crawl-delay: 1
+
+# Google-specific
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+# Bing-specific
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 0
+
+# Allow all image crawlers
+User-agent: Googlebot-Image
+Allow: /
+
+# Allow mobile crawlers
+User-agent: Googlebot-Mobile
+Allow: /
+
+# Host directive (canonical domain)
+Host: https://edamame-jp.com
