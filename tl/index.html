@@ -3807,48 +3807,46 @@
                 </div>
                 
                 <div class="contact-form-card">
-                    <form action="https://formspree.io/f/mwpdrrov" method="POST" class="contact-form">
+                    <form id="kintoneForm" class="contact-form" onsubmit="return submitToKintone(event)">
                         <div class="form-row">
                             <div class="form-group">
                                 <label class="form-label" data-en="Name" data-ja="お名前" data-tl="Pangalan">Name <span class="required">*</span></label>
-                                <input type="text" name="name" class="form-input" required placeholder="Your name">
+                                <input type="text" name="Name" id="formName" class="form-input" required placeholder="Your name">
                             </div>
                             <div class="form-group">
                                 <label class="form-label" data-en="Email" data-ja="メールアドレス" data-tl="Email">Email <span class="required">*</span></label>
-                                <input type="email" name="email" class="form-input" required placeholder="your@email.com">
+                                <input type="email" name="Email" id="formEmail" class="form-input" required placeholder="your@email.com">
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="form-group">
                                 <label class="form-label" data-en="Company" data-ja="会社名" data-tl="Kumpanya">Company</label>
-                                <input type="text" name="company" class="form-input" placeholder="Your company">
+                                <input type="text" name="Company" id="formCompany" class="form-input" placeholder="Your company">
                             </div>
                             <div class="form-group">
                                 <label class="form-label" data-en="Phone" data-ja="電話番号" data-tl="Telepono">Phone</label>
-                                <input type="tel" name="phone" class="form-input" placeholder="+63 XXX XXX XXXX">
+                                <input type="tel" name="Phone" id="formPhone" class="form-input" placeholder="+63 XXX XXX XXXX">
                             </div>
                         </div>
                         <div class="form-group full-width">
                             <label class="form-label" data-en="What are you interested in?" data-ja="ご興味のある内容" data-tl="Ano ang interest mo?">What are you interested in?</label>
-                            <select name="interest" class="form-select">
+                            <select name="interest" id="formInterest" class="form-select">
                                 <option value="" data-en="Select an option" data-ja="選択してください" data-tl="Pumili ng option">Select an option</option>
-                                <option value="demo" data-en="Free Demo / Consultation" data-ja="無料デモ・相談" data-tl="Libreng Demo / Consultation">Free Demo / Consultation</option>
-                                <option value="crm" data-en="CRM / Sales Management" data-ja="CRM・営業管理" data-tl="CRM / Sales Management">CRM / Sales Management</option>
-                                <option value="inventory" data-en="Inventory Management" data-ja="在庫管理" data-tl="Inventory Management">Inventory Management</option>
-                                <option value="hr" data-en="HR / Employee Management" data-ja="人事・労務管理" data-tl="HR / Employee Management">HR / Employee Management</option>
-                                <option value="accounting" data-en="Accounting / Finance" data-ja="経理・会計" data-tl="Accounting / Finance">Accounting / Finance</option>
-                                <option value="project" data-en="Project Management" data-ja="プロジェクト管理" data-tl="Project Management">Project Management</option>
-                                <option value="custom" data-en="Custom App Development" data-ja="カスタムアプリ開発" data-tl="Custom App Development">Custom App Development</option>
-                                <option value="other" data-en="Other" data-ja="その他" data-tl="Iba pa">Other</option>
+                                <option value="Free Demo / Consultation" data-en="Free Demo / Consultation" data-ja="無料デモ・相談" data-tl="Libreng Demo / Consultation">Free Demo / Consultation</option>
+                                <option value="CRM / Sales Management" data-en="CRM / Sales Management" data-ja="CRM・営業管理" data-tl="CRM / Sales Management">CRM / Sales Management</option>
+                                <option value="Inventory Management" data-en="Inventory Management" data-ja="在庫管理" data-tl="Inventory Management">Inventory Management</option>
+                                <option value="HR / Employee Management" data-en="HR / Employee Management" data-ja="人事・労務管理" data-tl="HR / Employee Management">HR / Employee Management</option>
+                                <option value="Accounting / Finance" data-en="Accounting / Finance" data-ja="経理・会計" data-tl="Accounting / Finance">Accounting / Finance</option>
+                                <option value="Project Management" data-en="Project Management" data-ja="プロジェクト管理" data-tl="Project Management">Project Management</option>
+                                <option value="Custom App Development" data-en="Custom App Development" data-ja="カスタムアプリ開発" data-tl="Custom App Development">Custom App Development</option>
+                                <option value="Other" data-en="Other" data-ja="その他" data-tl="Iba pa">Other</option>
                             </select>
                         </div>
                         <div class="form-group full-width">
                             <label class="form-label" data-en="Message" data-ja="メッセージ" data-tl="Mensahe">Message <span class="required">*</span></label>
-                            <textarea name="message" class="form-textarea" required placeholder="Tell us about your project or questions..."></textarea>
+                            <textarea name="Message" id="formMessage" class="form-textarea" required placeholder="Tell us about your project or questions..."></textarea>
                         </div>
-                        <input type="hidden" name="_subject" value="New Contact Form Submission - Kintone Philippines">
-                        <input type="hidden" name="_template" value="table">
-                        <button type="submit" class="form-submit">
+                        <button type="submit" class="form-submit" id="submitBtn">
                             <span data-en="Send Message" data-ja="送信する" data-tl="Ipadala">Send Message</span>
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <line x1="22" y1="2" x2="11" y2="13"/>
@@ -4071,6 +4069,147 @@
             el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
             observer.observe(el);
         });
+
+        // Kintone API Configuration
+        const KINTONE_CONFIG = {
+            subdomain: 'edamame',
+            appId: 906,
+            apiToken: 'BcM1q0uHhMbhxnKj3SBD4tahW4cPSAJIUNuRWY5j'
+        };
+        
+        async function submitToKintone(event) {
+            event.preventDefault();
+            
+            const submitBtn = document.getElementById('submitBtn');
+            const originalText = submitBtn.querySelector('span').textContent;
+            
+            // Disable button and show loading
+            submitBtn.disabled = true;
+            submitBtn.querySelector('span').textContent = 'Sending...';
+            submitBtn.style.opacity = '0.7';
+            
+            // Get form values
+            const name = document.getElementById('formName').value.trim();
+            const email = document.getElementById('formEmail').value.trim();
+            const company = document.getElementById('formCompany').value.trim();
+            const phone = document.getElementById('formPhone').value.trim();
+            const interest = document.getElementById('formInterest').value;
+            const message = document.getElementById('formMessage').value.trim();
+            
+            // Build message with interest
+            const fullMessage = interest 
+                ? `[Interest: ${interest}]\n\n${message}`
+                : message;
+            
+            // Get current language
+            const lang = document.body.getAttribute('lang') || 'en';
+            
+            // Kintone record payload
+            const payload = {
+                app: KINTONE_CONFIG.appId,
+                record: {
+                    Name: { value: name },
+                    Email: { value: email },
+                    Company: { value: company },
+                    Phone: { value: phone },
+                    Message: { value: fullMessage }
+                }
+            };
+            
+            try {
+                const response = await fetch(`https://${KINTONE_CONFIG.subdomain}.kintone.com/k/v1/record.json`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'X-Cybozu-API-Token': KINTONE_CONFIG.apiToken
+                    },
+                    body: JSON.stringify(payload)
+                });
+                
+                const result = await response.json();
+                
+                if (!response.ok || result.code) {
+                    throw new Error(result.message || 'Submission failed');
+                }
+                
+                console.log('Form submitted to Kintone - Record ID:', result.id);
+                
+                // GA4 event tracking
+                if (typeof gtag === 'function') {
+                    gtag('event', 'generate_lead', {
+                        event_category: 'Contact Form',
+                        event_label: interest || 'General Inquiry',
+                        currency: 'PHP',
+                        value: 1
+                    });
+                }
+                
+                // Success - show message based on language
+                const successMessages = {
+                    en: { title: 'Thank You!', text: 'We\'ve received your message and will get back to you within 24 hours.' },
+                    ja: { title: 'ありがとうございます！', text: '24時間以内にご連絡いたします。' },
+                    tl: { title: 'Salamat!', text: 'Natanggap na namin ang iyong mensahe. Magreresponde kami sa loob ng 24 oras.' }
+                };
+                const msg = successMessages[lang] || successMessages.en;
+                
+                // Show success message
+                showFormMessage('success', msg.title, msg.text);
+                
+                // Reset form
+                document.getElementById('kintoneForm').reset();
+                
+            } catch (error) {
+                console.error('Form submission error:', error);
+                
+                // Error messages based on language
+                const errorMessages = {
+                    en: { title: 'Oops!', text: 'Something went wrong. Please try again or contact us directly at kintone@edamame-jp.com' },
+                    ja: { title: 'エラー', text: '送信に失敗しました。kintone@edamame-jp.com まで直接ご連絡ください。' },
+                    tl: { title: 'May Error!', text: 'May problema sa pagpapadala. Subukan ulit o kontakin kami sa kintone@edamame-jp.com' }
+                };
+                const msg = errorMessages[lang] || errorMessages.en;
+                
+                showFormMessage('error', msg.title, msg.text);
+                
+            } finally {
+                // Re-enable button
+                submitBtn.disabled = false;
+                submitBtn.querySelector('span').textContent = originalText;
+                submitBtn.style.opacity = '1';
+            }
+            
+            return false;
+        }
+        
+        // Simple message display function
+        function showFormMessage(type, title, text) {
+            // Create overlay
+            const overlay = document.createElement('div');
+            overlay.style.cssText = 'position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.5);display:flex;align-items:center;justify-content:center;z-index:10000;';
+            
+            // Create modal
+            const modal = document.createElement('div');
+            modal.style.cssText = 'background:white;padding:40px;border-radius:16px;text-align:center;max-width:400px;margin:20px;box-shadow:0 20px 60px rgba(0,0,0,0.3);';
+            
+            const icon = type === 'success' 
+                ? '<div style="width:64px;height:64px;margin:0 auto 20px;background:#E8F5E9;border-radius:50%;display:flex;align-items:center;justify-content:center;"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#4CAF50" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>'
+                : '<div style="width:64px;height:64px;margin:0 auto 20px;background:#FFEBEE;border-radius:50%;display:flex;align-items:center;justify-content:center;"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#F44336" stroke-width="3"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></div>';
+            
+            modal.innerHTML = `
+                ${icon}
+                <h3 style="font-size:1.5rem;margin-bottom:12px;color:#1A1A18;">${title}</h3>
+                <p style="color:#666;margin-bottom:24px;line-height:1.6;">${text}</p>
+                <button onclick="this.closest('div').parentElement.remove()" style="background:linear-gradient(135deg,#4A7C59,#5C956C);color:white;border:none;padding:12px 32px;border-radius:8px;font-size:1rem;font-weight:600;cursor:pointer;">OK</button>
+            `;
+            
+            overlay.appendChild(modal);
+            document.body.appendChild(overlay);
+            
+            // Close on overlay click
+            overlay.addEventListener('click', (e) => {
+                if (e.target === overlay) overlay.remove();
+            });
+        }
     </script>
 </body>
 </html>
