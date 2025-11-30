@@ -1877,6 +1877,17 @@
             -webkit-text-fill-color: transparent;
         }
 
+        .mobile-cta-btn {
+            display: inline-block;
+            margin-top: 16px;
+            padding: 16px 32px !important;
+            background: var(--gradient-primary) !important;
+            color: white !important;
+            border-radius: 100px;
+            font-size: 1.1rem !important;
+            -webkit-text-fill-color: white !important;
+        }
+
         /* ==================== RESPONSIVE ==================== */
         @media (max-width: 1200px) {
             .possibilities-grid {
@@ -2661,7 +2672,76 @@
             margin-bottom: 24px;
         }
 
-        /* FAQ Enhanced */
+        /* Calendly Booking Section */
+        .booking-section {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #f8f9fa 0%, #fff 100%);
+        }
+
+        .booking-header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 40px;
+        }
+
+        .booking-header h2 {
+            font-size: clamp(1.8rem, 4vw, 2.5rem);
+            font-weight: 700;
+            color: var(--color-dark);
+            margin-bottom: 16px;
+        }
+
+        .booking-header p {
+            font-size: 1.1rem;
+            color: var(--color-text-muted);
+        }
+
+        .booking-benefits {
+            display: flex;
+            justify-content: center;
+            gap: 32px;
+            flex-wrap: wrap;
+            margin-bottom: 32px;
+        }
+
+        .booking-benefit {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.95rem;
+            color: var(--color-text);
+        }
+
+        .booking-benefit svg {
+            width: 20px;
+            height: 20px;
+            color: var(--color-primary);
+        }
+
+        .calendly-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-lg);
+            overflow: hidden;
+        }
+
+        .calendly-inline-widget {
+            min-width: 320px;
+            height: 700px;
+        }
+
+        @media (max-width: 900px) {
+            .calendly-inline-widget {
+                height: 800px;
+            }
+            .booking-benefits {
+                flex-direction: column;
+                align-items: center;
+                gap: 16px;
+            }
+        }
         .faq-section {
             padding: 100px 0;
             background: var(--color-bg-alt);
@@ -2814,7 +2894,7 @@
                     <li><a href="#process" class="nav-link" data-en="Process" data-ja="導入の流れ" data-tl="Proseso">Process</a></li>
                     <li><a href="#customers" class="nav-link" data-en="Clients" data-ja="導入実績" data-tl="Clients">Clients</a></li>
                     <li><a href="#contact-form" class="nav-link" data-en="Contact" data-ja="お問い合わせ" data-tl="Contact">Contact</a></li>
-                    <li><a href="https://calendly.com/kintoneph/freekintoneappconsultation" target="_blank" class="nav-cta" data-en="Free Demo" data-ja="無料相談" data-tl="Libreng Demo">Free Demo</a></li>
+                    <li><a href="#book-demo" class="nav-cta" data-en="Free Demo" data-ja="無料相談" data-tl="Libreng Demo">Free Demo</a></li>
                 </ul>
                 <div class="mobile-toggle" onclick="toggleMobileMenu()">
                     <span></span>
@@ -2839,7 +2919,8 @@
             <li><a href="#about" onclick="toggleMobileMenu()" data-en="Why Kintone" data-ja="選ばれる理由">Why Kintone</a></li>
             <li><a href="#process" onclick="toggleMobileMenu()" data-en="Process" data-ja="導入プロセス">Process</a></li>
             <li><a href="#customers" onclick="toggleMobileMenu()" data-en="Clients" data-ja="導入事例">Clients</a></li>
-            <li><a href="https://calendly.com/kintoneph/freekintoneappconsultation" target="_blank" onclick="toggleMobileMenu()" data-en="Contact" data-ja="お問い合わせ">Contact</a></li>
+            <li><a href="#contact-form" onclick="toggleMobileMenu()" data-en="Contact" data-ja="お問い合わせ">Contact</a></li>
+            <li><a href="#book-demo" onclick="toggleMobileMenu()" class="mobile-cta-btn" data-en="📅 Book Free Demo" data-ja="📅 無料デモ予約" data-tl="📅 Mag-book ng Demo">📅 Book Free Demo</a></li>
         </ul>
     </div>
 
@@ -3759,6 +3840,36 @@
         </div>
     </section>
 
+    <!-- Book a Demo Section - Embedded Calendly -->
+    <section class="booking-section" id="book-demo">
+        <div class="container">
+            <div class="booking-header">
+                <h2 data-en="📅 Book Your Free Consultation" data-ja="📅 無料相談を予約" data-tl="📅 Mag-book ng Libreng Consultation">📅 Book Your Free Consultation</h2>
+                <p data-en="Pick a time that works for you. No commitment, no pressure — just a quick chat to see how Kintone can help your business." data-ja="ご都合の良い日時をお選びください。コミットメント不要、プレッシャーなし — Kintoneがお客様のビジネスにどう役立つかを簡単にご説明します。" data-tl="Pumili ng oras na okay sa'yo. Walang commitment, walang pressure — quick chat lang para makita kung paano makakatulong ang Kintone sa business mo.">Pick a time that works for you. No commitment, no pressure — just a quick chat to see how Kintone can help your business.</p>
+            </div>
+            <div class="booking-benefits">
+                <div class="booking-benefit">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                    <span data-en="30-minute session" data-ja="30分のセッション" data-tl="30-minute session">30-minute session</span>
+                </div>
+                <div class="booking-benefit">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                    <span data-en="Live demo included" data-ja="ライブデモ付き" data-tl="May live demo">Live demo included</span>
+                </div>
+                <div class="booking-benefit">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                    <span data-en="100% free, no obligation" data-ja="完全無料、義務なし" data-tl="100% libre, walang obligation">100% free, no obligation</span>
+                </div>
+            </div>
+            <div class="calendly-container">
+                <!-- Calendly inline widget begin -->
+                <div class="calendly-inline-widget" data-url="https://calendly.com/kintoneph/freekintoneappconsultation?hide_gdpr_banner=1&primary_color=4a7c59"></div>
+                <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+                <!-- Calendly inline widget end -->
+            </div>
+        </div>
+    </section>
+
     <!-- Contact Form Section -->
     <section class="contact-section" id="contact-form">
         <div class="container">
@@ -4193,5 +4304,19 @@
             });
         }
     </script>
+
+    <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/692ba5a3040be6197b42a67e/1jb97u1s4';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+    })();
+    </script>
+    <!--End of Tawk.to Script-->
 </body>
 </html>
