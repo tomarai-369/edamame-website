@@ -3918,30 +3918,32 @@
                 </div>
                 
                 <div class="contact-form-card">
-                    <form id="kintoneForm" class="contact-form" onsubmit="return submitToKintone(event)">
+                    <form id="contactForm" class="contact-form" action="https://formspree.io/f/mwpdrrov" method="POST">
+                        <input type="hidden" name="_subject" value="New Kintone Website Inquiry">
+                        <input type="hidden" name="_next" value="https://edamame-jp.com/tl/?submitted=true">
                         <div class="form-row">
                             <div class="form-group">
                                 <label class="form-label" data-en="Name" data-ja="お名前" data-tl="Pangalan">Name <span class="required">*</span></label>
-                                <input type="text" name="Name" id="formName" class="form-input" required placeholder="Your name">
+                                <input type="text" name="name" class="form-input" required placeholder="Your name">
                             </div>
                             <div class="form-group">
                                 <label class="form-label" data-en="Email" data-ja="メールアドレス" data-tl="Email">Email <span class="required">*</span></label>
-                                <input type="email" name="Email" id="formEmail" class="form-input" required placeholder="your@email.com">
+                                <input type="email" name="_replyto" class="form-input" required placeholder="your@email.com">
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="form-group">
                                 <label class="form-label" data-en="Company" data-ja="会社名" data-tl="Kumpanya">Company</label>
-                                <input type="text" name="Company" id="formCompany" class="form-input" placeholder="Your company">
+                                <input type="text" name="company" class="form-input" placeholder="Your company">
                             </div>
                             <div class="form-group">
                                 <label class="form-label" data-en="Phone" data-ja="電話番号" data-tl="Telepono">Phone</label>
-                                <input type="tel" name="Phone" id="formPhone" class="form-input" placeholder="+63 XXX XXX XXXX">
+                                <input type="tel" name="phone" class="form-input" placeholder="+63 XXX XXX XXXX">
                             </div>
                         </div>
                         <div class="form-group full-width">
                             <label class="form-label" data-en="What are you interested in?" data-ja="ご興味のある内容" data-tl="Ano ang interest mo?">What are you interested in?</label>
-                            <select name="interest" id="formInterest" class="form-select">
+                            <select name="interest" class="form-select">
                                 <option value="" data-en="Select an option" data-ja="選択してください" data-tl="Pumili ng option">Select an option</option>
                                 <option value="Free Demo / Consultation" data-en="Free Demo / Consultation" data-ja="無料デモ・相談" data-tl="Libreng Demo / Consultation">Free Demo / Consultation</option>
                                 <option value="CRM / Sales Management" data-en="CRM / Sales Management" data-ja="CRM・営業管理" data-tl="CRM / Sales Management">CRM / Sales Management</option>
@@ -3955,7 +3957,7 @@
                         </div>
                         <div class="form-group full-width">
                             <label class="form-label" data-en="Message" data-ja="メッセージ" data-tl="Mensahe">Message <span class="required">*</span></label>
-                            <textarea name="Message" id="formMessage" class="form-textarea" required placeholder="Tell us about your project or questions..."></textarea>
+                            <textarea name="message" class="form-textarea" required placeholder="Tell us about your project or questions..."></textarea>
                         </div>
                         <button type="submit" class="form-submit" id="submitBtn">
                             <span data-en="Send Message" data-ja="送信する" data-tl="Ipadala">Send Message</span>
@@ -4181,108 +4183,18 @@
             observer.observe(el);
         });
 
-        // Kintone Form Proxy Configuration
-        // Deploy worker from kintone-form-worker.js to Cloudflare, then update URL below
-        const FORM_PROXY_URL = 'https://kintone-form-proxy.edamame-ph.workers.dev';
-        
-        async function submitToKintone(event) {
-            event.preventDefault();
-            
-            const submitBtn = document.getElementById('submitBtn');
-            const originalText = submitBtn.querySelector('span').textContent;
-            
-            // Disable button and show loading
-            submitBtn.disabled = true;
-            submitBtn.querySelector('span').textContent = 'Sending...';
-            submitBtn.style.opacity = '0.7';
-            
-            // Get form values
-            const name = document.getElementById('formName').value.trim();
-            const email = document.getElementById('formEmail').value.trim();
-            const company = document.getElementById('formCompany').value.trim();
-            const phone = document.getElementById('formPhone').value.trim();
-            const interest = document.getElementById('formInterest').value;
-            const message = document.getElementById('formMessage').value.trim();
-            
-            // Build message with interest
-            const fullMessage = interest 
-                ? `[Interest: ${interest}]\n\n${message}`
-                : message;
-            
-            // Get current language
+        // Check for successful form submission (Formspree redirect)
+        if (window.location.search.includes('submitted=true')) {
             const lang = document.body.getAttribute('lang') || 'en';
-            
-            // Simple payload - worker handles Kintone formatting
-            const payload = {
-                Name: name,
-                Email: email,
-                Company: company,
-                Phone: phone,
-                Message: fullMessage
+            const successMessages = {
+                en: { title: 'Thank You!', text: 'We\'ve received your message and will get back to you within 24 hours.' },
+                ja: { title: 'ありがとうございます！', text: '24時間以内にご連絡いたします。' },
+                tl: { title: 'Salamat!', text: 'Natanggap na namin ang iyong mensahe. Magreresponde kami sa loob ng 24 oras.' }
             };
-            
-            try {
-                const response = await fetch(FORM_PROXY_URL, {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify(payload)
-                });
-                
-                const result = await response.json();
-                
-                if (!response.ok || result.error) {
-                    throw new Error(result.error || result.details || 'Submission failed');
-                }
-                
-                console.log('Form submitted to Kintone - Record ID:', result.recordId);
-                
-                // GA4 event tracking
-                if (typeof gtag === 'function') {
-                    gtag('event', 'generate_lead', {
-                        event_category: 'Contact Form',
-                        event_label: interest || 'General Inquiry',
-                        currency: 'PHP',
-                        value: 1
-                    });
-                }
-                
-                // Success - show message based on language
-                const successMessages = {
-                    en: { title: 'Thank You!', text: 'We\'ve received your message and will get back to you within 24 hours.' },
-                    ja: { title: 'ありがとうございます！', text: '24時間以内にご連絡いたします。' },
-                    tl: { title: 'Salamat!', text: 'Natanggap na namin ang iyong mensahe. Magreresponde kami sa loob ng 24 oras.' }
-                };
-                const msg = successMessages[lang] || successMessages.en;
-                
-                // Show success message
-                showFormMessage('success', msg.title, msg.text);
-                
-                // Reset form
-                document.getElementById('kintoneForm').reset();
-                
-            } catch (error) {
-                console.error('Form submission error:', error);
-                
-                // Error messages based on language
-                const errorMessages = {
-                    en: { title: 'Oops!', text: 'Something went wrong. Please try again or contact us directly at kintone@edamame-jp.com' },
-                    ja: { title: 'エラー', text: '送信に失敗しました。kintone@edamame-jp.com まで直接ご連絡ください。' },
-                    tl: { title: 'May Error!', text: 'May problema sa pagpapadala. Subukan ulit o kontakin kami sa kintone@edamame-jp.com' }
-                };
-                const msg = errorMessages[lang] || errorMessages.en;
-                
-                showFormMessage('error', msg.title, msg.text);
-                
-            } finally {
-                // Re-enable button
-                submitBtn.disabled = false;
-                submitBtn.querySelector('span').textContent = originalText;
-                submitBtn.style.opacity = '1';
-            }
-            
-            return false;
+            const msg = successMessages[lang] || successMessages.en;
+            showFormMessage('success', msg.title, msg.text);
+            // Clean URL
+            window.history.replaceState({}, document.title, window.location.pathname);
         }
         
         // Simple message display function
