@@ -1,69 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml"
-        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
-  
-  <!-- Root/Redirect Page -->
-  <url>
-    <loc>https://edamame-jp.com/</loc>
-    <lastmod>2025-11-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://edamame-jp.com/en/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://edamame-jp.com/ja/"/>
-    <xhtml:link rel="alternate" hreflang="fil" href="https://edamame-jp.com/tl/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://edamame-jp.com/en/"/>
-  </url>
-  
-  <!-- English Version - Primary -->
-  <url>
-    <loc>https://edamame-jp.com/en/</loc>
-    <lastmod>2025-11-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://edamame-jp.com/en/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://edamame-jp.com/ja/"/>
-    <xhtml:link rel="alternate" hreflang="fil" href="https://edamame-jp.com/tl/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://edamame-jp.com/en/"/>
-    <image:image>
-      <image:loc>https://edamame-jp.com/og-image-kintone-philippines.png</image:loc>
-      <image:title>Kintone Philippines - Build Business Apps Without Code</image:title>
-      <image:caption>Official Kintone Partner Philippines - Edamame Inc.</image:caption>
-    </image:image>
-  </url>
-  
-  <!-- Japanese Version -->
-  <url>
-    <loc>https://edamame-jp.com/ja/</loc>
-    <lastmod>2025-11-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://edamame-jp.com/en/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://edamame-jp.com/ja/"/>
-    <xhtml:link rel="alternate" hreflang="fil" href="https://edamame-jp.com/tl/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://edamame-jp.com/en/"/>
-    <image:image>
-      <image:loc>https://edamame-jp.com/og-image-kintone-philippines.png</image:loc>
-      <image:title>Kintone フィリピン - ノーコードで業務アプリ構築</image:title>
-      <image:caption>Kintone フィリピン正規代理店 - Edamame Inc.</image:caption>
-    </image:image>
-  </url>
-  
-  <!-- Filipino/Tagalog Version -->
-  <url>
-    <loc>https://edamame-jp.com/tl/</loc>
-    <lastmod>2025-11-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://edamame-jp.com/en/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://edamame-jp.com/ja/"/>
-    <xhtml:link rel="alternate" hreflang="fil" href="https://edamame-jp.com/tl/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://edamame-jp.com/en/"/>
-    <image:image>
-      <image:loc>https://edamame-jp.com/og-image-kintone-philippines.png</image:loc>
-      <image:title>Kintone Philippines - Gumawa ng Business App Walang Coding</image:title>
-      <image:caption>Opisyal na Kintone Partner Philippines - Edamame Inc.</image:caption>
-    </image:image>
-  </url>
-  
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+    
+    <!-- English (Default) -->
+    <url>
+        <loc>https://edamame-jp.com/kintone-philippines/en/</loc>
+        <lastmod>2025-12-04</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://edamame-jp.com/kintone-philippines/en/"/>
+        <xhtml:link rel="alternate" hreflang="en-ph" href="https://edamame-jp.com/kintone-philippines/en/"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://edamame-jp.com/kintone-philippines/ja/"/>
+        <xhtml:link rel="alternate" hreflang="tl" href="https://edamame-jp.com/kintone-philippines/tl/"/>
+        <xhtml:link rel="alternate" hreflang="fil" href="https://edamame-jp.com/kintone-philippines/tl/"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://edamame-jp.com/kintone-philippines/en/"/>
+    </url>
+    
+    <!-- Japanese -->
+    <url>
+        <loc>https://edamame-jp.com/kintone-philippines/ja/</loc>
+        <lastmod>2025-12-04</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://edamame-jp.com/kintone-philippines/en/"/>
+        <xhtml:link rel="alternate" hreflang="en-ph" href="https://edamame-jp.com/kintone-philippines/en/"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://edamame-jp.com/kintone-philippines/ja/"/>
+        <xhtml:link rel="alternate" hreflang="tl" href="https://edamame-jp.com/kintone-philippines/tl/"/>
+        <xhtml:link rel="alternate" hreflang="fil" href="https://edamame-jp.com/kintone-philippines/tl/"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://edamame-jp.com/kintone-philippines/en/"/>
+    </url>
+    
+    <!-- Filipino/Tagalog -->
+    <url>
+        <loc>https://edamame-jp.com/kintone-philippines/tl/</loc>
+        <lastmod>2025-12-04</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://edamame-jp.com/kintone-philippines/en/"/>
+        <xhtml:link rel="alternate" hreflang="en-ph" href="https://edamame-jp.com/kintone-philippines/en/"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://edamame-jp.com/kintone-philippines/ja/"/>
+        <xhtml:link rel="alternate" hreflang="tl" href="https://edamame-jp.com/kintone-philippines/tl/"/>
+        <xhtml:link rel="alternate" hreflang="fil" href="https://edamame-jp.com/kintone-philippines/tl/"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://edamame-jp.com/kintone-philippines/en/"/>
+    </url>
+    
 </urlset>
