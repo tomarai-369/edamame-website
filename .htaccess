@@ -1,0 +1,56 @@
+# .htaccess for Kintone Philippines - edamame-jp.com
+# 301 Redirects from old URLs to new URL structure
+
+# Enable RewriteEngine
+RewriteEngine On
+
+# Force HTTPS
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# 301 Redirects: Old URLs -> New URLs (Kintone-Philippines)
+# These preserve SEO value from any existing indexed pages
+
+# Redirect /en/ to /kintone-philippines/en/
+RewriteRule ^en/?$ /kintone-philippines/en/ [R=301,L]
+RewriteRule ^en/(.*)$ /kintone-philippines/en/$1 [R=301,L]
+
+# Redirect /ja/ to /kintone-philippines/ja/
+RewriteRule ^ja/?$ /kintone-philippines/ja/ [R=301,L]
+RewriteRule ^ja/(.*)$ /kintone-philippines/ja/$1 [R=301,L]
+
+# Redirect /tl/ to /kintone-philippines/tl/
+RewriteRule ^tl/?$ /kintone-philippines/tl/ [R=301,L]
+RewriteRule ^tl/(.*)$ /kintone-philippines/tl/$1 [R=301,L]
+
+# Default language redirect (root to English)
+RewriteRule ^$ /kintone-philippines/en/ [R=301,L]
+
+# Prevent directory listing
+Options -Indexes
+
+# Enable GZIP compression
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css application/javascript application/json
+</IfModule>
+
+# Browser caching
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType text/html "access plus 1 hour"
+    ExpiresByType text/css "access plus 1 month"
+    ExpiresByType application/javascript "access plus 1 month"
+    ExpiresByType image/png "access plus 1 year"
+    ExpiresByType image/jpeg "access plus 1 year"
+    ExpiresByType image/gif "access plus 1 year"
+    ExpiresByType image/webp "access plus 1 year"
+    ExpiresByType image/svg+xml "access plus 1 year"
+</IfModule>
+
+# Security headers
+<IfModule mod_headers.c>
+    Header set X-Content-Type-Options "nosniff"
+    Header set X-Frame-Options "SAMEORIGIN"
+    Header set X-XSS-Protection "1; mode=block"
+    Header set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
