@@ -2809,6 +2809,101 @@
             margin-top: 8px;
         }
 
+        /* Privacy Consent Checkbox */
+        .privacy-consent {
+            margin: 16px 0 8px 0;
+        }
+
+        .checkbox-container {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            cursor: pointer;
+            position: relative;
+            padding-left: 32px;
+            line-height: 1.5;
+        }
+
+        .checkbox-container input[type="checkbox"] {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+            height: 0;
+            width: 0;
+        }
+
+        .checkmark {
+            position: absolute;
+            left: 0;
+            top: 2px;
+            height: 20px;
+            width: 20px;
+            background-color: var(--color-bg);
+            border: 2px solid var(--color-bg-alt);
+            border-radius: 4px;
+            transition: all 0.2s ease;
+        }
+
+        .checkbox-container:hover input ~ .checkmark {
+            border-color: var(--color-primary);
+        }
+
+        .checkbox-container input:checked ~ .checkmark {
+            background-color: var(--color-primary);
+            border-color: var(--color-primary);
+        }
+
+        .checkbox-container input:focus ~ .checkmark {
+            box-shadow: 0 0 0 3px rgba(74, 124, 89, 0.2);
+        }
+
+        .checkmark:after {
+            content: "";
+            position: absolute;
+            display: none;
+            left: 6px;
+            top: 2px;
+            width: 5px;
+            height: 10px;
+            border: solid white;
+            border-width: 0 2px 2px 0;
+            transform: rotate(45deg);
+        }
+
+        .checkbox-container input:checked ~ .checkmark:after {
+            display: block;
+        }
+
+        .consent-text {
+            font-size: 0.85rem;
+            color: var(--color-text);
+        }
+
+        .consent-text a {
+            color: var(--color-primary);
+            text-decoration: underline;
+            font-weight: 500;
+        }
+
+        .consent-text a:hover {
+            color: var(--color-kintone);
+        }
+
+        .privacy-error {
+            color: #dc3545;
+            font-size: 0.8rem;
+            margin-top: 6px;
+            display: none;
+        }
+
+        .privacy-consent.error .checkmark {
+            border-color: #dc3545;
+        }
+
+        .privacy-consent.error .privacy-error {
+            display: block;
+        }
+
         .form-submit:hover {
             transform: translateY(-2px);
             box-shadow: 0 8px 24px rgba(237, 28, 36, 0.3);
@@ -5032,6 +5127,14 @@
                             <label class="form-label" data-en="Message" data-ja="メッセージ" data-tl="Mensahe">Message <span class="required">*</span></label>
                             <textarea name="message" class="form-textarea" required placeholder="Tell us about your project or questions..."></textarea>
                         </div>
+                        <div class="form-group full-width privacy-consent" id="privacyConsentGroup">
+                            <label class="checkbox-container">
+                                <input type="checkbox" id="privacyConsent" name="privacyConsent">
+                                <span class="checkmark"></span>
+                                <span class="consent-text" data-en="I agree to the <a href='../en/privacy-policy/' target='_blank'>Privacy Policy</a> and consent to the collection and processing of my personal data." data-ja="<a href='../ja/privacy-policy/' target='_blank'>プライバシーポリシー</a>に同意し、個人情報の収集・処理に同意します。" data-tl="Sumasang-ayon ako sa <a href='privacy-policy/' target='_blank'>Patakaran sa Privacy</a> at pumapayag sa pagkolekta at pagproseso ng aking personal na impormasyon.">Sumasang-ayon ako sa <a href="privacy-policy/" target="_blank">Patakaran sa Privacy</a> at pumapayag sa pagkolekta at pagproseso ng aking personal na impormasyon.</span>
+                            </label>
+                            <div class="privacy-error" data-en="Please agree to the Privacy Policy to continue." data-ja="続行するにはプライバシーポリシーに同意してください。" data-tl="Mangyaring sumang-ayon sa Patakaran sa Privacy upang magpatuloy.">Mangyaring sumang-ayon sa Patakaran sa Privacy upang magpatuloy.</div>
+                        </div>
                         <button type="submit" class="form-submit" id="submitBtn">
                             <span data-en="Send Message" data-ja="送信する" data-tl="Ipadala">Send Message</span>
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -5413,6 +5516,17 @@
             contactForm.addEventListener('submit', async function(e) {
                 e.preventDefault();
                 
+                // Privacy checkbox validation
+                const privacyCheckbox = document.getElementById('privacyConsent');
+                const privacyGroup = document.getElementById('privacyConsentGroup');
+                
+                if (!privacyCheckbox.checked) {
+                    privacyGroup.classList.add('error');
+                    privacyCheckbox.focus();
+                    return;
+                }
+                privacyGroup.classList.remove('error');
+                
                 const btn = document.getElementById('submitBtn');
                 const originalHTML = btn.innerHTML;
                 btn.innerHTML = '<svg class="spin" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10" stroke-dasharray="32" stroke-dashoffset="32"/></svg> Nagpapadala...';
@@ -5439,6 +5553,7 @@
                     phone: formData.get('phone') || '',
                     interest: formData.get('interest') || '',
                     message: formData.get('message') || '',
+                    privacy_consent: 'Yes',
                     source: 'Kintone Philippines Website',
                     language: 'TL',
                     page_url: window.location.href,
@@ -5459,7 +5574,7 @@
                 };
                 
                 try {
-                    await fetch('https://script.google.com/macros/s/AKfycbw-PnmTAPPAGWLIra0fepKNC5HGI2FVjqS7kMS-cXa5D-SdrKN6kgKT-yZOmRljmDAClw/exec', {
+                    await fetch('https://script.google.com/macros/s/AKfycbz5vVl2EmzGOCfjMNmZ0nIGsPyRel3yg4fq0yNIcTvMbY0pFOpym3yuVPkvY6VP4DEcTg/exec', {
                         method: 'POST',
                         mode: 'no-cors',
                         headers: { 'Content-Type': 'application/json' },
