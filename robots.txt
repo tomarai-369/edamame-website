@@ -1,16 +1,16 @@
-# Robots.txt for Kintone Philippines - edamame-jp.com
-# Official Kintone Partner in the Philippines
+# Robots.txt for Edamame Inc. - Kintone Philippines
+# https://edamame-jp.com
 
 User-agent: *
 Allow: /
 
-# Sitemap location
+# Sitemaps
 Sitemap: https://edamame-jp.com/sitemap.xml
 
-# Crawl-delay for polite crawling
+# Crawl-delay (optional - be nice to servers)
 Crawl-delay: 1
 
-# Allow all major search engines
+# Specific bot rules
 User-agent: Googlebot
 Allow: /
 
@@ -22,3 +22,19 @@ Allow: /
 
 User-agent: DuckDuckBot
 Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+# Block bad bots
+User-agent: AhrefsBot
+Crawl-delay: 10
+
+User-agent: SemrushBot
+Crawl-delay: 10
+
+# Host directive
+Host: https://edamame-jp.com
