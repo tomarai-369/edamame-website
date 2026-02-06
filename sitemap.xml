@@ -9,8 +9,6 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://edamame-jp.com/kintone-philippines/en/"/>
     <xhtml:link rel="alternate" hreflang="en-ph" href="https://edamame-jp.com/kintone-philippines/en/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://edamame-jp.com/kintone-philippines/ja/"/>
-    <xhtml:link rel="alternate" hreflang="tl" href="https://edamame-jp.com/kintone-philippines/tl/"/>
-    <xhtml:link rel="alternate" hreflang="fil" href="https://edamame-jp.com/kintone-philippines/tl/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://edamame-jp.com/kintone-philippines/en/"/>
     <lastmod>2026-02-04</lastmod>
     <changefreq>weekly</changefreq>
@@ -23,8 +21,6 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://edamame-jp.com/kintone-philippines/en/"/>
     <xhtml:link rel="alternate" hreflang="en-ph" href="https://edamame-jp.com/kintone-philippines/en/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://edamame-jp.com/kintone-philippines/ja/"/>
-    <xhtml:link rel="alternate" hreflang="tl" href="https://edamame-jp.com/kintone-philippines/tl/"/>
-    <xhtml:link rel="alternate" hreflang="fil" href="https://edamame-jp.com/kintone-philippines/tl/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://edamame-jp.com/kintone-philippines/en/"/>
     <lastmod>2026-02-04</lastmod>
     <changefreq>weekly</changefreq>
@@ -32,25 +28,12 @@
   </url>
   
   <!-- Homepage - Filipino/Tagalog -->
-  <url>
-    <loc>https://edamame-jp.com/kintone-philippines/tl/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://edamame-jp.com/kintone-philippines/en/"/>
-    <xhtml:link rel="alternate" hreflang="en-ph" href="https://edamame-jp.com/kintone-philippines/en/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://edamame-jp.com/kintone-philippines/ja/"/>
-    <xhtml:link rel="alternate" hreflang="tl" href="https://edamame-jp.com/kintone-philippines/tl/"/>
-    <xhtml:link rel="alternate" hreflang="fil" href="https://edamame-jp.com/kintone-philippines/tl/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://edamame-jp.com/kintone-philippines/en/"/>
-    <lastmod>2026-02-04</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
   
   <!-- Privacy Policy - English -->
   <url>
     <loc>https://edamame-jp.com/kintone-philippines/en/privacy-policy/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://edamame-jp.com/kintone-philippines/en/privacy-policy/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://edamame-jp.com/kintone-philippines/ja/privacy-policy/"/>
-    <xhtml:link rel="alternate" hreflang="tl" href="https://edamame-jp.com/kintone-philippines/tl/privacy-policy/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://edamame-jp.com/kintone-philippines/en/privacy-policy/"/>
     <lastmod>2026-02-04</lastmod>
     <changefreq>monthly</changefreq>
@@ -62,7 +45,6 @@
     <loc>https://edamame-jp.com/kintone-philippines/ja/privacy-policy/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://edamame-jp.com/kintone-philippines/en/privacy-policy/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://edamame-jp.com/kintone-philippines/ja/privacy-policy/"/>
-    <xhtml:link rel="alternate" hreflang="tl" href="https://edamame-jp.com/kintone-philippines/tl/privacy-policy/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://edamame-jp.com/kintone-philippines/en/privacy-policy/"/>
     <lastmod>2026-02-04</lastmod>
     <changefreq>monthly</changefreq>
@@ -70,16 +52,6 @@
   </url>
   
   <!-- Privacy Policy - Filipino -->
-  <url>
-    <loc>https://edamame-jp.com/kintone-philippines/tl/privacy-policy/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://edamame-jp.com/kintone-philippines/en/privacy-policy/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://edamame-jp.com/kintone-philippines/ja/privacy-policy/"/>
-    <xhtml:link rel="alternate" hreflang="tl" href="https://edamame-jp.com/kintone-philippines/tl/privacy-policy/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://edamame-jp.com/kintone-philippines/en/privacy-policy/"/>
-    <lastmod>2026-02-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.3</priority>
-  </url>
   
   <!-- Blog Index -->
   <url>
