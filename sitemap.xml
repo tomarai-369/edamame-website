@@ -130,4 +130,48 @@
     <priority>0.8</priority>
   </url>
 
+  <!-- Industry Pages - Added 2026-02-06 -->
+  <url>
+    <loc>https://edamame-jp.com/kintone-philippines/en/blog/logistics-software-philippines/</loc>
+    <lastmod>2026-02-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://edamame-jp.com/kintone-philippines/en/blog/real-estate-software-philippines/</loc>
+    <lastmod>2026-02-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://edamame-jp.com/kintone-philippines/en/blog/healthcare-software-philippines/</loc>
+    <lastmod>2026-02-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://edamame-jp.com/kintone-philippines/en/blog/bpo-software-philippines/</loc>
+    <lastmod>2026-02-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://edamame-jp.com/kintone-philippines/en/blog/construction-software-philippines/</loc>
+    <lastmod>2026-02-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://edamame-jp.com/kintone-philippines/en/blog/education-software-philippines/</loc>
+    <lastmod>2026-02-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://edamame-jp.com/kintone-philippines/en/roi-calculator/</loc>
+    <lastmod>2026-02-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
 </urlset>
