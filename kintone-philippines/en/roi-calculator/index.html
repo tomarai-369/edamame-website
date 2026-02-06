@@ -600,11 +600,11 @@
         function renderTools() {
             const grid = document.getElementById('toolsGrid');
             grid.innerHTML = TOOLS.map(tool => `
-                <label class="tool-checkbox" data-tool="${tool.id}" onclick="toggleTool(this)">
+                <div class="tool-checkbox" data-tool="${tool.id}" onclick="toggleTool(this)">
                     <input type="checkbox" value="${tool.id}">
                     <div class="tool-check-icon"></div>
                     <span>${tool.name}</span>
-                </label>
+                </div>
             `).join('');
             // Pre-select CRM and PM
             ['crm', 'pm'].forEach(id => {
