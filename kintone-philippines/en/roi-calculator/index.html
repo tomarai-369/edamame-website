@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YF1198H5CL"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-YF1198H5CL');</script>
+
+    <!-- SEO -->
+    <title>Kintone ROI Calculator Philippines 2026 | Calculate Your Savings | Edamame Inc.</title>
+    <meta name="description" content="Calculate how much your Philippine business can save by switching to Kintone. Free ROI calculator compares costs of multiple software tools vs one unified no-code platform.">
+    <meta name="keywords" content="Kintone ROI calculator, business software savings calculator, no-code platform ROI, software cost comparison Philippines, Kintone pricing Philippines, digital transformation savings">
+    <meta name="author" content="Edamame Inc.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://edamame-jp.com/kintone-philippines/en/roi-calculator/">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Kintone ROI Calculator | How Much Can Your Business Save?">
+    <meta property="og:description" content="Free calculator: see your potential savings by consolidating business tools into Kintone.">
+    <meta property="og:url" content="https://edamame-jp.com/kintone-philippines/en/roi-calculator/">
+
+    <!-- Schema -->
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Kintone ROI Calculator Philippines","description":"Calculate potential savings from switching to Kintone","applicationCategory":"BusinessApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"PHP"},"author":{"@type":"Organization","name":"Edamame Inc."}}</script>
+
+    <style>
+        :root {
+            --primary: #4A7C59;
+            --primary-dark: #3d6b4a;
+            --primary-light: #e8f5e9;
+            --text: #333;
+            --text-light: #666;
+            --bg: #f8f9fa;
+            --white: #fff;
+            --border: #e0e0e0;
+            --accent: #ff6d00;
+            --savings: #2e7d32;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.7;
+            color: var(--text);
+            background: var(--bg);
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .header-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--white);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo-icon {
+            width: 32px;
+            height: 32px;
+            background: var(--white);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+        }
+
+        .nav {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .nav a {
+            color: var(--white);
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-weight: 500;
+            transition: background 0.3s;
+        }
+
+        .nav a:hover { background: rgba(255,255,255,0.15); }
+
+        .btn-cta {
+            background: var(--white) !important;
+            color: var(--primary) !important;
+            font-weight: 600;
+        }
+
+        /* Hero */
+        .hero {
+            background: linear-gradient(135deg, #1565c0 0%, #0d47a1 100%);
+            color: var(--white);
+            padding: 60px 20px 50px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        .hero h1 {
+            font-size: 2.3rem;
+            font-weight: 800;
+            margin-bottom: 15px;
+            position: relative;
+        }
+
+        .hero p {
+            font-size: 1.15rem;
+            opacity: 0.95;
+            max-width: 600px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        /* Calculator */
+        .calc-container {
+            max-width: 900px;
+            margin: -30px auto 40px;
+            padding: 0 20px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .calc-card {
+            background: var(--white);
+            border-radius: 16px;
+            box-shadow: 0 8px 40px rgba(0,0,0,0.12);
+            overflow: hidden;
+        }
+
+        .calc-section {
+            padding: 35px 40px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .calc-section:last-child { border-bottom: none; }
+
+        .section-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section-desc {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            margin-bottom: 25px;
+        }
+
+        /* Form Grid */
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group.full-width {
+            grid-column: 1 / -1;
+        }
+
+        label {
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-bottom: 6px;
+            color: var(--text);
+        }
+
+        label small {
+            font-weight: 400;
+            color: var(--text-light);
+        }
+
+        select, input[type="number"] {
+            padding: 12px 16px;
+            border: 2px solid var(--border);
+            border-radius: 8px;
+            font-size: 1rem;
+            font-family: inherit;
+            transition: border-color 0.3s;
+            background: var(--white);
+        }
+
+        select:focus, input[type="number"]:focus {
+            outline: none;
+            border-color: var(--primary);
+        }
+
+        /* Current Tools */
+        .tools-checklist {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+
+        .tool-checkbox {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 14px;
+            background: var(--bg);
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.2s, box-shadow 0.2s;
+            border: 2px solid transparent;
+        }
+
+        .tool-checkbox:hover {
+            background: var(--primary-light);
+        }
+
+        .tool-checkbox.active {
+            background: var(--primary-light);
+            border-color: var(--primary);
+        }
+
+        .tool-checkbox input { display: none; }
+
+        .tool-checkbox span {
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .tool-check-icon {
+            width: 20px;
+            height: 20px;
+            border: 2px solid var(--border);
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            transition: all 0.2s;
+        }
+
+        .tool-checkbox.active .tool-check-icon {
+            background: var(--primary);
+            border-color: var(--primary);
+            color: white;
+        }
+
+        /* Results */
+        .results-section {
+            background: linear-gradient(135deg, #f0f7f1 0%, #e0efe2 100%);
+            padding: 40px;
+        }
+
+        .results-hidden {
+            text-align: center;
+            padding: 30px;
+            color: var(--text-light);
+        }
+
+        .results-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .result-card {
+            background: var(--white);
+            padding: 25px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+        }
+
+        .result-card.highlight {
+            border: 3px solid var(--savings);
+            background: #f0fdf4;
+        }
+
+        .result-label {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: var(--text-light);
+            margin-bottom: 8px;
+        }
+
+        .result-value {
+            font-size: 2rem;
+            font-weight: 800;
+        }
+
+        .result-value.current { color: #c62828; }
+        .result-value.kintone { color: var(--primary); }
+        .result-value.savings { color: var(--savings); }
+
+        .result-sub {
+            font-size: 0.85rem;
+            color: var(--text-light);
+            margin-top: 5px;
+        }
+
+        /* Breakdown */
+        .breakdown {
+            background: var(--white);
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 25px;
+        }
+
+        .breakdown h4 {
+            margin-bottom: 15px;
+            font-size: 1rem;
+        }
+
+        .breakdown-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px solid #f0f0f0;
+            font-size: 0.95rem;
+        }
+
+        .breakdown-row:last-child { border-bottom: none; }
+
+        .breakdown-row .cost { font-weight: 600; }
+        .breakdown-row .cost.old { color: #c62828; text-decoration: line-through; }
+        .breakdown-row .cost.new { color: var(--primary); }
+
+        /* CTA */
+        .results-cta {
+            text-align: center;
+            padding: 20px 0 0;
+        }
+
+        .results-cta .cta-btn {
+            display: inline-block;
+            padding: 16px 40px;
+            background: var(--primary);
+            color: var(--white);
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .results-cta .cta-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(74,124,89,0.3);
+        }
+
+        /* Footer */
+        .footer {
+            background: #1a1a2e;
+            color: #aaa;
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .footer-inner {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .footer a {
+            color: #aaa;
+            text-decoration: none;
+        }
+
+        .footer a:hover { color: var(--white); }
+
+        .footer-links {
+            margin-top: 15px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 1.7rem; }
+            .calc-section { padding: 25px 20px; }
+            .form-grid { grid-template-columns: 1fr; }
+            .tools-checklist { grid-template-columns: 1fr 1fr; }
+            .results-grid { grid-template-columns: 1fr; }
+            .nav { display: none; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-inner">
+            <a href="/kintone-philippines/en/" class="logo">
+                <span class="logo-icon">🌱</span>
+                <span>
+                    Kintone Philippines
+                    <small style="display:block;font-size:0.6rem;font-weight:400;opacity:0.85;margin-top:-2px;">Powered by Edamame Inc.</small>
+                </span>
+            </a>
+            <nav class="nav">
+                <a href="/kintone-philippines/en/">Home</a>
+                <a href="/kintone-philippines/en/blog/">Blog</a>
+                <a href="/kintone-philippines/en/#services">Services</a>
+                <a href="https://calendly.com/kintoneph/freekintoneappconsultation" class="btn-cta">Free Demo</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <h1>💰 Kintone ROI Calculator</h1>
+        <p>See how much your business can save by consolidating multiple tools into one powerful no-code platform.</p>
+    </section>
+
+    <!-- Calculator -->
+    <div class="calc-container">
+        <div class="calc-card">
+
+            <!-- Section 1: Company Info -->
+            <div class="calc-section">
+                <div class="section-title">📊 Step 1: Your Company</div>
+                <div class="section-desc">Tell us about your team size and industry.</div>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label>Number of Employees <small>(who use business software)</small></label>
+                        <input type="number" id="employees" min="1" max="10000" value="20" oninput="calculate()">
+                    </div>
+                    <div class="form-group">
+                        <label>Industry</label>
+                        <select id="industry" onchange="calculate()">
+                            <option value="manufacturing">Manufacturing</option>
+                            <option value="logistics">Logistics & Distribution</option>
+                            <option value="real-estate">Real Estate</option>
+                            <option value="healthcare">Healthcare</option>
+                            <option value="bpo">BPO / Call Center</option>
+                            <option value="construction">Construction</option>
+                            <option value="education">Education</option>
+                            <option value="retail">Retail</option>
+                            <option value="finance">Finance & Accounting</option>
+                            <option value="other" selected>Other / General</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 2: Current Tools -->
+            <div class="calc-section">
+                <div class="section-title">🛠️ Step 2: Your Current Tools</div>
+                <div class="section-desc">Select all the software tools you currently pay for. We'll calculate what you'd save by replacing them with Kintone.</div>
+                <div class="tools-checklist" id="toolsGrid">
+                    <!-- Populated by JS -->
+                </div>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label>Additional monthly software spend <small>(₱ not listed above)</small></label>
+                        <input type="number" id="additionalSpend" min="0" value="0" oninput="calculate()">
+                    </div>
+                    <div class="form-group">
+                        <label>Hours/week staff spend on manual data entry</label>
+                        <input type="number" id="manualHours" min="0" max="100" value="10" oninput="calculate()">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 3: Costs -->
+            <div class="calc-section">
+                <div class="section-title">💳 Step 3: Hidden Costs</div>
+                <div class="section-desc">These often-overlooked costs add up fast.</div>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label>Monthly IT support / freelancer cost <small>(₱)</small></label>
+                        <input type="number" id="itCost" min="0" value="15000" oninput="calculate()">
+                    </div>
+                    <div class="form-group">
+                        <label>Average employee hourly rate <small>(₱)</small></label>
+                        <input type="number" id="hourlyRate" min="0" value="200" oninput="calculate()">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Results -->
+            <div class="results-section" id="resultsSection">
+                <div class="section-title" style="margin-bottom:20px;">📈 Your ROI Results</div>
+
+                <div class="results-grid">
+                    <div class="result-card">
+                        <div class="result-label">Current Monthly Cost</div>
+                        <div class="result-value current" id="currentCost">₱0</div>
+                        <div class="result-sub">All software + hidden costs</div>
+                    </div>
+                    <div class="result-card">
+                        <div class="result-label">With Kintone</div>
+                        <div class="result-value kintone" id="kintoneCost">₱0</div>
+                        <div class="result-sub">One platform, everything included</div>
+                    </div>
+                    <div class="result-card highlight">
+                        <div class="result-label">Monthly Savings</div>
+                        <div class="result-value savings" id="monthlySavings">₱0</div>
+                        <div class="result-sub" id="annualSavings">₱0/year</div>
+                    </div>
+                </div>
+
+                <div class="breakdown" id="breakdownSection">
+                    <h4>📋 Cost Breakdown</h4>
+                    <div id="breakdownRows"></div>
+                </div>
+
+                <div class="breakdown">
+                    <h4>⏱️ Time Savings</h4>
+                    <div class="breakdown-row">
+                        <span>Manual data entry hours saved/month</span>
+                        <span class="cost new" id="hoursSaved">0 hours</span>
+                    </div>
+                    <div class="breakdown-row">
+                        <span>Value of time saved/month</span>
+                        <span class="cost new" id="timeSavingsValue">₱0</span>
+                    </div>
+                    <div class="breakdown-row">
+                        <span>Estimated productivity gain</span>
+                        <span class="cost new" id="productivityGain">0%</span>
+                    </div>
+                </div>
+
+                <div class="results-cta">
+                    <p style="margin-bottom:15px;color:var(--text-light);">Ready to see these savings become real?</p>
+                    <a href="https://calendly.com/kintoneph/freekintoneappconsultation" class="cta-btn">Get Your Free Kintone Demo →</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <p><strong>Edamame Inc.</strong> — Official Kintone Partner Philippines</p>
+            <p style="margin-top:8px;font-size:0.9rem;">2024 Cybozu Global Partner of the Year 🏆</p>
+            <div class="footer-links">
+                <a href="/kintone-philippines/en/">Home</a>
+                <a href="/kintone-philippines/en/blog/">Blog</a>
+                <a href="/kintone-philippines/en/privacy-policy/">Privacy Policy</a>
+                <a href="https://calendly.com/kintoneph/freekintoneappconsultation">Contact</a>
+            </div>
+            <p style="margin-top:20px;font-size:0.85rem;opacity:0.7;">© 2026 Edamame Inc. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const TOOLS = [
+            { id: 'crm', name: 'CRM (Salesforce, Zoho, etc.)', costPerUser: 1200 },
+            { id: 'pm', name: 'Project Management (Monday, Asana)', costPerUser: 800 },
+            { id: 'hr', name: 'HR System (BambooHR, etc.)', costPerUser: 600 },
+            { id: 'inv', name: 'Inventory System', costPerUser: 700 },
+            { id: 'acc', name: 'Accounting (Xero, QuickBooks)', costPerUser: 900 },
+            { id: 'forms', name: 'Forms & Surveys (Typeform, etc.)', costPerUser: 200 },
+            { id: 'collab', name: 'Collaboration (Notion, Confluence)', costPerUser: 400 },
+            { id: 'help', name: 'Helpdesk (Zendesk, Freshdesk)', costPerUser: 800 },
+            { id: 'sheets', name: 'Spreadsheets + Zapier glue', costPerUser: 300 },
+        ];
+
+        const KINTONE_COST_PER_USER = 1350; // ~$24/user/mo in PHP
+
+        // Render tool checkboxes
+        function renderTools() {
+            const grid = document.getElementById('toolsGrid');
+            grid.innerHTML = TOOLS.map(tool => `
+                <label class="tool-checkbox" data-tool="${tool.id}" onclick="toggleTool(this)">
+                    <input type="checkbox" value="${tool.id}">
+                    <div class="tool-check-icon"></div>
+                    <span>${tool.name}</span>
+                </label>
+            `).join('');
+            // Pre-select CRM and PM
+            ['crm', 'pm'].forEach(id => {
+                const el = document.querySelector(`[data-tool="${id}"]`);
+                if (el) { el.classList.add('active'); el.querySelector('input').checked = true; }
+            });
+        }
+
+        function toggleTool(el) {
+            el.classList.toggle('active');
+            el.querySelector('input').checked = el.classList.contains('active');
+            calculate();
+        }
+
+        function getSelectedTools() {
+            return TOOLS.filter(t => {
+                const cb = document.querySelector(`[data-tool="${t.id}"] input`);
+                return cb && cb.checked;
+            });
+        }
+
+        function formatPHP(amount) {
+            return '₱' + Math.round(amount).toLocaleString();
+        }
+
+        function calculate() {
+            const employees = Math.max(1, parseInt(document.getElementById('employees').value) || 1);
+            const additionalSpend = parseInt(document.getElementById('additionalSpend').value) || 0;
+            const manualHours = parseInt(document.getElementById('manualHours').value) || 0;
+            const itCost = parseInt(document.getElementById('itCost').value) || 0;
+            const hourlyRate = parseInt(document.getElementById('hourlyRate').value) || 200;
+
+            const selectedTools = getSelectedTools();
+
+            // Current costs
+            let toolsCost = 0;
+            const breakdownItems = [];
+
+            selectedTools.forEach(tool => {
+                const cost = tool.costPerUser * employees;
+                toolsCost += cost;
+                breakdownItems.push({ name: tool.name, old: cost, new: 0 });
+            });
+
+            if (additionalSpend > 0) {
+                toolsCost += additionalSpend;
+                breakdownItems.push({ name: 'Other software', old: additionalSpend, new: 0 });
+            }
+
+            const manualCostMonthly = manualHours * 4.33 * hourlyRate; // weeks per month
+            const totalCurrent = toolsCost + itCost + manualCostMonthly;
+
+            // Kintone costs
+            const kintoneUsers = Math.max(5, employees); // minimum 5 users
+            const kintoneLicense = kintoneUsers * KINTONE_COST_PER_USER;
+            const kintoneSetup = 0; // amortized or free consultation
+            const reducedIT = itCost * 0.4; // 60% reduction
+            const reducedManual = manualCostMonthly * 0.3; // 70% reduction in manual work
+            const totalKintone = kintoneLicense + reducedIT + reducedManual;
+
+            // Savings
+            const monthlySavings = totalCurrent - totalKintone;
+            const annualSavings = monthlySavings * 12;
+            const hoursSaved = Math.round(manualHours * 0.7 * 4.33);
+            const productivityGain = employees > 0 ? Math.round((manualHours * 0.7 / (employees * 40)) * 100) : 0;
+
+            // Update UI
+            document.getElementById('currentCost').textContent = formatPHP(totalCurrent);
+            document.getElementById('kintoneCost').textContent = formatPHP(totalKintone);
+            document.getElementById('monthlySavings').textContent = formatPHP(Math.max(0, monthlySavings));
+            document.getElementById('annualSavings').textContent = formatPHP(Math.max(0, annualSavings)) + '/year';
+            document.getElementById('hoursSaved').textContent = hoursSaved + ' hours';
+            document.getElementById('timeSavingsValue').textContent = formatPHP(manualCostMonthly - reducedManual);
+            document.getElementById('productivityGain').textContent = Math.min(productivityGain, 30) + '%';
+
+            // Breakdown
+            const breakdownHtml = breakdownItems.map(item => `
+                <div class="breakdown-row">
+                    <span>${item.name}</span>
+                    <span class="cost old">${formatPHP(item.old)}/mo</span>
+                </div>
+            `).join('') + `
+                <div class="breakdown-row">
+                    <span>IT Support / Maintenance</span>
+                    <span><span class="cost old">${formatPHP(itCost)}</span> → <span class="cost new">${formatPHP(reducedIT)}</span></span>
+                </div>
+                <div class="breakdown-row">
+                    <span>Manual data entry labor cost</span>
+                    <span><span class="cost old">${formatPHP(manualCostMonthly)}</span> → <span class="cost new">${formatPHP(reducedManual)}</span></span>
+                </div>
+                <div class="breakdown-row" style="border-top:2px solid var(--primary);padding-top:15px;margin-top:5px;">
+                    <span><strong>Kintone license (${kintoneUsers} users × ₱${KINTONE_COST_PER_USER.toLocaleString()}/mo)</strong></span>
+                    <span class="cost new"><strong>${formatPHP(kintoneLicense)}/mo</strong></span>
+                </div>
+            `;
+            document.getElementById('breakdownRows').innerHTML = breakdownHtml;
+        }
+
+        // Initialize
+        renderTools();
+        calculate();
+    </script>
+</body>
+</html>
