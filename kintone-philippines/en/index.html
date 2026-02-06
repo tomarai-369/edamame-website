@@ -1336,329 +1336,240 @@
             border-radius: 2px;
         }
 
-        /* ==================== HERO SECTION ==================== */
+        /* ==================== HERO SECTION (AI-FIRST) ==================== */
         .hero {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
+            background: linear-gradient(135deg, #0a1628 0%, #1a3a2a 50%, #0d2818 100%);
+            color: #fff;
+            padding: 120px 20px 70px;
             position: relative;
-            padding-top: 140px;
             overflow: hidden;
+            text-align: center;
+            min-height: auto;
         }
 
-        .hero-bg {
+        .hero::before {
+            content: '';
             position: absolute;
-            top: 0;
-            right: -15%;
-            width: 75%;
-            height: 100%;
-            background: radial-gradient(ellipse at 70% 30%, rgba(74, 124, 89, 0.06) 0%, transparent 50%),
-                        radial-gradient(ellipse at 80% 70%, rgba(237, 28, 36, 0.04) 0%, transparent 40%);
-            z-index: -1;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(ellipse at 30% 50%, rgba(74,124,89,0.15) 0%, transparent 50%),
+                        radial-gradient(ellipse at 70% 30%, rgba(59,130,246,0.1) 0%, transparent 50%);
+            animation: heroGlow 8s ease-in-out infinite alternate;
         }
 
-        .hero-pattern {
+        @keyframes heroGlow {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(-2%, 2%); }
+        }
+
+        .hero::after {
+            content: '';
             position: absolute;
-            top: 15%;
-            right: 3%;
-            width: 500px;
-            height: 500px;
-            opacity: 0.12;
-            z-index: -1;
-            animation: rotate-slow 60s linear infinite;
-        }
-        
-        @keyframes rotate-slow {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
         }
 
-        .hero-grid {
-            display: grid;
-            grid-template-columns: 1.1fr 0.9fr;
-            gap: 4rem;
-            align-items: center;
+        .hero-inner {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
         }
 
-        .hero-content {
-            opacity: 0;
-            transform: translateY(40px);
-            animation: fadeInUp 1s var(--ease-out-expo) 0.2s forwards;
-        }
-
-        @keyframes fadeInUp {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .hero-badge {
+        .hero-award-badge {
             display: inline-flex;
             align-items: center;
-            gap: 0.625rem;
-            background: linear-gradient(135deg, rgba(74, 124, 89, 0.08), rgba(237, 28, 36, 0.08));
-            color: var(--color-kintone);
-            padding: 0.625rem 1.25rem;
-            border-radius: 100px;
-            font-size: 0.875rem;
+            gap: 8px;
+            background: rgba(74,124,89,0.2);
+            border: 1px solid rgba(74,124,89,0.4);
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-size: 0.85rem;
             font-weight: 600;
-            margin-bottom: 1.75rem;
-            border: 1px solid rgba(237, 28, 36, 0.1);
+            margin-bottom: 25px;
+            letter-spacing: 0.5px;
+            color: #fff;
         }
 
-        .hero-badge::before {
-            content: '';
+        .hero-award-badge .pulse-dot {
             width: 8px;
             height: 8px;
-            background: var(--color-kintone);
+            background: #4ade80;
             border-radius: 50%;
-            animation: pulse 2s ease infinite;
+            animation: pulseDot 2s ease-in-out infinite;
+            flex-shrink: 0;
         }
 
-        @keyframes pulse {
-            0%, 100% { opacity: 1; transform: scale(1); }
-            50% { opacity: 0.5; transform: scale(1.3); }
+        @keyframes pulseDot {
+            0%, 100% { opacity: 1; box-shadow: 0 0 0 0 rgba(74,222,128,0.4); }
+            50% { opacity: 0.8; box-shadow: 0 0 0 8px rgba(74,222,128,0); }
         }
 
         .hero-title {
-            font-size: clamp(2.5rem, 5vw, 3.75rem);
-            font-weight: 700;
-            line-height: 1.1;
-            letter-spacing: -0.03em;
-            margin-bottom: 1.25rem;
+            font-size: 3rem;
+            font-weight: 800;
+            line-height: 1.15;
+            margin-bottom: 20px;
+            letter-spacing: -0.5px;
+            color: #fff;
         }
 
         .hero-title em {
             font-style: normal;
-            background: var(--gradient-warm);
+            background: linear-gradient(135deg, #4ade80, #3b82f6);
             -webkit-background-clip: text;
-            background-clip: text;
             -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
 
         .hero-subtitle {
-            font-size: 1.35rem;
-            font-weight: 600;
-            color: var(--color-primary);
-            margin-bottom: 1rem;
-            letter-spacing: -0.01em;
+            font-size: 1.25rem;
+            line-height: 1.6;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto 35px;
+            font-weight: 400;
+            color: #fff;
         }
 
-        .hero-desc {
-            font-size: 1.1rem;
-            color: var(--color-text-muted);
-            max-width: 540px;
-            margin-bottom: 2rem;
-            line-height: 1.75;
-        }
-
-        /* Use Cases Pills */
-        .hero-use-cases {
+        .hero-cta-row {
             display: flex;
+            justify-content: center;
+            gap: 15px;
             flex-wrap: wrap;
-            gap: 0.625rem;
-            margin-bottom: 2rem;
+            margin-bottom: 50px;
         }
 
-        .use-case-pill {
+        .hero-btn-primary {
             display: inline-flex;
             align-items: center;
-            gap: 0.375rem;
-            padding: 0.5rem 0.875rem;
-            background: white;
-            border: 1px solid rgba(0,0,0,0.08);
-            border-radius: 100px;
-            font-size: 0.8rem;
-            font-weight: 500;
-            color: var(--color-text);
-            transition: all 0.3s ease;
+            gap: 8px;
+            padding: 16px 36px;
+            background: linear-gradient(135deg, #4A7C59, #3d6b4a);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 10px;
+            font-weight: 700;
+            font-size: 1.05rem;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(74,124,89,0.3);
         }
 
-        .use-case-pill:hover {
-            border-color: var(--color-kintone);
-            background: var(--color-kintone-soft);
-            color: var(--color-kintone);
+        .hero-btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(74,124,89,0.4);
         }
 
-        .use-case-pill svg {
-            width: 14px;
-            height: 14px;
-            color: var(--color-primary);
-        }
-
-        .hero-actions {
-            display: flex;
-            gap: 1rem;
-            flex-wrap: wrap;
-        }
-
-        .btn {
+        .hero-btn-secondary {
             display: inline-flex;
             align-items: center;
-            gap: 0.5rem;
-            padding: 1rem 1.75rem;
-            border-radius: 100px;
-            font-size: 0.95rem;
+            gap: 8px;
+            padding: 16px 36px;
+            background: rgba(255,255,255,0.08);
+            border: 1px solid rgba(255,255,255,0.2);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 10px;
             font-weight: 600;
-            transition: all 0.3s var(--ease-out-expo);
-            cursor: pointer;
-            border: none;
-            font-family: inherit;
+            font-size: 1.05rem;
+            transition: all 0.3s;
         }
 
-        .btn-primary {
-            background: var(--gradient-accent);
-            color: white;
-            box-shadow: 0 4px 16px rgba(237, 28, 36, 0.25);
+        .hero-btn-secondary:hover {
+            background: rgba(255,255,255,0.15);
         }
 
-        .btn-primary:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 12px 32px rgba(237, 28, 36, 0.35);
+        .hero-proof {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            padding-top: 40px;
+            border-top: 1px solid rgba(255,255,255,0.1);
         }
 
-        .btn-secondary {
-            background: white;
-            color: var(--color-text);
-            border: 2px solid rgba(0,0,0,0.1);
-            box-shadow: var(--shadow-sm);
-        }
-
-        .btn-secondary:hover {
-            border-color: var(--color-kintone);
-            color: var(--color-kintone);
-            box-shadow: var(--shadow-md);
-        }
-
-        .btn-arrow {
-            transition: transform 0.3s ease;
-        }
-
-        .btn:hover .btn-arrow {
-            transform: translateX(4px);
-        }
-
-        .hero-visual {
-            position: relative;
-            opacity: 0;
-            transform: translateY(40px);
-            animation: fadeInUp 1s var(--ease-out-expo) 0.4s forwards;
-        }
-
-        .kintone-logo-hero {
-            text-align: center;
-            margin-bottom: 1.5rem;
-        }
-
-        .kintone-logo-hero img {
-            height: 55px;
-            filter: drop-shadow(0 4px 12px rgba(0,0,0,0.08));
-        }
-
-        .hero-card {
-            background: white;
-            border-radius: var(--radius-xl);
-            padding: 2rem;
-            box-shadow: var(--shadow-xl), 0 0 0 1px rgba(0,0,0,0.02);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: var(--gradient-warm);
-        }
-
-        .hero-stats {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 1.25rem;
-            margin-bottom: 1.5rem;
-            padding-bottom: 1.5rem;
-            border-bottom: 1px solid rgba(0,0,0,0.06);
-        }
-
-        .stat-item {
+        .proof-item {
             text-align: center;
         }
 
-        .stat-number {
-            font-size: 2rem;
-            font-weight: 700;
-            background: var(--gradient-warm);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            line-height: 1;
-            margin-bottom: 0.25rem;
+        .proof-number {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: #4ade80;
         }
 
-        .stat-label {
-            font-size: 0.75rem;
-            color: var(--color-text-muted);
-            text-transform: uppercase;
-            letter-spacing: 0.08em;
-            font-weight: 600;
-        }
-
-        /* Infinite Possibilities Showcase */
-        .infinite-showcase {
-            background: linear-gradient(135deg, #f8f9fa 0%, #f0f1f3 100%);
-            border-radius: var(--radius-md);
-            padding: 1.25rem;
-        }
-
-        .infinite-title {
+        .proof-label {
             font-size: 0.8rem;
-            font-weight: 700;
-            color: var(--color-kintone);
+            opacity: 0.7;
             text-transform: uppercase;
-            letter-spacing: 0.1em;
-            margin-bottom: 1rem;
+            letter-spacing: 0.5px;
+            margin-top: 4px;
+            color: #fff;
+        }
+
+        .differentiator-bar {
+            background: #111827;
+            padding: 30px 20px;
+            text-align: center;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .diff-inner {
+            max-width: 900px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            flex-wrap: wrap;
+        }
+
+        .diff-item {
             display: flex;
             align-items: center;
-            gap: 0.5rem;
+            gap: 10px;
+            color: rgba(255,255,255,0.7);
+            font-size: 0.9rem;
         }
 
-        .infinite-title svg {
-            width: 16px;
-            height: 16px;
+        .diff-item .icon {
+            font-size: 1.3rem;
         }
 
-        .app-types-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 0.5rem;
+        .diff-item strong {
+            color: #fff;
         }
 
-        .app-type-item {
-            display: flex;
-            align-items: center;
-            gap: 0.375rem;
-            font-size: 0.8rem;
-            padding: 0.375rem 0.5rem;
-            background: white;
-            border-radius: 6px;
-            transition: all 0.2s ease;
+
+        /* New Hero Responsive */
+        @media (max-width: 768px) {
+            .hero { padding: 100px 15px 50px; }
+            .hero-title { font-size: 2rem; }
+            .hero-subtitle { font-size: 1.05rem; }
+            .hero-proof { gap: 20px; }
+            .hero-cta-row { flex-direction: column; align-items: center; }
+            .hero-btn-primary, .hero-btn-secondary { width: 100%; justify-content: center; max-width: 320px; }
+            .diff-inner { gap: 15px; }
+            .diff-item { font-size: 0.8rem; }
+            .proof-number { font-size: 1.4rem; }
         }
 
-        .app-type-item:hover {
-            background: var(--color-kintone-soft);
-            color: var(--color-kintone);
+        @media (max-width: 480px) {
+            .hero-title { font-size: 1.7rem; }
+            .hero-award-badge { font-size: 0.75rem; padding: 6px 14px; }
+            .diff-item { flex-direction: column; gap: 4px; text-align: center; }
         }
 
-        .app-type-item svg {
-            width: 14px;
-            height: 14px;
-            color: var(--color-primary);
-            flex-shrink: 0;
-        }
+        /* Hide old hero elements that may be targeted by other CSS */
+        .hero-bg, .hero-pattern, .hero-grid, .hero-content,
+        .hero-badge, .hero-desc, .hero-use-cases,
+        .hero-actions, .hero-visual, .kintone-logo-hero,
+        .hero-card, .hero-stats, .infinite-showcase,
+        .infinite-title, .app-types-grid, .app-type-item,
+        .use-case-pill, .stat-item, .stat-number, .stat-label,
+        .hero-card::before, .tool-check-icon { /* no-op overrides */ }
+
 
         /* ==================== PARTNERS BAR ==================== */
         .partners-bar {
@@ -3963,140 +3874,76 @@
         </ul>
     </div>
 
-    <!-- Hero Section -->
+
+    <!-- Hero Section (AI-First) -->
     <section class="hero">
-        <div class="hero-bg"></div>
-        <svg class="hero-pattern" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="200" cy="200" r="180" stroke="#4A7C59" stroke-width="1" stroke-dasharray="4 6"/>
-            <circle cx="200" cy="200" r="130" stroke="#ED1C24" stroke-width="1" stroke-dasharray="4 6"/>
-            <circle cx="200" cy="200" r="80" stroke="#4A7C59" stroke-width="1" stroke-dasharray="4 6"/>
-            <circle cx="200" cy="200" r="30" stroke="#ED1C24" stroke-width="1"/>
-        </svg>
-        <div class="container">
-            <div class="hero-grid">
-                <div class="hero-content">
-                    <div class="hero-badge">
-                        <span data-en="Official Kintone Partner Philippines" data-ja="Kintone フィリピン公式パートナー" data-tl="Opisyal na Kintone Partner sa Pilipinas">Official Kintone Partner Philippines</span>
-                    </div>
-                    <h1 class="hero-title">
-                        <span data-en="Kintone Philippines:" data-ja="Kintone フィリピン：" data-tl="Kintone Philippines:">Kintone Philippines:</span><br>
-                        <em data-en="Build Any Business App—No Code" data-ja="コード不要であらゆる業務アプリを構築" data-tl="Gumawa ng Business App—Walang Code">Build Any Business App—No Code</em>
-                    </h1>
-                    <p class="hero-subtitle" data-en="Build Any Business App Without Code" data-ja="コード不要であらゆる業務アプリを構築" data-tl="Gumawa ng Kahit Anong Business App Nang Walang Code">Build Any Business App Without Code</p>
-                    <p class="hero-desc" data-en="CRM, inventory, HR, accounting, projects—if you can imagine it, you can build it. Kintone is the all-in-one no-code platform trusted by 37,000+ companies to digitize and automate every business process." data-ja="CRM、在庫管理、人事、会計、プロジェクト管理—想像できるものは、すべて構築できます。Kintoneは37,000社以上に信頼されている、あらゆる業務プロセスをデジタル化・自動化するオールインワンのノーコードプラットフォームです。" data-tl="CRM, inventory, HR, accounting, projects—kung kaya mong isipin, kaya mong gawin. Ang Kintone ang all-in-one no-code platform na pinagkakatiwalaan ng 37,000+ na kumpanya para i-digitize at i-automate ang lahat ng business process.">
-                        CRM, inventory, HR, accounting, projects—if you can imagine it, you can build it. Kintone is the all-in-one no-code platform trusted by 37,000+ companies to digitize and automate every business process.
-                    </p>
-                    
-                    <!-- Use Case Pills -->
-                    <div class="hero-use-cases">
-                        <span class="use-case-pill">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-                            <span data-en="CRM" data-ja="顧客管理" data-tl="CRM">CRM</span>
-                        </span>
-                        <span class="use-case-pill">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
-                            <span data-en="Inventory" data-ja="在庫管理" data-tl="Inventory">Inventory</span>
-                        </span>
-                        <span class="use-case-pill">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-                            <span data-en="HR" data-ja="人事管理" data-tl="HR">HR</span>
-                        </span>
-                        <span class="use-case-pill">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-                            <span data-en="Accounting" data-ja="経理" data-tl="Accounting">Accounting</span>
-                        </span>
-                        <span class="use-case-pill">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
-                            <span data-en="Projects" data-ja="プロジェクト" data-tl="Projects">Projects</span>
-                        </span>
-                        <span class="use-case-pill">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
-                            <span data-en="& More" data-ja="その他" data-tl="at Marami Pa">& More</span>
-                        </span>
-                    </div>
-                    
-                    <div class="hero-actions">
-                        <a href="https://calendly.com/kintoneph/freekintoneappconsultation" target="_blank" class="btn btn-primary">
-                            <span data-en="Schedule Free Demo" data-ja="無料デモを予約" data-tl="Mag-book ng Libreng Demo">Schedule Free Demo</span>
-                            <svg class="btn-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M3 8h10M9 4l4 4-4 4"/>
-                            </svg>
-                        </a>
-                        <a href="#possibilities" class="btn btn-secondary">
-                            <span data-en="Explore Solutions" data-ja="ソリューションを見る" data-tl="Tingnan ang mga Solusyon">Explore Solutions</span>
-                        </a>
-                    </div>
+        <div class="hero-inner">
+            <div class="hero-award-badge">
+                <span class="pulse-dot"></span>
+                <span data-en="🏆 2024 Kintone Global Partner of the Year" data-ja="🏆 2024年 Kintone グローバルパートナー・オブ・ザ・イヤー" data-tl="🏆 2024 Kintone Global Partner of the Year">🏆 2024 Kintone Global Partner of the Year</span>
+            </div>
+
+            <h1 class="hero-title">
+                <em data-en="AI-Powered" data-ja="AI搭載" data-tl="AI-Powered">AI-Powered</em>
+                <span data-en=" Business Apps." data-ja="ビジネスアプリ。" data-tl=" Business Apps."> Business Apps.</span><br>
+                <span data-en="Built in Days. No Code." data-ja="数日で構築。コード不要。" data-tl="Mabilis. Walang Code.">Built in Days. No Code.</span>
+            </h1>
+
+            <p class="hero-subtitle" data-en="We don't just implement Kintone — we make it intelligent. Edamame Inc. is the Philippines' only Kintone partner that fuses AI into every solution. CRM, inventory, HR, operations — all automated, all learning, all connected." data-ja="私たちは単にKintoneを導入するだけではありません — インテリジェントにします。Edamame Inc.はフィリピン唯一のAI融合型Kintoneパートナー。CRM、在庫管理、人事、業務 — すべて自動化、すべて学習、すべて連携。" data-tl="Hindi lang namin ina-implement ang Kintone — ginagawa namin itong matalino. Ang Edamame Inc. ang tanging Kintone partner sa Pilipinas na nag-fuse ng AI sa bawat solution. CRM, inventory, HR, operations — lahat automated, lahat learning, lahat connected.">
+                We don't just implement Kintone — we make it intelligent. Edamame Inc. is the Philippines' only Kintone partner that fuses AI into every solution. CRM, inventory, HR, operations — all automated, all learning, all connected.
+            </p>
+
+            <div class="hero-cta-row">
+                <a href="https://calendly.com/kintoneph/freekintoneappconsultation" target="_blank" class="hero-btn-primary">
+                    <span data-en="Schedule Free AI Demo →" data-ja="無料AIデモを予約 →" data-tl="Mag-book ng Libreng AI Demo →">Schedule Free AI Demo →</span>
+                </a>
+                <a href="#possibilities" class="hero-btn-secondary">
+                    <span data-en="See What We Build" data-ja="構築事例を見る" data-tl="Tingnan ang Ginagawa Namin">See What We Build</span>
+                </a>
+            </div>
+
+            <div class="hero-proof">
+                <div class="proof-item">
+                    <div class="proof-number">37K+</div>
+                    <div class="proof-label" data-en="Companies Worldwide" data-ja="導入企業数" data-tl="Kumpanya Worldwide">Companies Worldwide</div>
                 </div>
-                <div class="hero-visual">
-                    <div class="kintone-logo-hero">
-                        <img src="https://www.kintone.com/wp-content/themes/kintone-global/assets/images//help-support/img_specialist-support.png" alt="Kintone Platform">
-                    </div>
-                    <div class="hero-card">
-                        <div class="hero-stats">
-                            <div class="stat-item">
-                                <div class="stat-number">37K+</div>
-                                <div class="stat-label" data-en="Companies" data-ja="導入企業" data-tl="Kumpanya">Companies</div>
-                            </div>
-                            <div class="stat-item">
-                                <div class="stat-number">2M+</div>
-                                <div class="stat-label" data-en="Apps Built" data-ja="構築アプリ数" data-tl="Apps na Nagawa">Apps Built</div>
-                            </div>
-                            <div class="stat-item">
-                                <div class="stat-number">11</div>
-                                <div class="stat-label" data-en="Countries" data-ja="展開国" data-tl="Bansa">Countries</div>
-                            </div>
-                        </div>
-                        <div class="infinite-showcase">
-                            <div class="infinite-title">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M18 3a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3H6a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3V6a3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3h12a3 3 0 0 0 3-3 3 3 0 0 0-3-3z"/>
-                                </svg>
-                                <span data-en="BUILD ANY APP YOU NEED" data-ja="必要なアプリをすべて構築" data-tl="GUMAWA NG KAHIT ANONG APP NA KAILANGAN MO">BUILD ANY APP YOU NEED</span>
-                            </div>
-                            <div class="app-types-grid">
-                                <div class="app-type-item">
-                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
-                                    <span data-en="CRM" data-ja="顧客管理" data-tl="CRM">CRM</span>
-                                </div>
-                                <div class="app-type-item">
-                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/></svg>
-                                    <span data-en="Inventory" data-ja="在庫管理" data-tl="Inventory">Inventory</span>
-                                </div>
-                                <div class="app-type-item">
-                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/></svg>
-                                    <span data-en="Projects" data-ja="プロジェクト" data-tl="Projects">Projects</span>
-                                </div>
-                                <div class="app-type-item">
-                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-                                    <span data-en="HR" data-ja="人事" data-tl="HR">HR</span>
-                                </div>
-                                <div class="app-type-item">
-                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-                                    <span data-en="Accounting" data-ja="会計" data-tl="Accounting">Accounting</span>
-                                </div>
-                                <div class="app-type-item">
-                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
-                                    <span data-en="Sales" data-ja="営業" data-tl="Sales">Sales</span>
-                                </div>
-                                <div class="app-type-item">
-                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-                                    <span data-en="Contracts" data-ja="契約管理" data-tl="Contracts">Contracts</span>
-                                </div>
-                                <div class="app-type-item">
-                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
-                                    <span data-en="Expenses" data-ja="経費" data-tl="Expenses">Expenses</span>
-                                </div>
-                                <div class="app-type-item">
-                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 1v6M12 17v6M4.22 4.22l4.24 4.24M15.54 15.54l4.24 4.24M1 12h6M17 12h6M4.22 19.78l4.24-4.24M15.54 8.46l4.24-4.24"/></svg>
-                                    <span data-en="& More..." data-ja="他多数..." data-tl="at Marami Pa...">& More...</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="proof-item">
+                    <div class="proof-number">AI×</div>
+                    <div class="proof-label" data-en="Every Solution" data-ja="すべてのソリューション" data-tl="Bawat Solution">Every Solution</div>
+                </div>
+                <div class="proof-item">
+                    <div class="proof-number">3</div>
+                    <div class="proof-label" data-en="Languages (EN/JP/TL)" data-ja="対応言語 (EN/JP/TL)" data-tl="Wika (EN/JP/TL)">Languages (EN/JP/TL)</div>
+                </div>
+                <div class="proof-item">
+                    <div class="proof-number" data-en="Days" data-ja="数日" data-tl="Araw">Days</div>
+                    <div class="proof-label" data-en="Not Months to Deploy" data-ja="数ヶ月ではなく" data-tl="Hindi Buwan para i-Deploy">Not Months to Deploy</div>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- What Makes Us Different Bar -->
+    <div class="differentiator-bar">
+        <div class="diff-inner">
+            <div class="diff-item">
+                <span class="icon">🤖</span>
+                <span><strong data-en="AI-First" data-ja="AI-First" data-tl="AI-First">AI-First</strong> — <span data-en="Every build is AI-enhanced" data-ja="すべてAI強化" data-tl="Lahat ng build ay AI-enhanced">Every build is AI-enhanced</span></span>
+            </div>
+            <div class="diff-item">
+                <span class="icon">🇵🇭</span>
+                <span><strong data-en="Local" data-ja="ローカル" data-tl="Lokal">Local</strong> — <span data-en="Philippine-based, trilingual" data-ja="フィリピン拠点、3言語対応" data-tl="Philippine-based, trilingual">Philippine-based, trilingual</span></span>
+            </div>
+            <div class="diff-item">
+                <span class="icon">⚡</span>
+                <span><strong data-en="Fast" data-ja="高速" data-tl="Mabilis">Fast</strong> — <span data-en="Go live in days, not months" data-ja="数日で本番稼働" data-tl="Go live sa loob ng ilang araw">Go live in days, not months</span></span>
+            </div>
+            <div class="diff-item">
+                <span class="icon">🏢</span>
+                <span><strong data-en="Enterprise" data-ja="エンタープライズ" data-tl="Enterprise">Enterprise</strong> — <span data-en="ORIX, Daikin, Aeon trust us" data-ja="ORIX、ダイキン、イオンの実績" data-tl="ORIX, Daikin, Aeon ang clients">ORIX, Daikin, Aeon trust us</span></span>
+            </div>
+        </div>
+    </div>
 
     <!-- Partners Bar -->
     <section class="partners-bar">
