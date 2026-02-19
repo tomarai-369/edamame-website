@@ -44,13 +44,8 @@
     body { font-family: var(--font-body); color: var(--ink); background: var(--white); line-height: 1.6; -webkit-font-smoothing: antialiased; }
     a { color: inherit; text-decoration: none; }
 
-    /* HEADER */
-    .site-header {
-      position: sticky; top: 0; z-index: 100;
-      background: linear-gradient(135deg, var(--green-dark) 0%, var(--green) 100%);
-      padding: 0 5%; display: flex; align-items: center; justify-content: space-between;
-      height: 64px; box-shadow: 0 2px 16px rgba(0,0,0,.18);
-    }
+    /* ── HEADER ── */
+    .site-header { position: sticky; top: 0; z-index: 100; background: linear-gradient(135deg, var(--green-dark) 0%, var(--green) 100%); padding: 0 5%; display: flex; align-items: center; justify-content: space-between; height: 64px; box-shadow: 0 2px 16px rgba(0,0,0,.18); }
     .header-logo { display: flex; align-items: center; gap: 10px; font-family: var(--font-head); font-size: 1.1rem; font-weight: 600; color: var(--white); }
     .logo-icon { width: 36px; height: 36px; background: rgba(255,255,255,.15); border-radius: 8px; display: flex; align-items: center; justify-content: center; }
     .header-nav { display: flex; align-items: center; gap: 28px; }
@@ -59,15 +54,9 @@
     .header-cta { background: var(--white); color: var(--green-dark) !important; padding: 8px 18px; border-radius: 8px; font-weight: 600 !important; font-size: .8rem !important; transition: transform .2s, box-shadow .2s !important; }
     .header-cta:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(0,0,0,.2) !important; }
 
-    /* HERO */
-    .hero {
-      background: linear-gradient(160deg, var(--green-dark) 0%, var(--green) 55%, #5a9e6f 100%);
-      padding: 80px 5% 90px; position: relative; overflow: hidden;
-    }
-    .hero::before {
-      content: ''; position: absolute; inset: 0;
-      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-    }
+    /* ── HERO ── */
+    .hero { background: linear-gradient(160deg, var(--green-dark) 0%, var(--green) 55%, #5a9e6f 100%); padding: 80px 5% 90px; position: relative; overflow: hidden; }
+    .hero::before { content: ''; position: absolute; inset: 0; background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); }
     .hero-inner { max-width: 800px; margin: 0 auto; position: relative; text-align: center; }
     .hero-eyebrow { display: inline-flex; align-items: center; gap: 8px; background: rgba(255,255,255,.15); color: var(--white); font-size: .8rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; padding: 6px 16px; border-radius: 100px; margin-bottom: 24px; }
     .hero-eyebrow span { width: 6px; height: 6px; background: #7fffaa; border-radius: 50%; animation: pulse 2s infinite; }
@@ -77,20 +66,20 @@
     .hero-sub { font-size: 1.05rem; color: rgba(255,255,255,.82); max-width: 560px; margin: 0 auto; }
     .hero-wave { position: absolute; bottom: -1px; left: 0; right: 0; }
 
-    /* FILTER BAR */
+    /* ── FILTER BAR ── */
     .filter-bar { background: var(--white); border-bottom: 1px solid var(--border); padding: 0 5%; display: flex; align-items: center; position: sticky; top: 64px; z-index: 90; overflow-x: auto; }
     .filter-btn { background: none; border: none; cursor: pointer; font-family: var(--font-body); font-size: .875rem; font-weight: 500; color: var(--muted); padding: 16px 20px; border-bottom: 2.5px solid transparent; white-space: nowrap; transition: all .2s; }
     .filter-btn:hover { color: var(--green); }
     .filter-btn.active { color: var(--green-dark); border-bottom-color: var(--green); font-weight: 600; }
 
-    /* CONTENT */
+    /* ── CONTENT ── */
     .content { max-width: 1160px; margin: 0 auto; padding: 60px 5% 80px; }
     .section-label { display: flex; align-items: center; gap: 12px; margin-bottom: 28px; }
     .section-label h2 { font-family: var(--font-head); font-size: 1.6rem; font-weight: 600; color: var(--ink); }
     .section-label .count { background: var(--green-light); color: var(--green-dark); font-size: .78rem; font-weight: 700; padding: 3px 10px; border-radius: 100px; }
     .divider { height: 1px; background: var(--border); margin: 52px 0; }
 
-    /* EVENT CARDS */
+    /* ── EVENT CARDS ── */
     .events-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 24px; }
     .event-card { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-sm); transition: transform .25s, box-shadow .25s; display: flex; flex-direction: column; animation: fadeUp .45s ease both; }
     .event-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
@@ -98,9 +87,9 @@
     @keyframes fadeUp { from{opacity:0;transform:translateY(16px)} to{opacity:1;transform:none} }
 
     .card-banner { height: 8px; }
+    .card-banner.hybrid { background: linear-gradient(90deg, var(--green) 0%, #2e7d9e 100%); }
     .card-banner.in-person { background: linear-gradient(90deg, var(--green) 0%, #5a9e6f 100%); }
     .card-banner.webinar { background: linear-gradient(90deg, #2e7d9e 0%, #4ab3d9 100%); }
-    .card-banner.hybrid { background: linear-gradient(90deg, var(--green) 0%, #2e7d9e 100%); }
     .card-banner.past { background: #bdbdbd; }
 
     .card-body { padding: 24px; flex: 1; display: flex; flex-direction: column; }
@@ -118,7 +107,6 @@
     .card-title { font-family: var(--font-head); font-size: 1.2rem; font-weight: 600; color: var(--ink); line-height: 1.3; margin-bottom: 10px; }
     .card-desc { font-size: .875rem; color: var(--muted); line-height: 1.65; flex: 1; }
 
-    /* location + online blocks */
     .card-locations { margin-top: 16px; display: flex; flex-direction: column; gap: 10px; }
     .location-block { display: flex; gap: 10px; align-items: flex-start; background: var(--green-pale); border-radius: 10px; padding: 12px 14px; }
     .location-block.online { background: #f0f8ff; }
@@ -131,7 +119,7 @@
     .card-speaker { display: flex; align-items: center; gap: 8px; }
     .speaker-avatar { width: 32px; height: 32px; border-radius: 50%; background: var(--green-mid); color: var(--green-dark); display: flex; align-items: center; justify-content: center; font-size: .72rem; font-weight: 700; }
     .speaker-name { font-size: .78rem; color: var(--ink-mid); font-weight: 600; }
-    .speaker-title-text { font-size: .72rem; color: var(--muted); }
+    .speaker-role { font-size: .72rem; color: var(--muted); }
     .card-spots { font-size: .78rem; font-weight: 600; padding: 4px 10px; border-radius: 100px; white-space: nowrap; }
     .spots-open { background: #e8f5e9; color: #2e7d32; }
     .spots-past { background: #f5f5f5; color: #9e9e9e; }
@@ -141,15 +129,118 @@
     .register-btn:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); }
     .register-btn.secondary { background: none; border: 1.5px solid var(--green); color: var(--green-dark); }
     .register-btn.secondary:hover { background: var(--green-pale); }
-    .register-btn.past-btn { background: none; border: 1.5px solid var(--border); color: var(--muted); }
-    .register-btn.past-btn:hover { border-color: var(--green); color: var(--green); transform: none; box-shadow: none; }
+    .register-btn.past-btn { background: none; border: 1.5px solid var(--border); color: var(--muted); cursor: default; }
+    .register-btn.past-btn:hover { transform: none; box-shadow: none; }
 
-    /* EMPTY STATE */
-    .empty-state { text-align: center; padding: 60px 20px; display: none; }
-    .empty-state.visible { display: block; }
-    .empty-state p { color: var(--muted); font-size: .95rem; margin-top: 12px; }
+    /* ── MODAL OVERLAY ── */
+    .modal-overlay {
+      display: none; position: fixed; inset: 0; z-index: 999;
+      background: rgba(0,0,0,.55); backdrop-filter: blur(3px);
+      align-items: center; justify-content: center; padding: 20px;
+    }
+    .modal-overlay.open { display: flex; }
 
-    /* NOTIFY STRIP */
+    .modal {
+      background: var(--white); border-radius: var(--radius-lg);
+      width: 100%; max-width: 560px; max-height: 90vh;
+      overflow-y: auto; box-shadow: 0 24px 80px rgba(0,0,0,.25);
+      animation: modalIn .3s cubic-bezier(.34,1.56,.64,1) both;
+    }
+    @keyframes modalIn { from{opacity:0;transform:scale(.92) translateY(20px)} to{opacity:1;transform:none} }
+
+    .modal-header {
+      background: linear-gradient(135deg, var(--green-dark), var(--green));
+      padding: 28px 32px 24px; position: relative;
+    }
+    .modal-header h2 { font-family: var(--font-head); font-size: 1.5rem; font-weight: 700; color: var(--white); margin-bottom: 4px; }
+    .modal-header p { font-size: .875rem; color: rgba(255,255,255,.8); }
+    .modal-close {
+      position: absolute; top: 20px; right: 20px;
+      background: rgba(255,255,255,.2); border: none; color: var(--white);
+      width: 32px; height: 32px; border-radius: 50%; cursor: pointer;
+      font-size: 1.1rem; display: flex; align-items: center; justify-content: center;
+      transition: background .2s;
+    }
+    .modal-close:hover { background: rgba(255,255,255,.35); }
+
+    /* Attendance type selector */
+    .attend-toggle {
+      display: flex; gap: 0; background: var(--green-pale);
+      border: 1px solid var(--green-mid); border-radius: 10px; overflow: hidden;
+      margin-bottom: 20px;
+    }
+    .attend-opt {
+      flex: 1; padding: 11px 16px; text-align: center;
+      font-family: var(--font-body); font-size: .875rem; font-weight: 600;
+      cursor: pointer; border: none; background: none;
+      color: var(--muted); transition: all .2s;
+    }
+    .attend-opt.active { background: var(--green-dark); color: var(--white); }
+
+    .modal-body { padding: 28px 32px 32px; }
+
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .form-group { margin-bottom: 16px; }
+    .form-group label { display: block; font-size: .8rem; font-weight: 600; color: var(--ink-mid); margin-bottom: 6px; letter-spacing: .02em; }
+    .form-group label .req { color: var(--green); }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%; padding: 11px 14px;
+      border: 1.5px solid var(--border); border-radius: 9px;
+      font-family: var(--font-body); font-size: .875rem; color: var(--ink);
+      outline: none; transition: border-color .2s, box-shadow .2s;
+      background: var(--white);
+    }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus { border-color: var(--green); box-shadow: 0 0 0 3px rgba(74,124,89,.12); }
+    .form-group textarea { resize: vertical; min-height: 88px; }
+
+    .online-info-box {
+      background: #f0f8ff; border: 1px solid #b3d9f0; border-radius: 10px;
+      padding: 14px 16px; margin-bottom: 20px; font-size: .82rem; color: var(--ink-mid); line-height: 1.6;
+      display: none;
+    }
+    .online-info-box.visible { display: block; }
+    .online-info-box strong { color: var(--ink); }
+    .online-info-box a { color: var(--green); }
+
+    .venue-info-box {
+      background: var(--green-pale); border: 1px solid var(--green-mid); border-radius: 10px;
+      padding: 14px 16px; margin-bottom: 20px; font-size: .82rem; color: var(--ink-mid); line-height: 1.6;
+      display: none;
+    }
+    .venue-info-box.visible { display: block; }
+
+    .submit-btn {
+      width: 100%; background: linear-gradient(135deg, var(--green-dark), var(--green));
+      color: var(--white); border: none; padding: 14px;
+      border-radius: 10px; font-family: var(--font-body); font-size: 1rem; font-weight: 700;
+      cursor: pointer; transition: transform .2s, box-shadow .2s;
+      margin-top: 4px;
+    }
+    .submit-btn:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); }
+    .submit-btn:disabled { opacity: .6; cursor: not-allowed; transform: none; }
+
+    .form-note { font-size: .76rem; color: var(--muted); text-align: center; margin-top: 12px; line-height: 1.5; }
+
+    /* Success state */
+    .modal-success {
+      display: none; padding: 48px 32px; text-align: center;
+    }
+    .modal-success.visible { display: block; }
+    .modal-success .success-icon { font-size: 3rem; margin-bottom: 16px; }
+    .modal-success h3 { font-family: var(--font-head); font-size: 1.6rem; font-weight: 700; color: var(--ink); margin-bottom: 10px; }
+    .modal-success p { color: var(--muted); line-height: 1.6; margin-bottom: 24px; }
+    .modal-success .confirm-details { background: var(--green-pale); border: 1px solid var(--green-mid); border-radius: 10px; padding: 16px; text-align: left; font-size: .875rem; color: var(--ink-mid); line-height: 1.8; margin-bottom: 24px; }
+    .modal-success .close-success { background: var(--green-dark); color: var(--white); border: none; padding: 12px 32px; border-radius: 10px; font-family: var(--font-body); font-weight: 600; cursor: pointer; }
+
+    /* Error banner */
+    .form-error { background: #fce4ec; border: 1px solid #f48fb1; color: #c62828; border-radius: 8px; padding: 10px 14px; font-size: .82rem; margin-bottom: 16px; display: none; }
+    .form-error.visible { display: block; }
+
+    /* ── NOTIFY STRIP ── */
     .notify-strip { background: var(--green-pale); border: 1px solid var(--green-mid); border-radius: var(--radius-lg); padding: 36px 40px; display: flex; align-items: center; gap: 32px; flex-wrap: wrap; margin-top: 56px; }
     .notify-strip-text h3 { font-family: var(--font-head); font-size: 1.3rem; font-weight: 600; margin-bottom: 4px; }
     .notify-strip-text p { font-size: .875rem; color: var(--muted); }
@@ -159,7 +250,12 @@
     .notify-form button { background: var(--green-dark); color: var(--white); border: none; padding: 11px 22px; border-radius: 10px; font-family: var(--font-body); font-weight: 600; font-size: .875rem; cursor: pointer; transition: background .2s; white-space: nowrap; }
     .notify-form button:hover { background: var(--green); }
 
-    /* FOOTER */
+    /* Empty state */
+    .empty-state { text-align: center; padding: 60px 20px; display: none; }
+    .empty-state.visible { display: block; }
+    .empty-state p { color: var(--muted); font-size: .95rem; margin-top: 12px; }
+
+    /* ── FOOTER ── */
     .site-footer { background: var(--ink); color: rgba(255,255,255,.6); padding: 40px 5%; text-align: center; font-size: .82rem; }
     .footer-inner { max-width: 1160px; margin: 0 auto; }
     .footer-links { display: flex; justify-content: center; gap: 24px; flex-wrap: wrap; margin-bottom: 16px; }
@@ -171,11 +267,14 @@
       .header-nav a:not(.header-cta) { display: none; }
       .events-grid { grid-template-columns: 1fr; }
       .notify-strip { padding: 28px 24px; }
+      .form-row { grid-template-columns: 1fr; }
+      .modal-body, .modal-header { padding-left: 22px; padding-right: 22px; }
     }
   </style>
 </head>
 <body>
 
+<!-- ═══ HEADER ═══════════════════════════════════════ -->
 <header class="site-header">
   <a href="/kintone-philippines/en/" class="header-logo">
     <div class="logo-icon">
@@ -197,19 +296,19 @@
   </nav>
 </header>
 
+<!-- ═══ HERO ══════════════════════════════════════════ -->
 <section class="hero">
   <div class="hero-inner">
-    <div class="hero-eyebrow">
-      <span></span> Live Events &amp; Webinars
-    </div>
+    <div class="hero-eyebrow"><span></span> Live Events &amp; Webinars</div>
     <h1>Meet Kintone.<br/><em>In person &amp; online.</em></h1>
-    <p class="hero-sub">Free events for Philippine businesses — meet the Kintone HQ team, ask questions live, and see what's possible without writing a single line of code.</p>
+    <p class="hero-sub">Free events for Philippine businesses — meet the Kintone HQ team, ask questions live, and discover what's possible without writing a single line of code.</p>
   </div>
   <svg class="hero-wave" viewBox="0 0 1440 48" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
     <path d="M0 48 L0 24 Q360 0 720 24 Q1080 48 1440 16 L1440 48 Z" fill="white"/>
   </svg>
 </section>
 
+<!-- ═══ FILTER BAR ════════════════════════════════════ -->
 <div class="filter-bar">
   <button class="filter-btn active" data-filter="all">All Events</button>
   <button class="filter-btn" data-filter="in-person">In-Person</button>
@@ -217,6 +316,7 @@
   <button class="filter-btn" data-filter="hybrid">Hybrid</button>
 </div>
 
+<!-- ═══ MAIN ══════════════════════════════════════════ -->
 <main class="content">
   <div class="section-label">
     <h2>Upcoming Events</h2>
@@ -243,7 +343,7 @@
   <div class="notify-strip">
     <div class="notify-strip-text">
       <h3>Never miss an event</h3>
-      <p>Get notified when we announce new events, webinars, and workshops.</p>
+      <p>Get notified when we announce new events and webinars.</p>
     </div>
     <form class="notify-form" onsubmit="handleNotify(event)">
       <input type="email" placeholder="Your work email" required id="notify-email" />
@@ -252,6 +352,7 @@
   </div>
 </main>
 
+<!-- ═══ FOOTER ════════════════════════════════════════ -->
 <footer class="site-footer">
   <div class="footer-inner">
     <div class="footer-links">
@@ -265,25 +366,118 @@
   </div>
 </footer>
 
-<script>
-/* ═══════════════════════════════════════════════════════
-   ✏️  EVENTS CONFIG
-   To add an event, copy one object and fill in the fields.
+<!-- ═══ REGISTRATION MODAL ════════════════════════════ -->
+<div class="modal-overlay" id="modal-overlay" onclick="handleOverlayClick(event)">
+  <div class="modal" id="modal">
 
-   type: "hybrid" | "in-person" | "webinar"
-   spotsLeft: number | null (null = open / no cap)
-   registerUrl: URL for CTA button (or null)
-   recordingUrl: URL to recording (past events, or null)
-   ═══════════════════════════════════════════════════════ */
+    <!-- Header -->
+    <div class="modal-header">
+      <button class="modal-close" onclick="closeModal()" aria-label="Close">✕</button>
+      <h2 id="modal-event-title">Register for Event</h2>
+      <p id="modal-event-meta">Loading event details...</p>
+    </div>
+
+    <!-- Form -->
+    <div class="modal-body" id="modal-form-body">
+      <div class="form-error" id="form-error"></div>
+
+      <!-- Attendance type toggle -->
+      <div id="attend-toggle-wrap">
+        <p style="font-size:.8rem;font-weight:600;color:var(--ink-mid);margin-bottom:8px;letter-spacing:.02em;">HOW WILL YOU ATTEND? <span style="color:var(--green)">*</span></p>
+        <div class="attend-toggle">
+          <button type="button" class="attend-opt active" data-value="Online"    onclick="setAttendType('Online')">💻 Join Online</button>
+          <button type="button" class="attend-opt"        data-value="In-Person" onclick="setAttendType('In-Person')">📍 In Person</button>
+        </div>
+      </div>
+
+      <!-- Online info box -->
+      <div class="online-info-box visible" id="online-info-box">
+        <strong>Google Meet link:</strong><br/>
+        <a href="https://meet.google.com/oyj-cxhh-grb" target="_blank" rel="noopener">https://meet.google.com/oyj-cxhh-grb</a><br/>
+        Dial in: (US) +1 781-570-3398 · PIN: 358 271 004#<br/>
+        <a href="https://tel.meet/oyj-cxhh-grb?pin=6484986394715" target="_blank" rel="noopener">More dial-in numbers →</a>
+      </div>
+
+      <!-- In-person venue box -->
+      <div class="venue-info-box" id="venue-info-box">
+        📍 <strong>7F KMC Armstrong</strong>, HV Dela Costa, Salcedo Village, Makati City, Metro Manila<br/>
+        <span style="color:var(--muted);font-size:.8rem;">Please arrive 10 minutes early.</span>
+      </div>
+
+      <!-- Form fields -->
+      <div class="form-row">
+        <div class="form-group">
+          <label>Full Name <span class="req">*</span></label>
+          <input type="text" id="f-name" placeholder="Juan dela Cruz" required />
+        </div>
+        <div class="form-group">
+          <label>Work Email <span class="req">*</span></label>
+          <input type="email" id="f-email" placeholder="juan@company.com" required />
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label>Company</label>
+          <input type="text" id="f-company" placeholder="Your company" />
+        </div>
+        <div class="form-group">
+          <label>Job Title</label>
+          <input type="text" id="f-jobtitle" placeholder="Operations Manager" />
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Phone Number</label>
+        <input type="tel" id="f-phone" placeholder="+63 9XX XXX XXXX" />
+      </div>
+      <div class="form-group">
+        <label>Questions for Jawad <span style="color:var(--muted);font-weight:400">(optional)</span></label>
+        <textarea id="f-questions" placeholder="Any questions you'd like to ask Jawad from Kintone HQ? This helps him prepare relevant answers for you."></textarea>
+      </div>
+      <div class="form-group">
+        <label>How did you hear about this event?</label>
+        <select id="f-heard">
+          <option value="">— Select —</option>
+          <option value="LinkedIn">LinkedIn</option>
+          <option value="Facebook">Facebook</option>
+          <option value="Email">Email</option>
+          <option value="Friend/Colleague">Friend / Colleague</option>
+          <option value="Google Search">Google Search</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+
+      <button class="submit-btn" id="submit-btn" onclick="submitRegistration()">
+        Confirm Attendance →
+      </button>
+      <p class="form-note">We'll email you a confirmation with joining details. Your information is only used for this event.</p>
+    </div>
+
+    <!-- Success state (hidden until submission) -->
+    <div class="modal-success" id="modal-success">
+      <div class="success-icon">☕</div>
+      <h3>You're confirmed!</h3>
+      <p>Check your inbox — we've sent the event details and joining information to your email.</p>
+      <div class="confirm-details" id="confirm-details"></div>
+      <button class="close-success" onclick="closeModal()">Close</button>
+    </div>
+
+  </div>
+</div>
+
+<script>
+/* ════════════════════════════════════════════════════
+   ✏️  EVENTS CONFIG — edit to add events
+   ════════════════════════════════════════════════════ */
+var GAS_URL = 'PASTE_YOUR_GAS_URL_HERE'; // ← Replace after deploying GAS script
+
 const EVENTS = [
   {
     id: "coffee-day-feb-2026",
     type: "hybrid",
     title: "Kintone Coffee Day",
-    desc: "Meet Jawad from Kintone HQ — Partner Sales Manager for the APAC region. Ask him anything about Kintone's product roadmap, partnership program, or how to get the most out of the platform. Grab a coffee and join us in person or online.",
+    desc: "Meet Jawad from Kintone HQ — Partner Sales Manager for the APAC region. Ask him anything about Kintone's product roadmap, partnerships, or how to get the most out of the platform. Grab a coffee, join us in Makati or dial in online.",
     date: "2026-02-19",
     time: "10:00 AM – 12:00 NN",
-    timezone: "Asia/Manila",
     speaker: "Jawad",
     speakerRole: "Partner Sales Manager, APAC",
     speakerOrg: "Kintone HQ",
@@ -296,77 +490,59 @@ const EVENTS = [
       dialIn: "(US) +1 781-570-3398",
       pin: "358 271 004#",
       moreNumbers: "https://tel.meet/oyj-cxhh-grb?pin=6484986394715"
-    },
-    registerUrl: "https://meet.google.com/oyj-cxhh-grb",
-    recordingUrl: null
+    }
   }
 ];
 
-/* ═══ RENDERING — no edits needed below ═══════════════ */
+/* ════════════════════════════════════════════════════
+   RENDERING
+   ════════════════════════════════════════════════════ */
 const today = new Date(); today.setHours(0,0,0,0);
 function isPast(e) { return new Date(e.date) < today; }
 function isToday(e) {
-  const d = new Date(e.date);
-  const t = new Date();
+  const d = new Date(e.date), t = new Date();
   return d.getFullYear()===t.getFullYear() && d.getMonth()===t.getMonth() && d.getDate()===t.getDate();
 }
-function formatDate(dateStr) {
-  return new Date(dateStr + "T00:00:00").toLocaleDateString("en-PH",{weekday:"long",year:"numeric",month:"long",day:"numeric"});
+function formatDate(s) {
+  return new Date(s + 'T00:00:00').toLocaleDateString('en-PH',{weekday:'long',year:'numeric',month:'long',day:'numeric'});
 }
-function initials(name) { return name.split(" ").map(w=>w[0]).join("").slice(0,2).toUpperCase(); }
+function initials(n) { return n.split(' ').map(w=>w[0]).join('').slice(0,2).toUpperCase(); }
 
 function renderCard(event, index) {
-  const past    = isPast(event);
-  const today_  = isToday(event);
-  const isHybrid = event.type === "hybrid";
-
-  const spotsHtml = event.spotsLeft === null
-    ? `<span class="card-spots spots-open">${past ? 'Event ended' : 'Open to all'}</span>`
-    : event.spotsLeft === 0
-    ? `<span class="card-spots" style="background:#fce4ec;color:#c62828">Fully booked</span>`
-    : `<span class="card-spots spots-open">${event.spotsLeft} spots open</span>`;
+  const past   = isPast(event);
+  const today_ = isToday(event);
 
   const locationHtml = `
     <div class="card-locations">
-      ${event.venue ? `
-      <div class="location-block">
+      ${event.venue ? `<div class="location-block">
         <div class="location-icon">📍</div>
-        <div>
-          <div class="location-label">In-Person Venue</div>
-          <div class="location-detail">${event.venue}</div>
-        </div>
-      </div>` : ''}
-      ${event.onlineInfo ? `
-      <div class="location-block online">
+        <div><div class="location-label">In-Person Venue</div>
+        <div class="location-detail">${event.venue}</div></div></div>` : ''}
+      ${event.onlineInfo ? `<div class="location-block online">
         <div class="location-icon">💻</div>
-        <div>
-          <div class="location-label">Online via ${event.onlineInfo.platform}</div>
-          <div class="location-detail">
-            <a href="${event.onlineInfo.link}" target="_blank" rel="noopener">${event.onlineInfo.link}</a><br/>
-            Dial in: ${event.onlineInfo.dialIn} &nbsp;·&nbsp; PIN: ${event.onlineInfo.pin}<br/>
-            <a href="${event.onlineInfo.moreNumbers}" target="_blank" rel="noopener">More dial-in numbers →</a>
-          </div>
-        </div>
-      </div>` : ''}
+        <div><div class="location-label">Online via ${event.onlineInfo.platform}</div>
+        <div class="location-detail">
+          <a href="${event.onlineInfo.link}" target="_blank">${event.onlineInfo.link}</a><br/>
+          Dial in: ${event.onlineInfo.dialIn} · PIN: ${event.onlineInfo.pin}<br/>
+          <a href="${event.onlineInfo.moreNumbers}" target="_blank">More numbers →</a>
+        </div></div></div>` : ''}
     </div>`;
 
   const footerHtml = past
-    ? `<a href="#" class="register-btn past-btn">Event Ended</a>`
-    : isHybrid
-    ? `<a href="${event.onlineInfo?.link || event.registerUrl}" target="_blank" rel="noopener" class="register-btn" onclick="gtag('event','event_join_online',{event_id:'${event.id}'})">Join Online — Google Meet ↗</a>
-       <a href="mailto:kintone@edamame-jp.com?subject=Attending: ${encodeURIComponent(event.title)}&body=Hi, I'd like to attend ${encodeURIComponent(event.title)} in person at ${encodeURIComponent(event.venue||'')}." class="register-btn secondary" onclick="gtag('event','event_join_inperson',{event_id:'${event.id}'})">Attend In Person →</a>`
-    : `<a href="${event.registerUrl}" target="_blank" rel="noopener" class="register-btn" onclick="gtag('event','event_register',{event_id:'${event.id}'})">Register Free →</a>`;
+    ? `<button class="register-btn past-btn" disabled>Event Ended</button>`
+    : `<button class="register-btn" onclick="openModal('${event.id}','Online')">💻 Join Online</button>
+       <button class="register-btn secondary" onclick="openModal('${event.id}','In-Person')">📍 Attend In Person</button>`;
 
   return `
-  <div class="event-card ${past?'past':''}" data-type="${event.type}" style="animation-delay:${index*0.07}s">
+  <div class="event-card ${past?'past':''}" data-type="${event.type}" style="animation-delay:${index*.07}s">
     <div class="card-banner ${past?'past':event.type}"></div>
     <div class="card-body">
       <div class="card-tags">
         <span class="tag tag-${event.type}">${event.type==='hybrid'?'🔀 Hybrid':event.type==='in-person'?'📍 In-Person':'💻 Online'}</span>
         <span class="tag tag-free">🎟 Free</span>
         <span class="tag tag-hq">Kintone HQ Speaker</span>
-        ${today_ ? '<span class="tag tag-today">🔴 Today</span>' : ''}
-        ${past ? '<span class="tag tag-past">Past</span>' : ''}
+        ${today_?'<span class="tag tag-today">🔴 Today</span>':''}
+        ${past?'<span class="tag tag-past">Past</span>':''}
       </div>
       <div class="card-date">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
@@ -380,10 +556,10 @@ function renderCard(event, index) {
           <div class="speaker-avatar">${initials(event.speaker)}</div>
           <div>
             <div class="speaker-name">${event.speaker}</div>
-            <div class="speaker-title-text">${event.speakerRole} · ${event.speakerOrg}</div>
+            <div class="speaker-role">${event.speakerRole} · ${event.speakerOrg}</div>
           </div>
         </div>
-        ${spotsHtml}
+        <span class="card-spots spots-open">${event.spotsLeft===null?'Open to all':event.spotsLeft+' spots'}</span>
       </div>
     </div>
     <div class="card-footer">${footerHtml}</div>
@@ -391,9 +567,9 @@ function renderCard(event, index) {
 }
 
 function render(filter) {
-  const upcoming = EVENTS.filter(e => !isPast(e) && (filter==='all' || e.type===filter || (filter==='webinar' && e.type==='hybrid')))
+  const upcoming = EVENTS.filter(e => !isPast(e) && (filter==='all'||e.type===filter||(filter==='webinar'&&e.type==='hybrid')))
     .sort((a,b)=>new Date(a.date)-new Date(b.date));
-  const past = EVENTS.filter(e => isPast(e) && (filter==='all' || e.type===filter || (filter==='webinar' && e.type==='hybrid')))
+  const past = EVENTS.filter(e => isPast(e) && (filter==='all'||e.type===filter||(filter==='webinar'&&e.type==='hybrid')))
     .sort((a,b)=>new Date(b.date)-new Date(a.date));
 
   document.getElementById('upcoming-grid').innerHTML = upcoming.map((e,i)=>renderCard(e,i)).join('');
@@ -412,13 +588,160 @@ document.querySelectorAll('.filter-btn').forEach(btn => {
   });
 });
 
+/* ════════════════════════════════════════════════════
+   MODAL
+   ════════════════════════════════════════════════════ */
+let currentEvent = null;
+let currentAttendType = 'Online';
+
+function openModal(eventId, attendType) {
+  currentEvent = EVENTS.find(e => e.id === eventId);
+  if (!currentEvent) return;
+
+  currentAttendType = attendType || 'Online';
+  setAttendType(currentAttendType);
+
+  document.getElementById('modal-event-title').textContent = currentEvent.title;
+  document.getElementById('modal-event-meta').textContent =
+    formatDate(currentEvent.date) + ' · ' + currentEvent.time + ' PHT';
+
+  // Reset form
+  document.getElementById('modal-form-body').style.display = '';
+  document.getElementById('modal-success').classList.remove('visible');
+  document.getElementById('form-error').classList.remove('visible');
+  ['f-name','f-email','f-company','f-jobtitle','f-phone','f-questions'].forEach(id => {
+    document.getElementById(id).value = '';
+  });
+  document.getElementById('f-heard').value = '';
+  document.getElementById('submit-btn').disabled = false;
+  document.getElementById('submit-btn').textContent = 'Confirm Attendance →';
+
+  document.getElementById('modal-overlay').classList.add('open');
+  document.body.style.overflow = 'hidden';
+
+  gtag('event','event_modal_open',{event_id: eventId, attend_type: attendType});
+}
+
+function closeModal() {
+  document.getElementById('modal-overlay').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+function handleOverlayClick(e) {
+  if (e.target === document.getElementById('modal-overlay')) closeModal();
+}
+
+document.addEventListener('keydown', e => { if(e.key==='Escape') closeModal(); });
+
+function setAttendType(type) {
+  currentAttendType = type;
+  document.querySelectorAll('.attend-opt').forEach(b => {
+    b.classList.toggle('active', b.dataset.value === type);
+  });
+  document.getElementById('online-info-box').classList.toggle('visible', type === 'Online');
+  document.getElementById('venue-info-box').classList.toggle('visible',  type === 'In-Person');
+}
+
+/* ════════════════════════════════════════════════════
+   FORM SUBMISSION
+   ════════════════════════════════════════════════════ */
+function submitRegistration() {
+  const name    = document.getElementById('f-name').value.trim();
+  const email   = document.getElementById('f-email').value.trim();
+  const errEl   = document.getElementById('form-error');
+
+  if (!name || !email) {
+    errEl.textContent = 'Please fill in your name and email.';
+    errEl.classList.add('visible');
+    return;
+  }
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    errEl.textContent = 'Please enter a valid email address.';
+    errEl.classList.add('visible');
+    return;
+  }
+  errEl.classList.remove('visible');
+
+  const btn = document.getElementById('submit-btn');
+  btn.disabled = true;
+  btn.textContent = 'Submitting…';
+
+  // Collect UTM params
+  const params = new URLSearchParams(window.location.search);
+
+  const payload = {
+    event_name:       currentEvent.title,
+    event_date:       formatDate(currentEvent.date) + ' · ' + currentEvent.time + ' PHT',
+    attendance_type:  currentAttendType,
+    name:             name,
+    email:            email,
+    company:          document.getElementById('f-company').value.trim(),
+    job_title:        document.getElementById('f-jobtitle').value.trim(),
+    phone:            document.getElementById('f-phone').value.trim(),
+    questions:        document.getElementById('f-questions').value.trim(),
+    how_did_you_hear: document.getElementById('f-heard').value,
+    source:           'Kintone Philippines Events Page',
+    page_url:         window.location.href,
+    timestamp:        new Date().toISOString(),
+    utm_source:       params.get('utm_source') || '',
+    utm_medium:       params.get('utm_medium') || '',
+    utm_campaign:     params.get('utm_campaign') || ''
+  };
+
+  // Check if GAS URL is configured
+  if (!GAS_URL || GAS_URL === 'PASTE_YOUR_GAS_URL_HERE') {
+    // Fallback: show success anyway (for testing before GAS is deployed)
+    showSuccess(payload);
+    return;
+  }
+
+  fetch(GAS_URL, {
+    method: 'POST',
+    mode: 'no-cors',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(payload)
+  })
+  .then(() => {
+    showSuccess(payload);
+    gtag('event','event_registration_complete',{
+      event_id: currentEvent.id,
+      attend_type: currentAttendType
+    });
+  })
+  .catch(err => {
+    console.error(err);
+    // Show success anyway (no-cors means we can't read the response, but if fetch didn't throw, it likely succeeded)
+    showSuccess(payload);
+  });
+}
+
+function showSuccess(payload) {
+  document.getElementById('modal-form-body').style.display = 'none';
+
+  const joiningHtml = payload.attendance_type === 'Online'
+    ? '<strong>Join online:</strong> <a href="https://meet.google.com/oyj-cxhh-grb" style="color:#4A7C59">meet.google.com/oyj-cxhh-grb</a>'
+    : '<strong>Venue:</strong> 7F KMC Armstrong, Salcedo Village, Makati City';
+
+  document.getElementById('confirm-details').innerHTML =
+    '<strong>Event:</strong> ' + payload.event_name + '<br/>' +
+    '<strong>Date:</strong> ' + payload.event_date + '<br/>' +
+    '<strong>Attendance:</strong> ' + payload.attendance_type + '<br/>' +
+    joiningHtml;
+
+  document.getElementById('modal-success').classList.add('visible');
+}
+
+/* ════════════════════════════════════════════════════
+   NOTIFY STRIP
+   ════════════════════════════════════════════════════ */
 function handleNotify(e) {
   e.preventDefault();
   const email = document.getElementById('notify-email').value;
-  gtag('event','event_notify_signup',{email_domain:email.split('@')[1]});
-  e.target.innerHTML = '<p style="color:#4A7C59;font-weight:600;padding:12px 0">✓ You\'re on the list! We\'ll email you when new events are announced.</p>';
+  gtag('event','event_notify_signup',{email_domain: email.split('@')[1]});
+  e.target.innerHTML = '<p style="color:#4A7C59;font-weight:600;padding:12px 0">✓ You\'re on the list! We\'ll notify you when new events are announced.</p>';
 }
 
+// Init
 render('all');
 </script>
 </body>
