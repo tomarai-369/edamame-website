@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Kintone App Builder Estimator Philippines | How Long Will My App Take? | Edamame Inc.</title>
+<meta name="description" content="Find out exactly what Kintone apps your Philippine business needs, how long they take to build, and what ROI to expect. Free AI-powered estimator from Edamame Inc."/>
+<meta name="robots" content="index,follow"/>
+<link rel="canonical" href="https://edamame-jp.com/kintone-philippines/en/tools/app-estimator/"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,400&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YF1198H5CL"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-YF1198H5CL');</script>
+<style>
+:root{--g:#4A7C59;--gd:#3d6b4a;--gdd:#2c4f36;--gl:#e8f5e9;--gm:#c8e6c9;--ink:#1a2a1e;--ink2:#2a3d2e;--mut:#6b7f70;--bdr:#d4e8d8;--off:#f8fdf9;--fh:'Fraunces',Georgia,serif;--fb:'DM Sans',system-ui,sans-serif;--gold:#c9a84c;--gold-l:#fdf6e3}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--fb);color:var(--ink);background:var(--off);min-height:100vh;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+.hdr{background:linear-gradient(135deg,var(--gd),var(--g));height:64px;padding:0 5%;display:flex;align-items:center;justify-content:space-between}
+.hdr-logo{display:flex;align-items:center;gap:10px;font-family:var(--fh);font-size:1.05rem;color:#fff;font-weight:700}
+.logo-box{width:36px;height:36px;background:rgba(255,255,255,.15);border-radius:8px;display:flex;align-items:center;justify-content:center}
+.hdr-nav{display:flex;align-items:center;gap:20px}
+.hdr-nav a{color:rgba(255,255,255,.8);font-size:.82rem;font-weight:500}
+.hdr-nav a:hover{color:#fff}
+.hdr-cta{background:#fff;color:var(--gd)!important;padding:7px 16px;border-radius:8px;font-weight:700!important}
+
+/* PAGE LAYOUT */
+.page{max-width:860px;margin:0 auto;padding:48px 24px 80px}
+
+/* HERO */
+.tool-hero{text-align:center;margin-bottom:48px}
+.tool-badge{display:inline-flex;align-items:center;gap:8px;background:var(--gdd);color:rgba(255,255,255,.9);font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:6px 16px;border-radius:100px;margin-bottom:20px}
+.tool-badge .ai-dot{width:7px;height:7px;background:#7fffaa;border-radius:50%;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+.tool-hero h1{font-family:var(--fh);font-size:clamp(2rem,4vw,2.8rem);font-weight:900;color:var(--ink);line-height:1.15;letter-spacing:-.02em;margin-bottom:14px}
+.tool-hero h1 em{font-style:italic;color:var(--g)}
+.tool-hero p{font-size:1rem;color:var(--mut);max-width:560px;margin:0 auto;line-height:1.7}
+
+/* WIZARD */
+.wizard{background:#fff;border:1px solid var(--bdr);border-radius:20px;box-shadow:0 8px 40px rgba(74,124,89,.1);overflow:hidden}
+
+/* Progress bar */
+.progress-bar-wrap{padding:0;height:5px;background:var(--bdr)}
+.progress-bar{height:5px;background:linear-gradient(90deg,var(--gd),var(--g));border-radius:0;transition:width .4s ease}
+
+/* Step header */
+.step-header{padding:28px 36px 0;display:flex;align-items:center;justify-content:space-between}
+.step-count{font-size:.75rem;font-weight:700;color:var(--mut);letter-spacing:.06em;text-transform:uppercase}
+.step-dots{display:flex;gap:6px}
+.step-dot{width:8px;height:8px;border-radius:50%;background:var(--bdr);transition:background .3s}
+.step-dot.done{background:var(--gm)}
+.step-dot.active{background:var(--g);transform:scale(1.3)}
+
+/* Steps */
+.step{display:none;padding:28px 36px 36px;animation:fadeIn .3s ease}
+.step.active{display:block}
+@keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.step h2{font-family:var(--fh);font-size:1.4rem;font-weight:700;color:var(--ink);margin-bottom:6px;line-height:1.3}
+.step .step-sub{font-size:.9rem;color:var(--mut);margin-bottom:28px;line-height:1.5}
+
+/* Choice grids */
+.choice-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:12px;margin-bottom:28px}
+.choice-grid.cols-2{grid-template-columns:1fr 1fr}
+.choice-btn{background:var(--off);border:2px solid var(--bdr);border-radius:12px;padding:16px 14px;cursor:pointer;text-align:center;transition:all .2s;font-family:var(--fb);position:relative}
+.choice-btn:hover{border-color:var(--gm);background:var(--gl)}
+.choice-btn.selected{border-color:var(--g);background:var(--gl)}
+.choice-btn.selected::after{content:'✓';position:absolute;top:8px;right:10px;font-size:.75rem;font-weight:700;color:var(--g)}
+.choice-btn .c-icon{font-size:1.8rem;margin-bottom:8px}
+.choice-btn .c-label{font-size:.85rem;font-weight:700;color:var(--ink);line-height:1.3}
+.choice-btn .c-sub{font-size:.75rem;color:var(--mut);margin-top:3px;line-height:1.3}
+
+/* Problem checkboxes */
+.problem-list{display:flex;flex-direction:column;gap:10px;margin-bottom:28px}
+.problem-item{background:var(--off);border:2px solid var(--bdr);border-radius:12px;padding:14px 16px;cursor:pointer;display:flex;align-items:flex-start;gap:12px;transition:all .2s;font-family:var(--fb)}
+.problem-item:hover{border-color:var(--gm)}
+.problem-item.selected{border-color:var(--g);background:var(--gl)}
+.problem-item .pi-check{width:20px;height:20px;border:2px solid var(--bdr);border-radius:5px;flex-shrink:0;display:flex;align-items:center;justify-content:center;margin-top:1px;transition:all .2s}
+.problem-item.selected .pi-check{background:var(--g);border-color:var(--g);color:#fff;font-size:.75rem}
+.problem-item .pi-text .pi-title{font-size:.9rem;font-weight:700;color:var(--ink)}
+.problem-item .pi-text .pi-desc{font-size:.8rem;color:var(--mut);margin-top:2px;line-height:1.4}
+
+/* Input */
+.form-group{margin-bottom:18px}
+.form-group label{display:block;font-size:.82rem;font-weight:700;color:var(--ink2);margin-bottom:6px;letter-spacing:.02em}
+.form-group input,.form-group select{width:100%;padding:12px 14px;border:2px solid var(--bdr);border-radius:10px;font-family:var(--fb);font-size:.9rem;color:var(--ink);outline:none;transition:border-color .2s;background:#fff}
+.form-group input:focus,.form-group select:focus{border-color:var(--g);box-shadow:0 0 0 3px rgba(74,124,89,.1)}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+
+/* Nav buttons */
+.step-nav{display:flex;justify-content:space-between;align-items:center;padding-top:12px}
+.btn-back{background:none;border:1.5px solid var(--bdr);color:var(--mut);font-family:var(--fb);font-size:.875rem;font-weight:600;padding:10px 22px;border-radius:9px;cursor:pointer;transition:all .2s}
+.btn-back:hover{border-color:var(--ink);color:var(--ink)}
+.btn-next{background:linear-gradient(135deg,var(--gd),var(--g));color:#fff;border:none;font-family:var(--fb);font-size:.875rem;font-weight:700;padding:12px 28px;border-radius:9px;cursor:pointer;transition:transform .2s,box-shadow .2s;display:flex;align-items:center;gap:8px}
+.btn-next:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(74,124,89,.3)}
+.btn-next:disabled{opacity:.5;cursor:not-allowed;transform:none;box-shadow:none}
+.btn-generate{background:linear-gradient(135deg,var(--gdd),var(--gd));color:#fff;border:none;font-family:var(--fb);font-size:1rem;font-weight:700;padding:14px 32px;border-radius:10px;cursor:pointer;transition:transform .2s,box-shadow .2s;display:flex;align-items:center;gap:10px;width:100%;justify-content:center;margin-top:8px}
+.btn-generate:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(44,79,54,.35)}
+
+/* LOADING */
+.loading-step{text-align:center;padding:56px 36px;display:none}
+.loading-step.active{display:block}
+.loading-ring{width:64px;height:64px;border:4px solid var(--gm);border-top-color:var(--g);border-radius:50%;animation:spin 1s linear infinite;margin:0 auto 20px}
+@keyframes spin{to{transform:rotate(360deg)}}
+.loading-step h3{font-family:var(--fh);font-size:1.3rem;color:var(--ink);margin-bottom:8px}
+.loading-step p{color:var(--mut);font-size:.9rem}
+.loading-messages{margin-top:20px;font-size:.82rem;color:var(--g);min-height:24px}
+
+/* RESULTS */
+.results-step{display:none;padding:0}
+.results-step.active{display:block}
+.results-header{background:linear-gradient(135deg,var(--gdd),var(--gd));padding:32px 36px}
+.results-header h2{font-family:var(--fh);font-size:1.6rem;font-weight:700;color:#fff;margin-bottom:6px}
+.results-header p{color:rgba(255,255,255,.75);font-size:.9rem}
+.results-body{padding:32px 36px}
+
+.result-summary{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:32px}
+.result-stat{background:var(--off);border:1px solid var(--bdr);border-radius:12px;padding:18px;text-align:center}
+.result-stat .rs-num{font-family:var(--fh);font-size:2rem;font-weight:900;color:var(--gd);line-height:1}
+.result-stat .rs-lbl{font-size:.78rem;color:var(--mut);margin-top:5px}
+
+.apps-recommended{margin-bottom:28px}
+.apps-recommended h3{font-family:var(--fh);font-size:1.1rem;font-weight:700;color:var(--ink);margin-bottom:14px}
+.app-rec-list{display:flex;flex-direction:column;gap:10px}
+.app-rec-item{background:var(--off);border:1px solid var(--bdr);border-radius:12px;padding:14px 16px;display:flex;align-items:flex-start;justify-content:space-between;gap:16px}
+.app-rec-left{display:flex;align-items:flex-start;gap:12px}
+.app-rec-icon{width:38px;height:38px;background:var(--gl);border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0}
+.app-rec-title{font-size:.9rem;font-weight:700;color:var(--ink);margin-bottom:3px}
+.app-rec-desc{font-size:.8rem;color:var(--mut);line-height:1.4}
+.app-rec-time{font-size:.78rem;font-weight:700;color:var(--g);background:var(--gl);padding:4px 10px;border-radius:100px;white-space:nowrap;flex-shrink:0;align-self:center}
+
+.roi-box{background:linear-gradient(135deg,rgba(74,124,89,.08),rgba(61,107,74,.12));border:1px solid var(--gm);border-radius:14px;padding:24px;margin-bottom:28px}
+.roi-box h3{font-family:var(--fh);font-size:1.05rem;font-weight:700;color:var(--gd);margin-bottom:14px}
+.roi-items{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.roi-item{display:flex;align-items:flex-start;gap:8px;font-size:.85rem;color:var(--ink2);line-height:1.5}
+.roi-check{color:var(--g);flex-shrink:0;font-weight:700}
+
+.cta-result{background:linear-gradient(135deg,var(--gd),var(--g));border-radius:14px;padding:28px;text-align:center}
+.cta-result h3{font-family:var(--fh);font-size:1.3rem;color:#fff;margin-bottom:8px}
+.cta-result p{color:rgba(255,255,255,.8);font-size:.875rem;margin-bottom:20px;line-height:1.6}
+.cta-result-btns{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+.cta-result-primary{background:#fff;color:var(--gd);font-weight:700;font-size:.9rem;padding:12px 26px;border-radius:10px;transition:transform .2s}
+.cta-result-primary:hover{transform:translateY(-2px)}
+.cta-result-secondary{border:1.5px solid rgba(255,255,255,.4);color:#fff;font-weight:600;font-size:.875rem;padding:11px 22px;border-radius:10px;transition:border-color .2s}
+.cta-result-secondary:hover{border-color:#fff}
+
+.error-msg{background:#fce4ec;border:1px solid #f48fb1;color:#c62828;border-radius:8px;padding:10px 14px;font-size:.85rem;margin-bottom:16px;display:none}
+.error-msg.visible{display:block}
+
+.restart-btn{background:none;border:none;color:var(--g);font-family:var(--fb);font-size:.82rem;font-weight:600;cursor:pointer;text-decoration:underline;margin-top:16px;display:block;width:100%;text-align:center}
+
+@media(max-width:600px){
+  .hdr-nav a:not(.hdr-cta){display:none}
+  .step,.step-header,.results-header,.results-body{padding-left:20px;padding-right:20px}
+  .choice-grid{grid-template-columns:1fr 1fr}
+  .choice-grid.cols-2{grid-template-columns:1fr}
+  .result-summary{grid-template-columns:1fr 1fr}
+  .roi-items{grid-template-columns:1fr}
+  .form-row{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<header class="hdr">
+  <a href="/kintone-philippines/en/" class="hdr-logo">
+    <div class="logo-box"><svg width="20" height="20" viewBox="0 0 40 40" fill="none"><ellipse cx="20" cy="28" rx="16" ry="8" fill="rgba(255,255,255,.9)"/><circle cx="13" cy="26" r="4" fill="#4A7C59"/><circle cx="20" cy="24" r="4" fill="#4A7C59"/><circle cx="27" cy="26" r="4" fill="#4A7C59"/><path d="M4 28 Q20 12 36 28" stroke="rgba(255,255,255,.6)" stroke-width="2" fill="none"/></svg></div>
+    Kintone Philippines
+  </a>
+  <nav class="hdr-nav">
+    <a href="/kintone-philippines/en/">Home</a>
+    <a href="/kintone-philippines/en/customers/">Customers</a>
+    <a href="/kintone-philippines/en/blog/">Blog</a>
+    <a href="https://calendly.com/kintoneph/freekintoneappconsultation" target="_blank" class="hdr-cta">Free Demo</a>
+  </nav>
+</header>
+
+<div class="page">
+  <div class="tool-hero">
+    <div class="tool-badge"><span class="ai-dot"></span>AI-Powered Estimator</div>
+    <h1>What Kintone apps does<br/><em>your business need?</em></h1>
+    <p>Answer 4 quick questions. Get a custom app recommendation, deployment timeline, and ROI estimate — built for your specific Philippine business.</p>
+  </div>
+
+  <div class="wizard">
+    <div class="progress-bar-wrap"><div class="progress-bar" id="progress-bar" style="width:0%"></div></div>
+
+    <div class="step-header">
+      <div class="step-count" id="step-count">Step 1 of 4</div>
+      <div class="step-dots" id="step-dots"></div>
+    </div>
+
+    <!-- STEP 1: Industry -->
+    <div class="step active" id="step-1">
+      <h2>What industry is your business in?</h2>
+      <p class="step-sub">We'll tailor your app recommendations to your specific industry needs.</p>
+      <div class="choice-grid" id="industry-grid">
+        <div class="choice-btn" onclick="selectChoice('industry','manufacturing',this)"><div class="c-icon">🏭</div><div class="c-label">Manufacturing</div></div>
+        <div class="choice-btn" onclick="selectChoice('industry','logistics',this)"><div class="c-icon">🚚</div><div class="c-label">Logistics & Distribution</div></div>
+        <div class="choice-btn" onclick="selectChoice('industry','real-estate',this)"><div class="c-icon">🏠</div><div class="c-label">Real Estate</div></div>
+        <div class="choice-btn" onclick="selectChoice('industry','healthcare',this)"><div class="c-icon">🏥</div><div class="c-label">Healthcare / Clinic</div></div>
+        <div class="choice-btn" onclick="selectChoice('industry','bpo',this)"><div class="c-icon">💻</div><div class="c-label">BPO / IT Services</div></div>
+        <div class="choice-btn" onclick="selectChoice('industry','construction',this)"><div class="c-icon">🏗</div><div class="c-label">Construction</div></div>
+        <div class="choice-btn" onclick="selectChoice('industry','retail',this)"><div class="c-icon">🛍</div><div class="c-label">Retail / Trading</div></div>
+        <div class="choice-btn" onclick="selectChoice('industry','education',this)"><div class="c-icon">🎓</div><div class="c-label">Education</div></div>
+        <div class="choice-btn" onclick="selectChoice('industry','finance',this)"><div class="c-icon">💰</div><div class="c-label">Finance / Insurance</div></div>
+        <div class="choice-btn" onclick="selectChoice('industry','other',this)"><div class="c-icon">🏢</div><div class="c-label">Other</div></div>
+      </div>
+      <div class="step-nav"><div></div><button class="btn-next" id="next-1" onclick="goStep(2)" disabled>Continue <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button></div>
+    </div>
+
+    <!-- STEP 2: Team size -->
+    <div class="step" id="step-2">
+      <h2>How large is your team?</h2>
+      <p class="step-sub">This helps us estimate the right licensing tier and deployment scope.</p>
+      <div class="choice-grid cols-2">
+        <div class="choice-btn" onclick="selectChoice('size','1-10',this)"><div class="c-icon">👤</div><div class="c-label">1–10 people</div><div class="c-sub">Startup / Small team</div></div>
+        <div class="choice-btn" onclick="selectChoice('size','11-50',this)"><div class="c-icon">👥</div><div class="c-label">11–50 people</div><div class="c-sub">Growing SME</div></div>
+        <div class="choice-btn" onclick="selectChoice('size','51-200',this)"><div class="c-icon">🏢</div><div class="c-label">51–200 people</div><div class="c-sub">Mid-size company</div></div>
+        <div class="choice-btn" onclick="selectChoice('size','200+',this)"><div class="c-icon">🏙</div><div class="c-label">200+ people</div><div class="c-sub">Large enterprise</div></div>
+      </div>
+      <div class="step-nav"><button class="btn-back" onclick="goStep(1)">← Back</button><button class="btn-next" id="next-2" onclick="goStep(3)" disabled>Continue <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button></div>
+    </div>
+
+    <!-- STEP 3: Pain points -->
+    <div class="step" id="step-3">
+      <h2>What are your biggest operational pain points?</h2>
+      <p class="step-sub">Select all that apply. This determines which apps to prioritize first.</p>
+      <div class="problem-list" id="problem-list">
+        <div class="problem-item" onclick="toggleProblem('spreadsheets',this)"><div class="pi-check"></div><div class="pi-text"><div class="pi-title">Still using Excel spreadsheets for critical business data</div><div class="pi-desc">Multiple versions, no real-time updates, data lost when someone is absent</div></div></div>
+        <div class="problem-item" onclick="toggleProblem('approvals',this)"><div class="pi-check">✓</div><div class="pi-text"><div class="pi-title">Approvals stuck in email chains or paper forms</div><div class="pi-desc">Purchase requests, leave forms, expense reports slow down operations daily</div></div></div>
+        <div class="problem-item" onclick="toggleProblem('inventory',this)"><div class="pi-check"></div><div class="pi-text"><div class="pi-title">Inventory or asset tracking is inaccurate</div><div class="pi-desc">Physical count never matches the system — discrepancies found too late</div></div></div>
+        <div class="problem-item" onclick="toggleProblem('visibility',this)"><div class="pi-check"></div><div class="pi-text"><div class="pi-title">Management has no real-time visibility into operations</div><div class="pi-desc">Reports are assembled manually — data is always days behind reality</div></div></div>
+        <div class="problem-item" onclick="toggleProblem('crm',this)"><div class="pi-check"></div><div class="pi-text"><div class="pi-title">Customer and sales data is fragmented across people and files</div><div class="pi-desc">No single view of customer history, pipeline, or follow-up status</div></div></div>
+        <div class="problem-item" onclick="toggleProblem('compliance',this)"><div class="pi-check"></div><div class="pi-text"><div class="pi-title">Compliance and audit documentation takes too long</div><div class="pi-desc">Preparing for inspections or audits means scrambling for paper records</div></div></div>
+      </div>
+      <div class="error-msg" id="problem-error">Please select at least one pain point.</div>
+      <div class="step-nav"><button class="btn-back" onclick="goStep(2)">← Back</button><button class="btn-next" id="next-3" onclick="goStep(4)">Continue <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button></div>
+    </div>
+
+    <!-- STEP 4: Contact + Generate -->
+    <div class="step" id="step-4">
+      <h2>Who should we send your personalized estimate to?</h2>
+      <p class="step-sub">We'll generate your custom app plan and email it to you. No spam — just your results.</p>
+      <div class="form-row">
+        <div class="form-group"><label>Your Name *</label><input type="text" id="f-name" placeholder="Juan dela Cruz"/></div>
+        <div class="form-group"><label>Work Email *</label><input type="email" id="f-email" placeholder="juan@company.com"/></div>
+      </div>
+      <div class="form-row">
+        <div class="form-group"><label>Company Name</label><input type="text" id="f-company" placeholder="Your company"/></div>
+        <div class="form-group"><label>Phone Number</label><input type="tel" id="f-phone" placeholder="+63 9XX XXX XXXX"/></div>
+      </div>
+      <div class="error-msg" id="contact-error">Please enter your name and email.</div>
+      <button class="btn-generate" onclick="generateEstimate()">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+        Generate My Custom App Estimate
+      </button>
+      <div class="step-nav" style="justify-content:flex-start;padding-top:4px"><button class="btn-back" onclick="goStep(3)">← Back</button></div>
+    </div>
+
+    <!-- LOADING -->
+    <div class="loading-step" id="loading-step">
+      <div class="loading-ring"></div>
+      <h3>Building your custom estimate...</h3>
+      <p>Our AI is analyzing your industry, team size, and pain points</p>
+      <div class="loading-messages" id="loading-msg"></div>
+    </div>
+
+    <!-- RESULTS -->
+    <div class="results-step" id="results-step">
+      <div class="results-header">
+        <h2 id="results-title">Your Custom Kintone App Plan</h2>
+        <p id="results-subtitle">Based on your responses — tailored for your Philippine business</p>
+      </div>
+      <div class="results-body">
+        <div class="result-summary" id="result-summary"></div>
+        <div class="apps-recommended">
+          <h3>Recommended Apps — Priority Order</h3>
+          <div class="app-rec-list" id="app-rec-list"></div>
+        </div>
+        <div class="roi-box">
+          <h3>📊 Expected ROI for Your Business</h3>
+          <div class="roi-items" id="roi-items"></div>
+        </div>
+        <div class="cta-result">
+          <h3>Ready to see this built live?</h3>
+          <p>Book a free 30-minute demo with Tom. We'll build one of your recommended apps during the call — so you can see exactly what it looks like before committing to anything.</p>
+          <div class="cta-result-btns">
+            <a href="https://calendly.com/kintoneph/freekintoneappconsultation" target="_blank" class="cta-result-primary">Book Free Demo →</a>
+            <a href="mailto:kintone@edamame-jp.com" class="cta-result-secondary">Email Tom directly</a>
+          </div>
+        </div>
+        <button class="restart-btn" onclick="restart()">↩ Start over with different answers</button>
+      </div>
+    </div>
+
+  </div><!-- /wizard -->
+</div><!-- /page -->
+
+<script>
+const TOTAL_STEPS = 4;
+const state = { industry: null, size: null, problems: new Set(), name: '', email: '', company: '', phone: '' };
+
+const INDUSTRY_APP_MAP = {
+  'manufacturing': [
+    {icon:'📊',title:'Production Tracker',desc:'Real-time work order status, output by line, shift summaries',days:'3–5 days'},
+    {icon:'✅',title:'Quality Control App',desc:'Inspection checklists, defect logging, photos attached to records',days:'2–4 days'},
+    {icon:'📦',title:'Inventory Control',desc:'Raw materials, WIP, and finished goods with auto-reorder alerts',days:'3–5 days'},
+    {icon:'🛒',title:'Procurement Workflow',desc:'Purchase requests with multi-level approval routing',days:'2–3 days'},
+    {icon:'🔧',title:'Preventive Maintenance',desc:'Equipment PM schedules, work orders, downtime tracking',days:'2–3 days'},
+  ],
+  'logistics': [
+    {icon:'🚚',title:'Fleet Dispatch App',desc:'Trip assignment, status tracking, ETAs and exceptions in one board',days:'3–5 days'},
+    {icon:'📦',title:'Warehouse Management',desc:'Inbound, outbound, picking — real-time stock accuracy',days:'3–5 days'},
+    {icon:'✅',title:'Proof of Delivery',desc:'Digital PODs with photo evidence, client signature',days:'1–2 days'},
+    {icon:'💰',title:'Client Billing System',desc:'Auto-generate billing summaries from delivery records',days:'2–3 days'},
+    {icon:'📊',title:'Performance Dashboard',desc:'On-time rates, cost per delivery, driver performance',days:'2–3 days'},
+  ],
+  'real-estate': [
+    {icon:'🏠',title:'Property Inventory',desc:'Real-time unit availability, reservations, and sales status',days:'2–4 days'},
+    {icon:'👥',title:'Buyer CRM',desc:'Prospect tracking from inquiry to turnover with document checklist',days:'3–5 days'},
+    {icon:'💰',title:'Commission Tracker',desc:'Co-broking, referral fees, and commission audit trail',days:'2–3 days'},
+    {icon:'📊',title:'Sales Dashboard',desc:'Reservations per day, absorption rate, broker performance',days:'1–2 days'},
+    {icon:'📄',title:'Document Management',desc:'Buyer requirements tracking with deficiency alerts',days:'2–3 days'},
+  ],
+  'healthcare': [
+    {icon:'🏥',title:'Patient Records System',desc:'Secure digital profiles with visit history and documents',days:'4–6 days'},
+    {icon:'📅',title:'Appointment Scheduling',desc:'Multi-doctor calendar with availability and reminders',days:'3–4 days'},
+    {icon:'💊',title:'Pharmacy Inventory',desc:'Stock levels, expiry dates, and consumption per patient',days:'2–3 days'},
+    {icon:'💳',title:'HMO/PhilHealth Filing',desc:'Claims, LOA tracking, and reimbursement management',days:'3–4 days'},
+    {icon:'✅',title:'Clearance & Clinical Forms',desc:'Digital intake forms with automatic routing',days:'2–3 days'},
+  ],
+  'bpo': [
+    {icon:'📊',title:'Operations Dashboard',desc:'Real-time SLA adherence, ticket volumes, agent performance',days:'3–4 days'},
+    {icon:'👥',title:'Agent Roster System',desc:'Headcount by account, shifts, seating, and availability',days:'2–3 days'},
+    {icon:'📋',title:'Auto Client Reports',desc:'Scheduled performance reports generated from live data',days:'2–3 days'},
+    {icon:'🤝',title:'Client Management',desc:'SLA agreements, escalation contacts, performance history',days:'2–3 days'},
+    {icon:'🎫',title:'Ticket Management',desc:'Intake, routing, SLA monitoring, and escalation',days:'3–4 days'},
+  ],
+  'construction': [
+    {icon:'🏗',title:'Project Dashboard',desc:'Site progress, milestones, daily reports, and delays in one view',days:'3–5 days'},
+    {icon:'🧱',title:'Materials Inventory',desc:'Receiving, issuance, and returns tracked per project',days:'3–4 days'},
+    {icon:'🛒',title:'Procurement Workflow',desc:'PO requests, approvals, and supplier PO management',days:'2–3 days'},
+    {icon:'⛑',title:'Safety & Compliance',desc:'Toolbox talks, incidents, and DOLE inspection checklists',days:'2–3 days'},
+    {icon:'👷',title:'Manpower Tracking',desc:'Daily attendance, skills, overtime, and labor cost monitoring',days:'2–3 days'},
+  ],
+  'education': [
+    {icon:'📝',title:'Digital Enrollment System',desc:'Online applications, document uploads, admission status',days:'4–6 days'},
+    {icon:'👨‍🎓',title:'Student Records',desc:'Complete digital profiles with grades, attendance, clearances',days:'3–5 days'},
+    {icon:'✅',title:'Clearance Processing',desc:'Multi-department digital clearance — no physical routing',days:'2–3 days'},
+    {icon:'👩‍🏫',title:'Faculty Management',desc:'Teaching loads, schedules, performance, and HR records',days:'2–3 days'},
+    {icon:'💳',title:'Scholarship Management',desc:'Applications, requirements, disbursements, and renewal',days:'2–3 days'},
+  ],
+  'retail': [
+    {icon:'📦',title:'Multi-Branch Inventory',desc:'Real-time stock across all locations with transfer workflow',days:'3–5 days'},
+    {icon:'🛒',title:'Purchase Order Management',desc:'PO creation, delivery tracking, receipt confirmation',days:'2–3 days'},
+    {icon:'📊',title:'Sales Analytics Dashboard',desc:'Daily sales by branch, category, and SKU in real time',days:'2–3 days'},
+    {icon:'🏪',title:'Supplier Management',desc:'Profiles, contracts, performance scores, and history',days:'2–3 days'},
+    {icon:'🔍',title:'Shrinkage Tracker',desc:'Count vs system reconciliation with variance flagging',days:'1–2 days'},
+  ],
+  'finance': [
+    {icon:'💰',title:'Loan Application Tracker',desc:'Applications, status, document checklist, and approval workflow',days:'3–5 days'},
+    {icon:'👥',title:'Client Portfolio CRM',desc:'Full client profiles, product holdings, and relationship history',days:'3–4 days'},
+    {icon:'📋',title:'Compliance Documentation',desc:'Regulatory checklists, audit readiness, and filing calendar',days:'2–3 days'},
+    {icon:'📊',title:'Management Dashboard',desc:'Portfolio performance, application volumes, and team metrics',days:'2–3 days'},
+    {icon:'🔄',title:'Claims Workflow',desc:'Claims intake, processing stages, and settlement tracking',days:'2–4 days'},
+  ],
+  'other': [
+    {icon:'👥',title:'Custom CRM',desc:'Contacts, leads, deals, and follow-ups tailored to your sales process',days:'3–5 days'},
+    {icon:'✅',title:'Approval Workflow App',desc:'Any process requiring multi-step review and sign-off',days:'2–3 days'},
+    {icon:'📦',title:'Inventory / Asset Tracker',desc:'Any physical items that need to be tracked and managed',days:'2–4 days'},
+    {icon:'📊',title:'Operations Dashboard',desc:'Real-time visibility into your most important KPIs',days:'2–3 days'},
+    {icon:'👔',title:'HR System',desc:'Leave, expenses, employee records, and performance tracking',days:'3–5 days'},
+  ],
+};
+
+const PAIN_APP_MAP = {
+  'spreadsheets': {icon:'📊',title:'Data Migration & Consolidation',desc:'Convert your critical spreadsheets into a proper relational database',days:'1–3 days'},
+  'approvals': {icon:'✅',title:'Approval Workflow System',desc:'End-to-end digital approvals for all your paper-based processes',days:'2–3 days'},
+  'inventory': {icon:'📦',title:'Inventory Management',desc:'Real-time tracking with automatic alerts and reconciliation',days:'3–5 days'},
+  'visibility': {icon:'📊',title:'Management Dashboard',desc:'Live KPI visibility — no more waiting for manual reports',days:'2–3 days'},
+  'crm': {icon:'👥',title:'Customer & Sales CRM',desc:'All customer data in one system with pipeline tracking',days:'3–5 days'},
+  'compliance': {icon:'📋',title:'Compliance Documentation App',desc:'Digital checklists, audit logs, and regulatory filing trackers',days:'2–3 days'},
+};
+
+const ROI_BY_INDUSTRY = {
+  'manufacturing': ['Reduce production tracking time by 60–80%','Eliminate tool/inventory loss with 100% accountability','Cut purchase approval cycle from days to hours','Enable management oversight from any location'],
+  'logistics': ['Real-time fleet visibility eliminates coordination calls','Reduce billing errors with automated delivery-to-invoice','Driver accountability with digital POD records','Client satisfaction improves with self-service tracking'],
+  'real-estate': ['Eliminate double-selling with real-time unit status','Reduce commission disputes with full audit trail','Close deals faster with centralized buyer information','Management sees full pipeline without chasing brokers'],
+  'healthcare': ['Reduce patient wait time with digital scheduling','Eliminate lost records — everything searchable instantly','HMO/PhilHealth billing becomes faster and more accurate','Audit readiness always on — no scrambling'],
+  'bpo': ['Client reports generate automatically — hours saved weekly','SLA breach alerts prevent escalations before they happen','Accurate headcount data eliminates roster disputes','New account onboarding accelerates significantly'],
+  'construction': ['Real-time site visibility without calling the foreman','Reduce material theft with tracking per project','DOLE compliance always ready — no audit scrambling','Client trust increases with progress portal access'],
+  'education': ['Enrollment queues eliminated — full digital process','Clearance processing time reduced from days to hours','CHED/DepEd compliance always current','Faculty load tracking prevents overload and disputes'],
+  'retail': ['Eliminate stockouts with real-time multi-branch visibility','Reduce shrinkage with systematic reconciliation tracking','Supplier disputes resolved with full transaction history','Management sees company-wide performance in real time'],
+  'finance': ['Application processing accelerates significantly','Compliance gaps identified proactively — not at audit','Client portfolio visibility at a glance for relationship managers','Claims processing time reduced with digital workflow'],
+  'other': ['Reduce time spent on manual data entry and follow-ups','Approvals happen faster — no more lost emails or paper','Management visibility improves without added headcount','Compliance and audit readiness maintained automatically'],
+};
+
+function selectChoice(field, value, el) {
+  el.parentElement.querySelectorAll('.choice-btn').forEach(b => b.classList.remove('selected'));
+  el.classList.add('selected');
+  state[field] = value;
+  const nextBtn = document.getElementById(`next-${field === 'industry' ? 1 : 2}`);
+  if (nextBtn) nextBtn.disabled = false;
+}
+
+function toggleProblem(key, el) {
+  if (state.problems.has(key)) {
+    state.problems.delete(key);
+    el.classList.remove('selected');
+    el.querySelector('.pi-check').textContent = '';
+  } else {
+    state.problems.add(key);
+    el.classList.add('selected');
+    el.querySelector('.pi-check').textContent = '✓';
+  }
+  document.getElementById('problem-error').classList.remove('visible');
+}
+
+function goStep(n) {
+  if (n === 4 && state.problems.size === 0) {
+    document.getElementById('problem-error').classList.add('visible');
+    return;
+  }
+  const current = document.querySelector('.step.active');
+  if (current) current.classList.remove('active');
+  const target = document.getElementById(`step-${n}`);
+  if (target) target.classList.add('active');
+  updateProgress(n);
+}
+
+function updateProgress(n) {
+  const pct = ((n - 1) / TOTAL_STEPS) * 100;
+  document.getElementById('progress-bar').style.width = pct + '%';
+  document.getElementById('step-count').textContent = `Step ${n} of ${TOTAL_STEPS}`;
+  const dots = document.getElementById('step-dots');
+  dots.innerHTML = Array.from({length: TOTAL_STEPS}, (_, i) =>
+    `<div class="step-dot ${i < n-1 ? 'done' : i === n-1 ? 'active' : ''}"></div>`
+  ).join('');
+}
+
+async function generateEstimate() {
+  const name = document.getElementById('f-name').value.trim();
+  const email = document.getElementById('f-email').value.trim();
+  const errEl = document.getElementById('contact-error');
+  if (!name || !email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    errEl.classList.add('visible');
+    return;
+  }
+  errEl.classList.remove('visible');
+  state.name = name;
+  state.email = email;
+  state.company = document.getElementById('f-company').value.trim();
+  state.phone = document.getElementById('f-phone').value.trim();
+
+  // Show loading
+  document.getElementById('step-4').classList.remove('active');
+  document.getElementById('loading-step').classList.add('active');
+  document.getElementById('progress-bar').style.width = '90%';
+
+  const messages = [
+    'Analyzing your industry requirements...',
+    'Mapping pain points to app solutions...',
+    'Calculating deployment timeline...',
+    'Computing ROI estimates...',
+    'Preparing your personalized plan...',
+  ];
+  let mi = 0;
+  const msgEl = document.getElementById('loading-msg');
+  const msgInterval = setInterval(() => {
+    if (mi < messages.length) { msgEl.textContent = messages[mi++]; }
+  }, 900);
+
+  // Try GAS submission (no-cors, fire-and-forget)
+  const GAS_URL = 'https://script.google.com/macros/s/AKfycbz5vVl2EmzGOCfjMNmZ0nIGsPyRel3yg4fq0yNIcTvMbY0pFOpym3yuVPkvY6VP4DEcTg/exec';
+  try {
+    fetch(GAS_URL, {
+      method: 'POST', mode: 'no-cors',
+      headers: {'Content-Type':'application/json'},
+      body: JSON.stringify({
+        name: state.name, email: state.email, company: state.company, phone: state.phone,
+        interest: `App Estimator — ${state.industry}, ${state.size}, problems: ${[...state.problems].join(',')}`,
+        message: `Used App Estimator tool. Industry: ${state.industry}. Team: ${state.size}. Pain points: ${[...state.problems].join(', ')}.`,
+        source: 'Kintone Philippines App Estimator', language: 'EN',
+        page_url: window.location.href, timestamp: new Date().toISOString()
+      })
+    });
+  } catch(e) {}
+
+  // Simulate AI processing
+  await new Promise(r => setTimeout(r, 4500));
+  clearInterval(msgInterval);
+
+  document.getElementById('loading-step').classList.remove('active');
+  document.getElementById('progress-bar').style.width = '100%';
+  buildResults();
+  document.getElementById('results-step').classList.add('active');
+
+  gtag('event', 'estimator_complete', {industry: state.industry, team_size: state.size});
+}
+
+function buildResults() {
+  const ind = state.industry || 'other';
+  const industryLabel = {
+    'manufacturing':'Manufacturing','logistics':'Logistics','real-estate':'Real Estate',
+    'healthcare':'Healthcare','bpo':'BPO / IT Services','construction':'Construction',
+    'education':'Education','retail':'Retail','finance':'Finance','other':'Business'
+  }[ind] || 'Business';
+
+  document.getElementById('results-title').textContent = `Your Custom Kintone Plan — ${industryLabel}`;
+  document.getElementById('results-subtitle').textContent = `For a ${state.size}-person ${industryLabel} company in the Philippines`;
+
+  // Get industry apps
+  let apps = (INDUSTRY_APP_MAP[ind] || INDUSTRY_APP_MAP['other']).slice(0,4);
+
+  // Add pain-specific apps not already in list
+  for (const p of state.problems) {
+    const pa = PAIN_APP_MAP[p];
+    if (pa && !apps.find(a => a.title.toLowerCase().includes(pa.title.split(' ')[0].toLowerCase()))) {
+      apps.push(pa);
+      if (apps.length >= 6) break;
+    }
+  }
+  apps = apps.slice(0, 6);
+
+  // Total build days
+  const totalDays = apps.reduce((sum, a) => sum + parseInt(a.days.split('–')[1] || a.days), 0);
+
+  // Summary stats
+  document.getElementById('result-summary').innerHTML = `
+    <div class="result-stat"><div class="rs-num">${apps.length}</div><div class="rs-lbl">Apps recommended for your business</div></div>
+    <div class="result-stat"><div class="rs-num">${apps.length > 3 ? '2–4' : '1–2'} wks</div><div class="rs-lbl">Estimated total deployment time</div></div>
+    <div class="result-stat"><div class="rs-num">₱0</div><div class="rs-lbl">Developer cost required</div></div>
+  `;
+
+  // App list
+  document.getElementById('app-rec-list').innerHTML = apps.map((a,i) =>
+    `<div class="app-rec-item">
+      <div class="app-rec-left">
+        <div class="app-rec-icon">${a.icon}</div>
+        <div>
+          <div class="app-rec-title">${i+1}. ${a.title}</div>
+          <div class="app-rec-desc">${a.desc}</div>
+        </div>
+      </div>
+      <div class="app-rec-time">${a.days}</div>
+    </div>`
+  ).join('');
+
+  // ROI items
+  const rois = ROI_BY_INDUSTRY[ind] || ROI_BY_INDUSTRY['other'];
+  document.getElementById('roi-items').innerHTML = rois.map(r =>
+    `<div class="roi-item"><div class="roi-check">✓</div><div>${r}</div></div>`
+  ).join('');
+}
+
+function restart() {
+  state.industry = null; state.size = null; state.problems = new Set();
+  state.name = ''; state.email = ''; state.company = ''; state.phone = '';
+  document.querySelectorAll('.choice-btn').forEach(b => b.classList.remove('selected'));
+  document.querySelectorAll('.problem-item').forEach(b => { b.classList.remove('selected'); b.querySelector('.pi-check').textContent = ''; });
+  ['f-name','f-email','f-company','f-phone'].forEach(id => { document.getElementById(id).value = ''; });
+  document.getElementById('next-1').disabled = true;
+  document.getElementById('next-2').disabled = true;
+  document.getElementById('results-step').classList.remove('active');
+  document.getElementById('step-1').classList.add('active');
+  document.getElementById('progress-bar').style.width = '0%';
+  document.getElementById('step-count').textContent = 'Step 1 of 4';
+  updateProgress(1);
+}
+
+// Init dots
+updateProgress(1);
+</script>
+</body>
+</html>
