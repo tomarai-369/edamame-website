@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Digital Readiness Assessment Philippines | Is Your Business Ready for No-Code? | Kintone</title>
+<meta name="description" content="Free 2-minute assessment for Philippine businesses. Find out your digital readiness score and get a custom action plan to modernize your operations with Kintone."/>
+<meta name="robots" content="index,follow"/>
+<link rel="canonical" href="https://edamame-jp.com/kintone-philippines/en/tools/digital-readiness/"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,400&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YF1198H5CL"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-YF1198H5CL');</script>
+<style>
+:root{--g:#4A7C59;--gd:#3d6b4a;--gdd:#2c4f36;--gl:#e8f5e9;--gm:#c8e6c9;--ink:#1a2a1e;--ink2:#2a3d2e;--mut:#6b7f70;--bdr:#d4e8d8;--off:#f8fdf9;--fh:'Fraunces',Georgia,serif;--fb:'DM Sans',system-ui,sans-serif;
+--score-low:#ef5350;--score-mid:#fb8c00;--score-high:#43a047;--score-top:#1b5e20}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--fb);color:var(--ink);background:var(--off);min-height:100vh;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+.hdr{background:linear-gradient(135deg,var(--gd),var(--g));height:64px;padding:0 5%;display:flex;align-items:center;justify-content:space-between}
+.hdr-logo{display:flex;align-items:center;gap:10px;font-family:var(--fh);font-size:1.05rem;color:#fff;font-weight:700}
+.logo-box{width:36px;height:36px;background:rgba(255,255,255,.15);border-radius:8px;display:flex;align-items:center;justify-content:center}
+.hdr-nav{display:flex;align-items:center;gap:20px}
+.hdr-nav a{color:rgba(255,255,255,.8);font-size:.82rem;font-weight:500;transition:color .2s}
+.hdr-nav a:hover{color:#fff}
+.hdr-cta{background:#fff;color:var(--gd)!important;padding:7px 16px;border-radius:8px;font-weight:700!important}
+
+.page{max-width:720px;margin:0 auto;padding:48px 24px 80px}
+
+/* HERO */
+.tool-hero{text-align:center;margin-bottom:44px}
+.tool-badge{display:inline-flex;align-items:center;gap:8px;background:var(--gdd);color:rgba(255,255,255,.9);font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:6px 16px;border-radius:100px;margin-bottom:18px}
+.tool-badge .pulse{width:7px;height:7px;background:#7fffaa;border-radius:50%;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+.tool-hero h1{font-family:var(--fh);font-size:clamp(1.9rem,4vw,2.6rem);font-weight:900;color:var(--ink);line-height:1.15;letter-spacing:-.02em;margin-bottom:12px}
+.tool-hero h1 em{font-style:italic;color:var(--g)}
+.tool-hero p{font-size:.95rem;color:var(--mut);max-width:500px;margin:0 auto;line-height:1.7}
+.time-badge{display:inline-flex;align-items:center;gap:6px;background:#fff;border:1px solid var(--bdr);color:var(--mut);font-size:.78rem;font-weight:600;padding:5px 14px;border-radius:100px;margin-top:14px}
+
+/* CARD */
+.card{background:#fff;border:1px solid var(--bdr);border-radius:20px;box-shadow:0 8px 40px rgba(74,124,89,.1);overflow:hidden}
+
+/* PROGRESS */
+.prog-wrap{height:6px;background:var(--bdr)}
+.prog-bar{height:6px;background:linear-gradient(90deg,var(--gd),var(--g));transition:width .5s cubic-bezier(.4,0,.2,1);border-radius:0 3px 3px 0}
+
+/* QUESTION */
+.q-header{padding:28px 36px 0;display:flex;align-items:center;justify-content:space-between}
+.q-num{font-size:.75rem;font-weight:700;color:var(--mut);letter-spacing:.06em;text-transform:uppercase}
+.q-dots{display:flex;gap:5px}
+.q-dot{width:28px;height:5px;border-radius:3px;background:var(--bdr);transition:all .3s}
+.q-dot.done{background:var(--gm)}
+.q-dot.active{background:var(--g)}
+
+.question{display:none;padding:24px 36px 36px;animation:fadeUp .3s ease}
+.question.active{display:block}
+@keyframes fadeUp{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.q-text{font-family:var(--fh);font-size:1.3rem;font-weight:700;color:var(--ink);line-height:1.4;margin-bottom:6px}
+.q-sub{font-size:.85rem;color:var(--mut);margin-bottom:24px;line-height:1.5}
+
+/* OPTIONS */
+.options{display:flex;flex-direction:column;gap:10px}
+.opt{background:var(--off);border:2px solid var(--bdr);border-radius:12px;padding:14px 18px;cursor:pointer;display:flex;align-items:center;gap:14px;transition:all .2s;font-family:var(--fb)}
+.opt:hover{border-color:var(--gm);background:var(--gl)}
+.opt.selected{border-color:var(--g);background:var(--gl)}
+.opt-radio{width:20px;height:20px;border:2px solid var(--bdr);border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center;transition:all .2s}
+.opt.selected .opt-radio{background:var(--g);border-color:var(--g)}
+.opt.selected .opt-radio::after{content:'';width:8px;height:8px;background:#fff;border-radius:50%;display:block}
+.opt-score{font-size:.72rem;font-weight:700;color:var(--mut);background:var(--bdr);padding:2px 8px;border-radius:100px;margin-left:auto;flex-shrink:0;transition:all .2s}
+.opt.selected .opt-score{background:var(--gm);color:var(--gd)}
+.opt-label{font-size:.9rem;font-weight:600;color:var(--ink);line-height:1.3}
+.opt-desc{font-size:.8rem;color:var(--mut);margin-top:2px;line-height:1.3}
+
+/* CONTACT */
+.contact-form{padding:8px 0}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px}
+.fgrp label{display:block;font-size:.8rem;font-weight:700;color:var(--ink2);margin-bottom:5px}
+.fgrp input{width:100%;padding:11px 14px;border:2px solid var(--bdr);border-radius:9px;font-family:var(--fb);font-size:.9rem;color:var(--ink);outline:none;transition:border-color .2s;background:#fff}
+.fgrp input:focus{border-color:var(--g);box-shadow:0 0 0 3px rgba(74,124,89,.1)}
+.err{background:#fce4ec;border:1px solid #f48fb1;color:#c62828;border-radius:8px;padding:9px 14px;font-size:.83rem;margin-bottom:12px;display:none}
+.err.show{display:block}
+.btn-submit{width:100%;background:linear-gradient(135deg,var(--gdd),var(--gd));color:#fff;border:none;font-family:var(--fb);font-size:.95rem;font-weight:700;padding:14px 24px;border-radius:10px;cursor:pointer;transition:transform .2s,box-shadow .2s;display:flex;align-items:center;justify-content:center;gap:10px;margin-top:8px}
+.btn-submit:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(44,79,54,.35)}
+
+/* LOADING */
+.loading{display:none;padding:60px 36px;text-align:center}
+.loading.show{display:block}
+.spin-ring{width:60px;height:60px;border:4px solid var(--gm);border-top-color:var(--g);border-radius:50%;animation:spin 1s linear infinite;margin:0 auto 18px}
+@keyframes spin{to{transform:rotate(360deg)}}
+.loading h3{font-family:var(--fh);font-size:1.2rem;color:var(--ink);margin-bottom:6px}
+.loading p{font-size:.875rem;color:var(--mut)}
+.load-msg{color:var(--g);font-size:.82rem;margin-top:14px;min-height:22px;font-weight:500}
+
+/* RESULTS */
+.results{display:none}
+.results.show{display:block}
+.results-top{padding:32px 36px;background:linear-gradient(135deg,var(--gdd),var(--gd))}
+.score-ring-wrap{text-align:center;margin-bottom:20px}
+.score-display{position:relative;display:inline-block}
+.score-ring{transform:rotate(-90deg)}
+.score-circle-bg{fill:none;stroke:rgba(255,255,255,.15);stroke-width:8}
+.score-circle{fill:none;stroke-width:8;stroke-linecap:round;transition:stroke-dashoffset 1.5s cubic-bezier(.4,0,.2,1)}
+.score-text{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.score-num{font-family:var(--fh);font-size:2.4rem;font-weight:900;color:#fff;line-height:1}
+.score-of{font-size:.75rem;color:rgba(255,255,255,.65);margin-top:2px}
+.score-label{font-family:var(--fh);font-size:1.4rem;font-weight:700;color:#fff;text-align:center;margin-bottom:6px}
+.score-sublabel{font-size:.875rem;color:rgba(255,255,255,.75);text-align:center;line-height:1.5;max-width:420px;margin:0 auto}
+
+/* Category bars */
+.cat-scores{padding:28px 36px;border-bottom:1px solid var(--bdr)}
+.cat-scores h3{font-family:var(--fh);font-size:1rem;font-weight:700;color:var(--ink);margin-bottom:16px}
+.cat-bar-item{margin-bottom:14px}
+.cat-bar-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:5px}
+.cat-name{font-size:.82rem;font-weight:700;color:var(--ink2)}
+.cat-pct{font-size:.78rem;font-weight:700;color:var(--g)}
+.cat-bar-bg{height:8px;background:var(--bdr);border-radius:4px;overflow:hidden}
+.cat-bar-fill{height:8px;border-radius:4px;transition:width 1.2s cubic-bezier(.4,0,.2,1)}
+
+/* Insights */
+.insights{padding:28px 36px;border-bottom:1px solid var(--bdr)}
+.insights h3{font-family:var(--fh);font-size:1rem;font-weight:700;color:var(--ink);margin-bottom:14px}
+.insight-item{background:var(--off);border:1px solid var(--bdr);border-radius:10px;padding:14px 16px;margin-bottom:10px;display:flex;gap:12px;align-items:flex-start}
+.insight-icon{font-size:1.2rem;flex-shrink:0;margin-top:1px}
+.insight-title{font-size:.875rem;font-weight:700;color:var(--ink);margin-bottom:3px}
+.insight-desc{font-size:.8rem;color:var(--mut);line-height:1.5}
+.insight-item.good{border-left:3px solid var(--g)}
+.insight-item.warn{border-left:3px solid #fb8c00}
+.insight-item.action{border-left:3px solid #ef5350}
+
+/* Action plan */
+.action-plan{padding:28px 36px;border-bottom:1px solid var(--bdr)}
+.action-plan h3{font-family:var(--fh);font-size:1rem;font-weight:700;color:var(--ink);margin-bottom:14px}
+.action-steps{display:flex;flex-direction:column;gap:10px}
+.action-step{display:flex;gap:14px;align-items:flex-start}
+.step-num{width:28px;height:28px;border-radius:50%;background:linear-gradient(135deg,var(--gd),var(--g));color:#fff;font-size:.75rem;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px}
+.step-content .step-title{font-size:.875rem;font-weight:700;color:var(--ink);margin-bottom:2px}
+.step-content .step-desc{font-size:.8rem;color:var(--mut);line-height:1.4}
+
+/* CTA */
+.result-cta{padding:28px 36px;background:linear-gradient(135deg,var(--gd),var(--g))}
+.result-cta h3{font-family:var(--fh);font-size:1.2rem;font-weight:700;color:#fff;margin-bottom:6px}
+.result-cta p{font-size:.875rem;color:rgba(255,255,255,.8);margin-bottom:20px;line-height:1.6}
+.cta-btns{display:flex;gap:10px;flex-wrap:wrap}
+.cta-primary{background:#fff;color:var(--gd);font-weight:700;font-size:.875rem;padding:12px 24px;border-radius:9px;transition:transform .2s;display:inline-block}
+.cta-primary:hover{transform:translateY(-2px)}
+.cta-sec{border:1.5px solid rgba(255,255,255,.4);color:#fff;font-weight:600;font-size:.83rem;padding:11px 20px;border-radius:9px;transition:border-color .2s;display:inline-block}
+.cta-sec:hover{border-color:#fff}
+.restart-link{display:block;text-align:center;font-size:.8rem;color:var(--g);font-weight:600;text-decoration:underline;cursor:pointer;margin:20px 36px 0}
+
+@media(max-width:600px){
+  .hdr-nav a:not(.hdr-cta){display:none}
+  .question,.q-header,.results-top,.cat-scores,.insights,.action-plan,.result-cta{padding-left:20px;padding-right:20px}
+  .form-row{grid-template-columns:1fr}
+  .cta-btns{flex-direction:column}
+}
+</style>
+</head>
+<body>
+
+<header class="hdr">
+  <a href="/kintone-philippines/en/" class="hdr-logo">
+    <div class="logo-box"><svg width="20" height="20" viewBox="0 0 40 40" fill="none"><ellipse cx="20" cy="28" rx="16" ry="8" fill="rgba(255,255,255,.9)"/><circle cx="13" cy="26" r="4" fill="#4A7C59"/><circle cx="20" cy="24" r="4" fill="#4A7C59"/><circle cx="27" cy="26" r="4" fill="#4A7C59"/><path d="M4 28 Q20 12 36 28" stroke="rgba(255,255,255,.6)" stroke-width="2" fill="none"/></svg></div>
+    Kintone Philippines
+  </a>
+  <nav class="hdr-nav">
+    <a href="/kintone-philippines/en/">Home</a>
+    <a href="/kintone-philippines/en/customers/">Customers</a>
+    <a href="/kintone-philippines/en/blog/">Blog</a>
+    <a href="https://calendly.com/kintoneph/freekintoneappconsultation" target="_blank" class="hdr-cta">Free Demo</a>
+  </nav>
+</header>
+
+<div class="page">
+  <div class="tool-hero">
+    <div class="tool-badge"><span class="pulse"></span>Free Assessment</div>
+    <h1>How digitally ready is<br/><em>your business?</em></h1>
+    <p>5 questions. 2 minutes. Get a personalised Digital Readiness Score and action plan — built for Philippine businesses in 2026.</p>
+    <div class="time-badge">⏱ 2 minutes &nbsp;·&nbsp; 🇵🇭 Built for Philippine businesses &nbsp;·&nbsp; 100% free</div>
+  </div>
+
+  <div class="card">
+    <div class="prog-wrap"><div class="prog-bar" id="prog" style="width:0%"></div></div>
+
+    <div class="q-header">
+      <div class="q-num" id="q-num">Question 1 of 5</div>
+      <div class="q-dots" id="q-dots"></div>
+    </div>
+
+    <!-- Q1: Current systems -->
+    <div class="question active" id="q1">
+      <div class="q-text">How does your team currently manage core business data?</div>
+      <div class="q-sub">Think about your most important records — customers, inventory, finances, HR.</div>
+      <div class="options">
+        <div class="opt" onclick="answer(1,0,this)">
+          <div class="opt-radio"></div>
+          <div><div class="opt-label">Paper forms and physical files</div><div class="opt-desc">Records kept in binders, folders, or handwritten logs</div></div>
+          <div class="opt-score">0 pts</div>
+        </div>
+        <div class="opt" onclick="answer(1,8,this)">
+          <div class="opt-radio"></div>
+          <div><div class="opt-label">Excel or Google Sheets</div><div class="opt-desc">Spreadsheets shared by email or on a shared drive</div></div>
+          <div class="opt-score">8 pts</div>
+        </div>
+        <div class="opt" onclick="answer(1,15,this)">
+          <div class="opt-radio"></div>
+          <div><div class="opt-label">Mix of spreadsheets and some software tools</div><div class="opt-desc">Partial digitization — different tools for different departments</div></div>
+          <div class="opt-score">15 pts</div>
+        </div>
+        <div class="opt" onclick="answer(1,22,this)">
+          <div class="opt-radio"></div>
+          <div><div class="opt-label">Dedicated software but it doesn't fit our needs well</div><div class="opt-desc">We have a system but it's rigid, expensive to change, or underutilised</div></div>
+          <div class="opt-score">22 pts</div>
+        </div>
+        <div class="opt" onclick="answer(1,30,this)">
+          <div class="opt-radio"></div>
+          <div><div class="opt-label">Custom, connected digital systems across departments</div><div class="opt-desc">Data flows automatically between systems — minimal manual work</div></div>
+          <div class="opt-score">30 pts</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Q2: Approvals -->
+    <div class="question" id="q2">
+      <div class="q-text">How are internal approvals handled in your company?</div>
+      <div class="q-sub">Purchase requests, leave applications, expense reports, contracts.</div>
+      <div class="options">
+        <div class="opt" onclick="answer(2,0,this)">
+          <div class="opt-radio"></div>
+          <div><div class="opt-label">Printed forms physically routed for signature</div><div class="opt-desc">Someone walks around with paperwork to get it signed</div></div>
+          <div class="opt-score">0 pts</div>
+        </div>
+        <div class="opt" onclick="answer(2,8,this)">
+          <div class="opt-radio"></div>
+          <div><div class="opt-label">Email chains with PDF attachments</div><div class="opt-desc">Requests sent by email, approvals come back as replies</div></div>
+          <div class="opt-score">8 pts</div>
+        </div>
+        <div class="opt" onclick="answer(2,15,this)">
+          <div class="opt-radio"></div>
+          <div><div class="opt-label">Partial digital — some forms digitized, some still on paper</div><div class="opt-desc">Inconsistent process across departments</div></div>
+          <div class="opt-score">15 pts</div>
+        </div>
+        <div class="opt" onclick="answer(2,22,this)">
+          <div class="opt-radio"></div>
+          <div><div class="opt-label">Digital system exists but requires manual follow-up</div><div class="opt-desc">Approvers forget or don't see the request — chasing still happens</div></div>
+          <div class="opt-score">22 pts</div>
+        </div>
+        <div class="opt" onclick="answer(2,30,this)">
+          <div class="opt-radio"></div>
+          <div><div class="opt-label">Fully automated — requests route and notify automatically</div><div class="opt-desc">Approvals happen in a system with auto-reminders and full history</div></div>
+          <div class="opt-score">30 pts</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Q3: Reporting -->
+    <div class="question" id="q3">
+      <div class="q-text">How does management get visibility into operations performance?</div>
+      <div class="q-sub">Sales, productivity, inventory, finances — how do your leaders know what's happening?</div>
+      <div class="options">
+        <div class="opt" onclick="answer(3,0,this)">
+          <div class="opt-radio"></div>
+          <div><div class="opt-label">Verbal updates in meetings or via phone</div><div class="opt-desc">No system — managers ask people directly</div></div>
+          <div class="opt-score">0 pts</div>
+        </div>
+        <div class="opt" onclick="answer(3,7,this)">
+          <div class="opt-radio"></div>
+          <div><div class="opt-label">Weekly or monthly manually-compiled reports</div><div class="opt-desc">Someone spends hours assembling data from different sources</div></div>
+          <div class="opt-score">7 pts</div>
+        </div>
+        <div class="opt" onclick="answer(3,14,this)">
+          <div class="opt-radio"></div>
+          <div><div class="opt-label">Department-level reports — no company-wide view</div><div class="opt-desc">Each department reports separately, no unified picture</div></div>
+          <div class="opt-score">14 pts</div>
+        </div>
+        <div class="opt" onclick="answer(3,21,this)">
+          <div class="opt-radio"></div>
+          <div><div class="opt-label">Daily dashboards but data is 1–2 days behind</div><div class="opt-desc">Dashboard exists but requires manual data entry to update</div></div>
+          <div class="opt-score">21 pts</div>
+        </div>
+        <div class="opt" onclick="answer(3,28,this)">
+          <div class="opt-radio"></div>
+          <div><div class="opt-label">Real-time dashboards accessible from anywhere</div><div class="opt-desc">Live data visible to management on any device, any time</div></div>
+          <div class="opt-score">28 pts</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Q4: Change agility -->
+    <div class="question" id="q4">
+      <div class="q-text">When a business process needs to change, how quickly can your systems adapt?</div>
+      <div class="q-sub">New approval step, new data field, new report format — how long does it actually take?</div>
+      <div class="options">
+        <div class="opt" onclick="answer(4,0,this)">
+          <div class="opt-radio"></div>
+          <div><div class="opt-label">We redesign the paper form manually — takes days</div><div class="opt-desc">Changes happen slowly and inconsistently</div></div>
+          <div class="opt-score">0 pts</div>
+        </div>
+        <div class="opt" onclick="answer(4,4,this)">
+          <div class="opt-radio"></div>
+          <div><div class="opt-label">We modify spreadsheets — takes a few hours to a day</div><div class="opt-desc">Possible but messy — version control is a problem</div></div>
+          <div class="opt-score">4 pts</div>
+        </div>
+        <div class="opt" onclick="answer(4,8,this)">
+          <div class="opt-radio"></div>
+          <div><div class="opt-label">We request changes from IT or a vendor — takes weeks</div><div class="opt-desc">Change requests, scoping, development, testing — slow and expensive</div></div>
+          <div class="opt-score">8 pts</div>
+        </div>
+        <div class="opt" onclick="answer(4,10,this)">
+          <div class="opt-radio"></div>
+          <div><div class="opt-label">Our platform allows changes — takes a few hours</div><div class="opt-desc">Someone on the team can make configuration changes</div></div>
+          <div class="opt-score">10 pts</div>
+        </div>
+        <div class="opt" onclick="answer(4,12,this)">
+          <div class="opt-radio"></div>
+          <div><div class="opt-label">Any team member can update processes in minutes</div><div class="opt-desc">Non-technical staff can modify apps themselves — no IT needed</div></div>
+          <div class="opt-score">12 pts</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Q5: Pain intensity -->
+    <div class="question" id="q5">
+      <div class="q-text">How much time does your team lose to manual administrative work each week?</div>
+      <div class="q-sub">Data entry, chasing approvals, compiling reports, finding documents — estimate honestly.</div>
+      <div class="options">
+        <div class="opt" onclick="answer(5,0,this)">
+          <div class="opt-radio"></div>
+          <div><div class="opt-label">Less than 2 hours per person</div><div class="opt-desc">Operations are mostly smooth — limited manual overhead</div></div>
+          <div class="opt-score">0 pts</div>
+        </div>
+        <div class="opt" onclick="answer(5,3,this)">
+          <div class="opt-radio"></div>
+          <div><div class="opt-label">2–5 hours per person</div><div class="opt-desc">Noticeable but manageable — some friction in daily work</div></div>
+          <div class="opt-score">3 pts</div>
+        </div>
+        <div class="opt" onclick="answer(5,5,this)">
+          <div class="opt-radio"></div>
+          <div><div class="opt-label">5–10 hours per person</div><div class="opt-desc">Significant overhead — a full day per week lost to admin work</div></div>
+          <div class="opt-score">5 pts</div>
+        </div>
+        <div class="opt" onclick="answer(5,6,this)">
+          <div class="opt-radio"></div>
+          <div><div class="opt-label">More than 10 hours per person</div><div class="opt-desc">Critical problem — manual work is actively hurting productivity</div></div>
+          <div class="opt-score">6 pts (urgent)</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CONTACT -->
+    <div class="question" id="q6">
+      <div class="q-text">Almost done — where should we send your Digital Readiness Report?</div>
+      <div class="q-sub">Your personalised score, category breakdown, and action plan.</div>
+      <div class="contact-form">
+        <div class="form-row">
+          <div class="fgrp"><label>Your Name *</label><input type="text" id="f-name" placeholder="Juan dela Cruz"/></div>
+          <div class="fgrp"><label>Work Email *</label><input type="email" id="f-email" placeholder="juan@company.com"/></div>
+        </div>
+        <div class="form-row">
+          <div class="fgrp"><label>Company</label><input type="text" id="f-co" placeholder="Your company"/></div>
+          <div class="fgrp"><label>Industry</label><input type="text" id="f-ind" placeholder="e.g. Manufacturing, BPO, Retail"/></div>
+        </div>
+        <div class="err" id="contact-err">Please enter your name and a valid email.</div>
+        <button class="btn-submit" onclick="submitAssessment()">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          Get My Digital Readiness Score
+        </button>
+      </div>
+    </div>
+
+    <!-- LOADING -->
+    <div class="loading" id="loading">
+      <div class="spin-ring"></div>
+      <h3>Calculating your score...</h3>
+      <p>Analysing your responses against Philippine business benchmarks</p>
+      <div class="load-msg" id="load-msg"></div>
+    </div>
+
+    <!-- RESULTS -->
+    <div class="results" id="results">
+      <div class="results-top">
+        <div class="score-ring-wrap">
+          <div class="score-display">
+            <svg class="score-ring" width="120" height="120" viewBox="0 0 120 120">
+              <circle class="score-circle-bg" cx="60" cy="60" r="52"/>
+              <circle class="score-circle" id="score-circle" cx="60" cy="60" r="52" stroke="#7fffaa"
+                stroke-dasharray="326.7" stroke-dashoffset="326.7"/>
+            </svg>
+            <div class="score-text">
+              <div class="score-num" id="score-num">0</div>
+              <div class="score-of">/ 100</div>
+            </div>
+          </div>
+        </div>
+        <div class="score-label" id="score-label">Calculating...</div>
+        <div class="score-sublabel" id="score-sublabel"></div>
+      </div>
+
+      <div class="cat-scores">
+        <h3>Score Breakdown by Category</h3>
+        <div id="cat-bars"></div>
+      </div>
+
+      <div class="insights">
+        <h3>Key Insights for Your Business</h3>
+        <div id="insight-items"></div>
+      </div>
+
+      <div class="action-plan">
+        <h3>Your 3-Step Digital Transformation Action Plan</h3>
+        <div class="action-steps" id="action-steps"></div>
+      </div>
+
+      <div class="result-cta">
+        <h3>Ready to improve your score?</h3>
+        <p id="cta-text">Book a free 30-minute demo with Tom. We'll show you exactly which Kintone apps will have the highest impact on your score — and build one live during the call.</p>
+        <div class="cta-btns">
+          <a href="https://calendly.com/kintoneph/freekintoneappconsultation" target="_blank" class="cta-primary">Book Free Demo →</a>
+          <a href="/kintone-philippines/en/tools/app-estimator/" class="cta-sec">Try App Estimator →</a>
+        </div>
+      </div>
+
+      <div class="restart-link" onclick="restart()">↩ Retake the assessment</div>
+    </div>
+
+  </div>
+</div>
+
+<script>
+const TOTAL_Q = 5;
+const answers = {};
+let currentQ = 1;
+
+const CATEGORY_LABELS = ['Data Management','Approval Workflows','Reporting & Visibility','Change Agility','Pain Intensity'];
+const CATEGORY_MAX = [30,30,28,12,6]; // per Q max — note Q5 is inverted (0 = good already, 6 = most pain → most room to improve)
+
+function answer(q, score, el) {
+  // Deselect others
+  document.querySelectorAll(`#q${q} .opt`).forEach(o => o.classList.remove('selected'));
+  el.classList.add('selected');
+  answers[q] = score;
+
+  // Auto-advance after short delay
+  setTimeout(() => {
+    if (q < TOTAL_Q) { goQ(q + 1); }
+    else { goQ(6); } // contact step
+  }, 350);
+}
+
+function goQ(n) {
+  document.querySelector('.question.active')?.classList.remove('active');
+  document.getElementById(`q${n}`)?.classList.add('active');
+  currentQ = n;
+  const displayN = Math.min(n, TOTAL_Q + 1);
+  const pct = n <= TOTAL_Q ? ((n-1)/TOTAL_Q)*100 : 90;
+  document.getElementById('prog').style.width = pct + '%';
+  document.getElementById('q-num').textContent = n <= TOTAL_Q
+    ? `Question ${n} of ${TOTAL_Q}`
+    : `Almost done!`;
+
+  // Dots
+  document.getElementById('q-dots').innerHTML = Array.from({length: TOTAL_Q}, (_,i) =>
+    `<div class="q-dot ${i < n-1 ? 'done' : i === n-1 ? 'active' : ''}"></div>`
+  ).join('');
+}
+
+async function submitAssessment() {
+  const name = document.getElementById('f-name').value.trim();
+  const email = document.getElementById('f-email').value.trim();
+  const errEl = document.getElementById('contact-err');
+  if (!name || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    errEl.classList.add('show'); return;
+  }
+  errEl.classList.remove('show');
+
+  // Hide contact, show loading
+  document.getElementById('q6').classList.remove('active');
+  const loadEl = document.getElementById('loading');
+  loadEl.classList.add('show');
+
+  const messages = [
+    'Analysing your data management practices...',
+    'Benchmarking against Philippine industry averages...',
+    'Identifying highest-ROI improvement opportunities...',
+    'Generating your personalised action plan...',
+    'Almost ready...',
+  ];
+  let mi = 0;
+  const msgEl = document.getElementById('load-msg');
+  const iv = setInterval(() => { if(mi<messages.length) msgEl.textContent = messages[mi++]; }, 800);
+
+  // Fire lead to GAS
+  const GAS = 'https://script.google.com/macros/s/AKfycbz5vVl2EmzGOCfjMNmZ0nIGsPyRel3yg4fq0yNIcTvMbY0pFOpym3yuVPkvY6VP4DEcTg/exec';
+  const score = calcScore();
+  try {
+    fetch(GAS, { method:'POST', mode:'no-cors', headers:{'Content-Type':'application/json'},
+      body: JSON.stringify({ name, email, company: document.getElementById('f-co').value, interest: 'Digital Readiness Assessment',
+        message: `Digital Readiness Score: ${score}/100. Q1:${answers[1]||0} Q2:${answers[2]||0} Q3:${answers[3]||0} Q4:${answers[4]||0} Q5:${answers[5]||0}`,
+        source:'Kintone Philippines Digital Readiness Tool', language:'EN', page_url:location.href, timestamp: new Date().toISOString()
+      })
+    });
+  } catch(e){}
+
+  await new Promise(r => setTimeout(r, 4200));
+  clearInterval(iv);
+  loadEl.classList.remove('show');
+  document.getElementById('prog').style.width = '100%';
+  buildResults(score, name);
+  document.getElementById('results').classList.add('show');
+  gtag('event','readiness_complete',{score});
+}
+
+function calcScore() {
+  // Q5 is pain — higher pain = lower current score but higher URGENCY
+  // Use direct points which already reflect maturity
+  const raw = (answers[1]||0)+(answers[2]||0)+(answers[3]||0)+(answers[4]||0);
+  // Q5: invert — 0 pain means already efficient (add 6), high pain = 0 bonus
+  const painBonus = 6 - (answers[5]||0);
+  const total = raw + painBonus;
+  const maxPossible = 30+30+28+12+6; // 106 — normalise to 100
+  return Math.round((total / 106) * 100);
+}
+
+function buildResults(score, name) {
+  // Animate score ring
+  const circumference = 326.7;
+  const offset = circumference - (score/100)*circumference;
+  const circle = document.getElementById('score-circle');
+
+  let displayed = 0;
+  const numEl = document.getElementById('score-num');
+  const countUp = setInterval(() => {
+    displayed = Math.min(displayed + 2, score);
+    numEl.textContent = displayed;
+    if (displayed >= score) clearInterval(countUp);
+  }, 30);
+
+  setTimeout(() => { circle.style.strokeDashoffset = offset; }, 100);
+
+  // Label
+  let label, sublabel, labelColor;
+  if (score < 25) {
+    label = 'Early Stage'; labelColor = '#ef5350';
+    sublabel = `${name ? name.split(' ')[0] + ', your' : 'Your'} business is running on mostly manual systems. The opportunity for improvement — and time savings — is significant.`;
+  } else if (score < 50) {
+    label = 'Partially Digitized'; labelColor = '#fb8c00';
+    sublabel = `You've started digitalizing but critical gaps remain. The right tools will unlock major efficiency gains quickly.`;
+  } else if (score < 75) {
+    label = 'Digitally Developing'; labelColor = '#fdd835';
+    sublabel = `Strong foundation. You have digital systems but they're not fully connected or optimized. Targeted improvements will compound quickly.`;
+  } else {
+    label = 'Digitally Advanced'; labelColor = '#43a047';
+    sublabel = `Excellent baseline. You're ahead of most Philippine businesses. The focus now is on connecting and optimizing your existing systems further.`;
+  }
+  document.getElementById('score-label').textContent = label;
+  document.getElementById('score-sublabel').textContent = sublabel;
+  circle.style.stroke = labelColor;
+
+  // Category bars
+  const catScores = [
+    { name:'Data Management', score: answers[1]||0, max:30 },
+    { name:'Approval Workflows', score: answers[2]||0, max:30 },
+    { name:'Reporting & Visibility', score: answers[3]||0, max:28 },
+    { name:'Change Agility', score: answers[4]||0, max:12 },
+    { name:'Operational Efficiency', score: 6-(answers[5]||0), max:6 },
+  ];
+  document.getElementById('cat-bars').innerHTML = catScores.map(c => {
+    const pct = Math.round((c.score/c.max)*100);
+    const color = pct < 40 ? '#ef5350' : pct < 70 ? '#fb8c00' : '#43a047';
+    return `<div class="cat-bar-item">
+      <div class="cat-bar-top"><span class="cat-name">${c.name}</span><span class="cat-pct">${pct}%</span></div>
+      <div class="cat-bar-bg"><div class="cat-bar-fill" style="width:0%;background:${color}" data-target="${pct}%"></div></div>
+    </div>`;
+  }).join('');
+  setTimeout(() => {
+    document.querySelectorAll('.cat-bar-fill').forEach(b => { b.style.width = b.dataset.target; });
+  }, 300);
+
+  // Insights
+  const insights = [];
+  if ((answers[1]||0) < 15) insights.push({type:'action',icon:'📊',title:'Critical: Replace spreadsheets as your system of record',desc:'Your core business data is at risk. A single person out sick — or a corrupted file — can halt operations. This is your highest-priority fix.'});
+  if ((answers[2]||0) < 15) insights.push({type:'action',icon:'✅',title:'High priority: Digitize your approval processes',desc:'Approvals stuck in paper or email are costing you days per week. Every department has at least one process that can be automated immediately.'});
+  if ((answers[3]||0) < 14) insights.push({type:'warn',icon:'📈',title:'Management is flying blind — no real-time visibility',desc:'When leadership relies on manual reports, decisions are made on old data. Live dashboards are achievable in days with the right platform.'});
+  if ((answers[4]||0) < 8) insights.push({type:'warn',icon:'⚡',title:'Your systems can\'t keep up with your business needs',desc:'If changing a business process takes weeks or costs money, your operations will always lag behind market demands.'});
+  if ((answers[5]||0) >= 5) insights.push({type:'action',icon:'⏰',title:'Significant time being lost to manual work every week',desc:`At 5–10+ hours per person per week, your team is spending a substantial portion of their capacity on work that can be automated.`});
+  if (score >= 60) insights.push({type:'good',icon:'🌟',title:'Strong foundation — you\'re ready to accelerate',desc:'Your existing digital practices put you ahead of most Philippine businesses. The next phase is connecting your systems and eliminating remaining manual gaps.'});
+
+  if (insights.length === 0) insights.push({type:'good',icon:'✅',title:'Great digital foundation',desc:'Your business is already operating at a high level. Focus on integrating systems further and automating the remaining manual touch points.'});
+
+  document.getElementById('insight-items').innerHTML = insights.map(i =>
+    `<div class="insight-item ${i.type}"><div class="insight-icon">${i.icon}</div><div><div class="insight-title">${i.title}</div><div class="insight-desc">${i.desc}</div></div></div>`
+  ).join('');
+
+  // Action plan
+  const actions = score < 30 ? [
+    {title:'Start with one critical process — not everything at once',desc:'Pick the spreadsheet or paper form causing the most daily pain. Build one app around it. See it work. That first win creates momentum.'},
+    {title:'Book a free 30-minute demo to see what\'s possible',desc:'We will map your highest-pain process and build a live Kintone prototype during the call. You leave knowing exactly what your system looks like.'},
+    {title:'Deploy your first app, then expand systematically',desc:'Kintone grows with you. Start with one department, prove the value, then roll out to the rest. Guhring Philippines started with one employee and now runs 20+ apps.'},
+  ] : score < 65 ? [
+    {title:'Identify and connect your isolated digital islands',desc:'You have digital tools but they don\'t talk to each other. Connecting them — CRM to inventory to billing — eliminates the manual bridging work.'},
+    {title:'Automate your top 3 approval workflows',desc:'Even if you have digital forms, adding auto-routing and reminders will cut approval cycle times by 50–80%. This is a 2–3 day project.'},
+    {title:'Build a management dashboard from your existing data',desc:'Real-time KPI visibility is achievable in days once your data is in a connected system. This is usually the highest-impact single change.'},
+  ] : [
+    {title:'Audit your manual bridging work — find the remaining gaps',desc:'At your level, the wins are in the gaps between systems. Identify where staff are still manually moving data between tools.'},
+    {title:'Explore AI-powered workflows on top of your Kintone apps',desc:'Kintone\'s API layer enables intelligent automations — predictive reorder, anomaly detection, auto-classification — built on your existing data.'},
+    {title:'Use your digital maturity as a competitive advantage',desc:'Most Philippine competitors are years behind your current level. Market your operational efficiency — faster delivery, better accuracy, real-time client updates.'},
+  ];
+
+  document.getElementById('action-steps').innerHTML = actions.map((a,i) =>
+    `<div class="action-step"><div class="step-num">${i+1}</div><div class="step-content"><div class="step-title">${a.title}</div><div class="step-desc">${a.desc}</div></div></div>`
+  ).join('');
+
+  if (score < 40) {
+    document.getElementById('cta-text').textContent = 'Your score shows significant room for improvement — and the good news is, the highest-impact changes are achievable in days. Book a free demo and we\'ll show you exactly where to start.';
+  }
+}
+
+function restart() {
+  Object.keys(answers).forEach(k => delete answers[k]);
+  document.querySelectorAll('.opt').forEach(o => o.classList.remove('selected'));
+  ['f-name','f-email','f-co','f-ind'].forEach(id => { document.getElementById(id).value=''; });
+  document.getElementById('results').classList.remove('show');
+  document.getElementById('loading').classList.remove('show');
+  document.querySelectorAll('.question').forEach(q => q.classList.remove('active'));
+  document.getElementById('q1').classList.add('active');
+  currentQ = 1;
+  goQ(1);
+}
+
+// Init dots
+goQ(1);
+</script>
+</body>
+</html>
