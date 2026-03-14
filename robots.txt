@@ -5,10 +5,7 @@ User-agent: *
 Allow: /
 
 # Sitemaps
-Sitemap: https://edamame-jp.com/sitemap.xml
-
-# Crawl-delay (optional - be nice to servers)
-Crawl-delay: 1
+Sitemap: https://edamame-jp.com/kintone-philippines/sitemap.xml
 
 # Specific bot rules
 User-agent: Googlebot
@@ -17,19 +14,10 @@ Allow: /
 User-agent: Bingbot
 Allow: /
 
-User-agent: Slurp
-Allow: /
-
 User-agent: DuckDuckBot
 Allow: /
 
-User-agent: Baiduspider
-Allow: /
-
-User-agent: YandexBot
-Allow: /
-
-# Block bad bots
+# Rate limit aggressive crawlers
 User-agent: AhrefsBot
 Crawl-delay: 10
 
