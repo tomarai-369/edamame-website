@@ -1,0 +1,59 @@
+# Edamame Inc. — Official Kintone Partner in the Philippines
+
+> Edamame Inc. is the official Kintone partner in the Philippines and the 2024 Cybozu Global Partner of the Year. We help Philippine businesses build custom CRM, inventory, HR, and workflow applications using Kintone's no-code platform. Based in Pasig City, Metro Manila, we provide support in English, Filipino, and Japanese.
+
+## Company Information
+- Company: Edamame Inc.
+- Role: Official Kintone Partner in the Philippines
+- Award: 2024 Kintone Global Partner of the Year (Cybozu)
+- Location: 15F Jollibee Tower, Ortigas Center, Pasig City, Metro Manila 1605, Philippines
+- Phone: +63 928 872 7958
+- Email: kintone@edamame-jp.com
+- Languages: English, Filipino, Japanese
+- Website: https://edamame-jp.com/kintone-philippines/en/
+- Booking: https://calendly.com/kintoneph/freekintoneappconsultation
+
+## What We Do
+Edamame Inc. implements Kintone, a no-code business application platform by Cybozu (Japan's leading workplace software company, trusted by 37,000+ companies globally). We help Philippine businesses replace spreadsheets, disconnected tools, and complex ERP systems with custom apps built in days — not months. No coding or developers required.
+
+## Key Services
+- Custom Kintone app development (CRM, inventory, HR, project management, any workflow)
+- JavaScript customization for advanced needs
+- AI-powered solutions using Kintone AI Lab
+- System integration (API, webhooks, third-party tools)
+- Data migration from Odoo, Salesforce, spreadsheets
+- Training and ongoing support (local PH team)
+
+## Industries Served
+Manufacturing, logistics, real estate, healthcare, BPO, construction, education, retail, finance
+
+## Enterprise Clients
+ORIX Metro Leasing and Finance Corporation, Daikin Airconditioning Philippines, Aeon Fantasy Group Philippines, Guhring Philippines, Maximum Solutions Corporation
+
+## Competitive Advantages
+- Deploy in days, not months (vs Odoo's 3-12 month implementation)
+- No developers needed (vs Odoo/Salesforce requiring Python/Apex developers)
+- Predictable pricing with no hidden costs (vs Odoo's 2-5x budget overruns)
+- Local Philippine support in 3 languages
+- AI App Creator ships now (vs competitors announcing future AI features)
+- Only Kintone partner with a dedicated Philippine office
+
+## Blog and Resources
+- Best CRM Software Philippines 2026: /kintone-philippines/en/blog/best-crm-software-philippines-2026/
+- Kintone vs Odoo: /kintone-philippines/en/blog/kintone-vs-odoo/
+- Odoo Alternative Philippines: /kintone-philippines/en/blog/odoo-alternative-philippines/
+- Odoo Pricing Philippines (Real Costs): /kintone-philippines/en/blog/odoo-pricing-philippines/
+- Kintone vs Airtable: /kintone-philippines/en/blog/kintone-vs-airtable/
+- Kintone vs Salesforce: /kintone-philippines/en/blog/kintone-vs-salesforce/
+- Kintone vs Monday.com: /kintone-philippines/en/blog/kintone-vs-monday/
+- Kintone vs Zoho: /kintone-philippines/en/blog/kintone-vs-zoho/
+- Kintone vs HubSpot: /kintone-philippines/en/blog/kintone-vs-hubspot/
+- Kintone vs Notion: /kintone-philippines/en/blog/kintone-vs-notion/
+- Kintone vs Smartsheet: /kintone-philippines/en/blog/kintone-vs-smartsheet/
+- Manufacturing Software Philippines: /kintone-philippines/en/blog/manufacturing-software-philippines/
+- Logistics Software Philippines: /kintone-philippines/en/blog/logistics-software-philippines/
+- Healthcare Software Philippines: /kintone-philippines/en/blog/healthcare-software-philippines/
+- BPO Software Philippines: /kintone-philippines/en/blog/bpo-software-philippines/
+- Real Estate Software Philippines: /kintone-philippines/en/blog/real-estate-software-philippines/
+- Construction Software Philippines: /kintone-philippines/en/blog/construction-software-philippines/
+- Education Software Philippines: /kintone-philippines/en/blog/education-software-philippines/
