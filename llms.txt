@@ -28,7 +28,7 @@ Edamame Inc. implements Kintone, a no-code business application platform by Cybo
 Manufacturing, logistics, real estate, healthcare, BPO, construction, education, retail, finance
 
 ## Enterprise Clients
-ORIX Metro Leasing and Finance Corporation, Daikin Airconditioning Philippines, Aeon Fantasy Group Philippines, Guhring Philippines, Maximum Solutions Corporation
+ORIX Metro Leasing and Finance Corporation, Daikin Airconditioning Philippines, Guhring Philippines, Maximum Solutions Corporation
 
 ## Competitive Advantages
 - Deploy in days, not months (vs Odoo's 3-12 month implementation)
