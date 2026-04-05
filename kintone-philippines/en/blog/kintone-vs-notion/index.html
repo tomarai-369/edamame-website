@@ -82,13 +82,28 @@
         .faq-q.open::after{content:'\2212'}
         .faq-a{padding:0 20px 16px;color:var(--text-light);display:none}
         .faq-a.show{display:block}
-    </style>
+    
+.hdr{position:sticky;top:0;z-index:100;background:linear-gradient(135deg,#3d6b4a,#4A7C59);padding:0 5%;height:64px;display:flex;align-items:center;box-shadow:0 2px 16px rgba(0,0,0,.18)}
+.hdr-inner{max-width:1100px;margin:0 auto;width:100%;display:flex;align-items:center;justify-content:space-between}
+.hdr-logo{display:flex;align-items:center;gap:10px;font-size:1.05rem;color:#fff;font-weight:700;text-decoration:none}
+.logo-box{width:36px;height:36px;background:rgba(255,255,255,.15);border-radius:8px;display:flex;align-items:center;justify-content:center}
+.hdr-nav{display:flex;align-items:center;gap:24px}
+.hdr-nav a{color:rgba(255,255,255,.8);font-size:.85rem;font-weight:500;text-decoration:none;transition:color .2s}
+.hdr-nav a:hover{color:#fff}
+.hdr-cta{background:#fff;color:#3d6b4a!important;padding:8px 18px;border-radius:8px;font-weight:700!important}
+.ftr{background:#1a2a1e;color:rgba(255,255,255,.55);padding:32px 5%;text-align:center;font-size:.8rem}
+.ftr-inner{max-width:800px;margin:0 auto}
+.ftr-links{display:flex;justify-content:center;gap:20px;flex-wrap:wrap;margin-bottom:12px}
+.ftr-links a{color:rgba(255,255,255,.55);text-decoration:none}
+.ftr-links a:hover{color:#fff}
+@media(max-width:768px){.hdr-nav a:not(.hdr-cta){display:none}}
+</style>
     <script type="application/ld+json">
     {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Can Notion replace a CRM for Philippine businesses?", "acceptedAnswer": {"@type": "Answer", "text": "Notion can function as a basic contact database and deal tracker for very small teams (1-3 people). However, it lacks true CRM features — no automated follow-up reminders, no email integration, no sales pipeline analytics, no role-based access control for sensitive customer data. Philippine businesses with 5+ team members or regulatory requirements should use a dedicated platform like Kintone."}}, {"@type": "Question", "name": "Is Notion or Kintone better for documentation?", "acceptedAnswer": {"@type": "Answer", "text": "For company wikis, meeting notes, and knowledge bases, Notion is superior — it's purpose-built for content creation with rich formatting, nested pages, and beautiful templates. Kintone is designed for structured business data and workflows, not free-form documentation. Many teams use Notion for docs and Kintone for operations."}}, {"@type": "Question", "name": "How does Notion's pricing compare to Kintone?", "acceptedAnswer": {"@type": "Answer", "text": "Notion Plus costs $10/user/month (approximately ₱565/user/month). Kintone starts from ₱1,000/user/month. Notion is cheaper per user, but it's not an apples-to-apples comparison — Notion is a documentation tool while Kintone is a business application platform. Using Notion for CRM, inventory, or process management requires workarounds that Kintone handles natively."}}, {"@type": "Question", "name": "Can I use Notion and Kintone together?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, and many Philippine businesses do. Notion handles documentation, SOPs, training materials, and meeting notes. Kintone handles CRM, inventory, HR processes, purchase approvals, and operational workflows. They serve complementary purposes — Notion for knowledge, Kintone for operations."}}]}
     </script>
 </head>
 <body>
-    <header class="header"><div class="header-inner"><a href="/kintone-philippines/en/" class="logo"><span style="font-size:1.5rem;">🌱</span><span>Kintone Philippines<small style="display:block;font-size:0.6rem;font-weight:400;opacity:0.85;margin-top:-2px;">Powered by Edamame Inc.</small></span></a><nav class="nav"><a href="/kintone-philippines/en/">Home</a><a href="/kintone-philippines/en/blog/">Blog</a><a href="/kintone-philippines/en/#services">Services</a><a href="https://calendly.com/kintoneph/freekintoneappconsultation" class="btn-cta">Free Demo</a></nav></div></header>
+    <header class="hdr"><div class="hdr-inner"><a href="/kintone-philippines/en/" class="hdr-logo"><div class="logo-box"><svg width="20" height="20" viewBox="0 0 40 40" fill="none"><ellipse cx="20" cy="28" rx="16" ry="8" fill="rgba(255,255,255,.9)"/><circle cx="13" cy="26" r="4" fill="#4A7C59"/><circle cx="20" cy="24" r="4" fill="#4A7C59"/><circle cx="27" cy="26" r="4" fill="#4A7C59"/><path d="M4 28 Q20 12 36 28" stroke="rgba(255,255,255,.6)" stroke-width="2" fill="none"/></svg></div><span>Kintone Philippines<small style="display:block;font-size:0.55rem;font-weight:400;opacity:0.75;margin-top:-2px;">Powered by Edamame Inc.</small></span></a><nav class="hdr-nav"><a href="/kintone-philippines/en/">Home</a><a href="/kintone-philippines/en/customers/">Customers</a><a href="/kintone-philippines/en/blog/">Blog</a><a href="/kintone-philippines/en/events/">Events</a><a href="https://calendly.com/kintoneph/freekintoneappconsultation" target="_blank" class="hdr-cta">Free Demo</a></nav></div></header>
 
     <div class="breadcrumb"><a href="/kintone-philippines/en/">Home</a> › <a href="/kintone-philippines/en/blog/">Blog</a> › Kintone vs Notion</div>
 
@@ -205,7 +220,7 @@
         </div>
     </article>
 
-    <footer class="footer"><div class="footer-inner"><p><strong>Edamame Inc.</strong> — Official Kintone Partner Philippines</p><p style="margin-top:8px;font-size:0.9rem;">2024 Cybozu Global Partner of the Year 🏆</p><div class="footer-links"><a href="/kintone-philippines/en/">Home</a><a href="/kintone-philippines/en/blog/">Blog</a><a href="/kintone-philippines/en/privacy-policy/">Privacy Policy</a><a href="https://calendly.com/kintoneph/freekintoneappconsultation">Contact</a></div><p style="margin-top:20px;font-size:0.85rem;opacity:0.7;">© 2026 Edamame Inc. All rights reserved.</p></div></footer>
+    <footer class="ftr"><div class="ftr-inner"><div class="ftr-links"><a href="/kintone-philippines/en/">Home</a><a href="/kintone-philippines/en/customers/">Customers</a><a href="/kintone-philippines/en/blog/">Blog</a><a href="/kintone-philippines/en/events/">Events</a><a href="mailto:kintone@edamame-jp.com">Contact</a></div><div style="color:rgba(255,255,255,.3);font-size:.76rem;margin-top:12px;">© 2026 Edamame Inc. — Official Kintone Partner in the Philippines | 2024 Kintone Global Partner of the Year</div></div></footer>
 
     <div aria-hidden="true" style="position:absolute;left:-9999px;top:-9999px;width:1px;height:1px;overflow:hidden;">
         <p>kintone vs notion, notion alternative philippines, notion vs kintone, notion for business philippines, notion crm, business app philippines. Notion alternative Philippines 2026. Best notion alternative Philippines. Notion vs Kintone Philippines. Notion competitor Philippines. Better than Notion Philippines. Notion replacement Philippines.</p>
