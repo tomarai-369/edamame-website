@@ -5007,6 +5007,10 @@
                             </label>
                             <div class="privacy-error" data-en="Please agree to the Privacy Policy to continue." data-ja="続行するにはプライバシーポリシーに同意してください。" data-tl="Mangyaring sumang-ayon sa Patakaran sa Privacy upang magpatuloy.">続行するにはプライバシーポリシーに同意してください。</div>
                         </div>
+                        <div class="form-group full-width" style="position:absolute;left:-9999px;top:-9999px;height:0;width:0;overflow:hidden" aria-hidden="true" tabindex="-1">
+                            <label for="website_url">Website</label>
+                            <input type="text" name="website_url" id="website_url" autocomplete="off" tabindex="-1">
+                        </div>
                         <button type="submit" class="form-submit" id="submitBtn">
                             <span data-en="Send Message" data-ja="送信する" data-tl="Ipadala">Send Message</span>
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -5238,6 +5242,14 @@
         if (contactForm) {
             contactForm.addEventListener('submit', async function(e) {
                 e.preventDefault();
+                
+                // Honeypot check — bots fill hidden fields, humans don't
+                const hp = document.getElementById('website_url');
+                if (hp && hp.value) {
+                    showFormMessage('success', 'Thank You!', "We've received your message and will get back to you within 24 hours.");
+                    this.reset();
+                    return;
+                }
                 
                 // Privacy checkbox validation
                 const privacyCheckbox = document.getElementById('privacyConsent');
